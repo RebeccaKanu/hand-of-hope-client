@@ -1,0 +1,15 @@
+footer{
+    border: 3px solid red; 
+    width: 120vw;
+    height: 150vh;
+    *{
+        font-size: 1.2em;
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    img{
+        width: 42vw;
+        height: 30vh;
+    }
+}
