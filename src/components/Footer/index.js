@@ -32,8 +32,23 @@ export default class index extends Component {
               Fait avec amour par NAWAL, JEROME ET REBECCA Tous droits réservés
               © 2021
             </p>
-            {/* 
-            <Nav /> */}
+            <ul className="Nav_links">
+          <li>
+            <a href="/contact"></a>
+          </li>
+          <li>
+            <a href="/actualite"></a>
+          </li>
+          <li>
+            <a href="/don"></a>
+          </li>
+          <li>
+            <a href="/nous"></a>
+          </li>
+          <li>
+            <a href="/sengager"></a>
+          </li>
+        </ul>
           </div>
           <Contact />
         </footer>

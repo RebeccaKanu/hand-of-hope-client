@@ -1,0 +1,14 @@
+.contact {
+  font-size: 62.5%;
+  border: 5px solid blueviolet;
+}
+
+.contact * {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+/*# sourceMappingURL=contact.css.map */

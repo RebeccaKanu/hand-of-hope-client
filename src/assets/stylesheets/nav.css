@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Muli-Light";
+  src: local("MuliLight"), url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
+}
+
+.LinkNav {
+  font-size: 62.5%;
+  border: 5px solid gold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+  position: absolute;
+  margin: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+.LinkNav * {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+.LinkNav .burgerMenu > div {
+  height: 2px;
+  width: 23px;
+  border-radius: 2px;
+  background-color: black;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.LinkNav a:link {
+  font-family: "Muli-Light";
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+
+.LinkNav .Nav_links {
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=nav.css.map */
