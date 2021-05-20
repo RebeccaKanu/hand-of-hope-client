@@ -5,39 +5,73 @@ import "../../assets/stylesheets/actuality.scss";
 
 
 export default class index extends Component {
-//   constructor(){
-//       super();
-// //   this.state{
-// //      backgroundImage: ""
-// //   };
-//   }
+  constructor(){
+      super();
+     this.state = {
+        //  backgroundImage: taylor,
+    };
+  }
+
+  // test = () => {
+  //   this.setState({
+  //     backgroundImage: taylor,
+  //   });
+
+  // }
   render() {
     return (
       <div className="actuality">
-        <figure>
-          <div className="imgcard"
-                // style={{
-                //     backgroundImage: `url({taylor})`
-                // }}
-          ></div>
-          <img className="img" src={taylor} alt="taylor" /> 
-          <a href="#">Scolarité</a>
-          <h2>TITRE DE L'ARTICLE</h2>
-          <p>ÉCRIS PAR MARYSE CONDÉ</p>
-          <p>Article de la campagne de distribution</p>
-          <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-          <button>
-            <Link to="#">Lire la suite</Link>
-          </button>
-        </figure>
+        <section>
+          <h1>DERNIERE ACTUS</h1>
+          <h2>Les dernières actualités de l’association </h2>
+          <span></span>
+        </section>
+        <article>
+            <figure>
+              <img className="imgcard" src={taylor} alt="taylor"/>
+              <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
+              <a href="#">Scolarité</a>
+            </figure>
+            <h3>TITRE DE L'ARTICLE</h3>
+            <p>ÉCRIS PAR MARYSE CONDÉ</p>
+            <p>Article de la campagne de distribution</p>
+            <button>
+              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+            </button>
+        </article>
 
-        <figure>
-          <figcaption></figcaption>
-        </figure>
+        <article>
+            <figure>
+              <img className="imgcard" src={taylor} alt="taylor"/>
+              <figcaption className="figcaption2">CAMPAGNE DE DISTRIBUTION</figcaption>
+              <a className="a2"href="#">Enseignement</a>
+            </figure>
+            <h3>TITRE DE L'ARTICLE</h3>
+            <p>ÉCRIS PAR MARYSE CONDÉ</p>
+            <p>Article de la campagne de distribution</p>
+            <button>
+              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+            </button>
+        </article>
 
-        <figure>
-          <figcaption></figcaption>
-        </figure>
+        <article >
+            <figure>
+              <img className="imgcard" src={taylor} alt="taylor"/>
+              <figcaption className="figcaption3">CAMPAGNE DE DISTRIBUTION</figcaption>
+              <a className="a3" href="#">Scolarité</a>
+            </figure>
+            <h3>TITRE DE L'ARTICLE</h3>
+            <p>ÉCRIS PAR MARYSE CONDÉ</p>
+            <p>Article de la campagne de distribution</p>
+            <button>
+              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+            </button>
+        </article>
+
+
+        
+
+        
       </div>
     );
   }

@@ -1,10 +1,10 @@
 footer {
   font-size: 62.5%;
-  border: 3px solid red;
+  border: 3px solid blue;
   justify-content: center;
-  text-align: center;
   text-align: left;
   margin: 2%;
+  
 
   div:nth-child(1) {
     display: flex;
@@ -15,6 +15,7 @@ footer {
       width: 50%;
       display: flex;
       text-align: left;
+      
     }
     img {
       width: 20%;
@@ -24,6 +25,11 @@ footer {
     display: flex;
   }
   li {
-    font-size: 1.2em;
+    font-size: 1.4rem;
+  }
+  .Nav_links{
+    list-style-type: none;
+
+
   }
 }
