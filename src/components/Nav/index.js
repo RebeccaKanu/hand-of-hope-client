@@ -63,8 +63,7 @@ class index extends Component {
       <div className="LinkNav">
         {/*au clique du menu burger soit le menu s'affiche (if) soit il
         disparait(else)*/}
-
-        <ul>
+        <ul className="">
           {/*changement dynamique des valeur des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
           <li>
             <a href="/contact">{this.state.contact}</a>
@@ -90,9 +89,7 @@ class index extends Component {
             </a>
           </li>
         </ul>
-
         {/*gérer l'affichage*/}
-
         <div className="burgerMenu" onClick={this.compteur}>
           <div></div>
           <div></div>
