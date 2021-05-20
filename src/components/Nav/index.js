@@ -14,7 +14,7 @@ class index extends Component {
       sengager: "",
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
-      n: 1,
+      n: 1, //n va s'incrément de 1 à chaque clique
     };
   }
 
@@ -61,21 +61,43 @@ class index extends Component {
     console.log("compteur", this.state.compteur);
     return (
       <div className="LinkNav">
-        au clique du menu burger soit le menu s'affiche (if) soit il
-        disparait(else)
+        {/*au clique du menu burger soit le menu s'affiche (if) soit il
+        disparait(else)*/}
+
+        <ul>
+          {/*changement dynamique des valeur des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+          <li>
+            <a href="/contact">{this.state.contact}</a>
+          </li>
+          <li>
+            <a href="/actualite">{this.state.actualite}</a>
+          </li>
+          <li>
+            <a href="/don">{this.state.don}</a>
+          </li>
+          <li>
+            <a href="/nous">{this.state.nous}</a>
+          </li>
+          <li>
+            <a href="/sengager">{this.state.sengager}</a>
+          </li>
+          <li>
+            {/* <Link to="#" onClick={this.compteur}>
+              &rarr;
+            </Link> ne marche pas*/}
+            <a href="#" onClick={this.compteur}>
+              &rarr;
+            </a>
+          </li>
+        </ul>
+
+        {/*gérer l'affichage*/}
+
         <div className="burgerMenu" onClick={this.compteur}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <Link to="">&larr;</Link>
-        <ul>
-          <li>{this.state.contact}</li>
-          <li>{this.state.actualite}</li>
-          <li>{this.state.don}</li>
-          <li>{this.state.nous}</li>
-          <li>{this.state.sengager}</li>
-        </ul>
       </div>
     );
   }
