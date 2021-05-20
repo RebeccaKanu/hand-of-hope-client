@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Link } from "react-router-dom";
 import taylor from "../../assets/images/taylor.jpg";
+import "../../assets/stylesheets/actuality.scss";
+
 
 export default class index extends Component {
 //   constructor(){
