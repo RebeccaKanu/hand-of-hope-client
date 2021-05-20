@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Link } from "react-router-dom";
 import "../../assets/stylesheets/nav.scss";
 
 class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //on initialise le menu avec des string vide car initialement il ne s'affiche pas tant que l'on a pas cliqué sur le burger menu
+      //on initialise le menu avec des strings vides car initialement il ne s'affiche pas tant que l'on a pas cliqué sur le burger menu
       contact: "",
       actualite: "",
       don: "",
@@ -14,7 +13,7 @@ class index extends Component {
       sengager: "",
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
-      n: 1, //n va s'incrément de 1 à chaque clique
+      n: 1, //n va s'incrément de 1 à chaque clique,
     };
   }
 
@@ -37,6 +36,11 @@ class index extends Component {
       don: "",
       nous: "",
       sengager: "",
+      width: 0,
+      backgroundColor: "",
+      opacity: 0.2,
+      // transition: "all 0.1s ease-out",
+      height: 0,
     });
   };
 
@@ -50,22 +54,49 @@ class index extends Component {
       //au deuxième clique cacher le menu => deuxième clique = compteur à 2
       //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
       this.hideMenu();
+      this.setState({
+        width: 0,
+        backgroundColor: "white",
+        opacity: 0,
+        transition: "all 0.8s ease-out",
+        transformTop: "",
+        transformBottom: "",
+        background: "black",
+      });
     } else {
       //au premier clique afficher le menu => premier clique = compteur à 1
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
+      this.setState({
+        width: "89vw",
+        backgroundColor: "#f7efe9",
+        opacity: 0.6,
+        height: "100vh",
+        transformTop: "rotate(45deg) translate(3px, 4px)",
+        transformBottom: "rotate(-45deg) translate(3px, -4px)",
+        background: "transparent",
+      });
     }
   };
 
   render() {
     console.log("compteur", this.state.compteur);
     return (
-      <div className="LinkNav">
+      <div
+        className="LinkNav"
+        style={{
+          backgroundColor: this.state.backgroundColor,
+          // transition: this.state.transition,
+        }}
+      >
         {/*au clique du menu burger soit le menu s'affiche (if) soit il
         disparait(else)*/}
 
-        <ul>
-          {/*changement dynamique des valeur des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+        <ul
+          className="Nav_links"
+          style={{ width: this.state.width, height: this.state.height }}
+        >
+          {/*changement dynamique des valeurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
           <li>
             <a href="/contact">{this.state.contact}</a>
           </li>
@@ -81,22 +112,12 @@ class index extends Component {
           <li>
             <a href="/sengager">{this.state.sengager}</a>
           </li>
-          <li>
-            {/* <Link to="#" onClick={this.compteur}>
-              &rarr;
-            </Link> ne marche pas*/}
-            <a href="#" onClick={this.compteur}>
-              &rarr;
-            </a>
-          </li>
         </ul>
 
-        {/*gérer l'affichage*/}
-
         <div className="burgerMenu" onClick={this.compteur}>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div style={{ transform: this.state.transformTop }}></div>
+          <div style={{ background: this.state.background }}></div>
+          <div style={{ transform: this.state.transformBottom }}></div>
         </div>
       </div>
     );
