@@ -1,6 +1,14 @@
+@font-face {
+  font-family: "Muli-Light";
+  src: local("MuliLight"),
+    url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
+}
 .LinkNav {
   font-size: 62.5%;
   border: 5px solid gold;
+  display: flex;
+  justify-content: space-between;
+  height: 151px; // à enlever quand il y' aura le header
 
   * {
     font-size: 1.2em;
@@ -8,5 +16,24 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+  }
+
+  .burgerMenu > div {
+    height: 2px;
+    width: 23px;
+    border-radius: 2px;
+    background-color: black;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  a:link {
+    font-family: "Muli-Light";
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+  }
+  ul {
+    background-color: #eff7fa;
+    width: 143px;
   }
 }

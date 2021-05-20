@@ -29,7 +29,7 @@ export default class index extends Component {
 
           <div className="copyrightNav">
             <p>
-              Fais avec amour par NAWAL, JEROME ET REBECCA Tous droits réservés
+              Fait avec amour par NAWAL, JEROME ET REBECCA Tous droits réservés
               © 2021
             </p>
 
