@@ -1,0 +1,30 @@
+.Burger{
+    width: 42px;
+    height: 24px;
+    background-color: black;
+    cursor :pointer;
+    position: relative;
+    
+    .Burger span{
+        width:100%;
+        height:4px;
+        background-color: black;
+        display:block;
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+    }
+        .Burger span::before, .Burger span::after{
+            content:'';
+            position:absolute;
+            width: 100%;
+            height: 4px;
+            background-color: black;
+        }
+        .burger span ::before{
+            transform: translateY(-10px);
+        }
+        .burger span ::after{
+            transform: translateY(10px);
+        }
+}
