@@ -32,8 +32,8 @@ export default class index extends Component {
               Fait avec amour par NAWAL, JEROME ET REBECCA Tous droits réservés
               © 2021
             </p>
-
-            <Nav />
+            {/* 
+            <Nav /> */}
           </div>
 
           <Contact />
