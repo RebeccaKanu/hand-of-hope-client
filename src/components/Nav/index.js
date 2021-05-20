@@ -39,7 +39,7 @@ class index extends Component {
       width: 0,
       backgroundColor: "",
       opacity: 0.2,
-      // transition: "all 0.1s ease-out",
+      transition: "all 0.1s ease-out",
       height: 0,
     });
   };
@@ -56,8 +56,7 @@ class index extends Component {
       this.hideMenu();
       this.setState({
         width: 0,
-        backgroundColor: "white",
-        opacity: 0,
+        // opacity: 0,
         transition: "all 0.8s ease-out",
         transformTop: "",
         transformBottom: "",
