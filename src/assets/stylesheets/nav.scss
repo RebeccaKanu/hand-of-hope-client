@@ -8,7 +8,12 @@
   border: 5px solid gold;
   display: flex;
   justify-content: space-between;
-  height: 151px; // à enlever quand il y' aura le headerd
+  z-index: 10;
+  position: absolute;
+  margin: 10%;
+  width: 100%;
+  height: 100%;
+
   * {
     font-size: 1.2em;
     padding: 0;
@@ -17,22 +22,52 @@
     list-style: none;
   }
 
-  .burgerMenu > div {
-    height: 2px;
-    width: 23px;
-    border-radius: 2px;
-    background-color: black;
-    margin-top: 3px;
-    cursor: pointer;
+  .burgerMenu {
+    // background-color: #f7efe9;
+    > div {
+      height: 2px;
+      width: 23px;
+      border-radius: 2px;
+      background-color: black;
+      margin-top: 3px;
+      cursor: pointer;
+    }
   }
+
   a:link {
     font-family: "Muli-Light";
     text-decoration: none;
     color: black;
     font-size: 10px;
   }
-  ul {
-    background-color: #eff7fa;
-    width: 143px;
+
+  .Nav_links {
+    // background-color: #f7efe9;
+    transition: all 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+// li:nth-child(1) {
+//   border: 3px solid brown;
+//   transition: all 1.1s ease-out;
+// }
+// li:nth-child(2) {
+//   border: 3px solid brown;
+//   transition: all 1.2s ease-out;
+// }
+// li:nth-child(3) {
+//   border: 3px solid brown;
+//   transition: all 1.3s ease-out;
+// }
+// nn li:nth-child(4) {
+//   border: 3px solid brown;
+//   transition: all 1.4s ease-out;
+// }
+// li:nth-child(5) {
+//   border: 3px solid brown;
+//   transition: all 1.5s ease-out;
+// }

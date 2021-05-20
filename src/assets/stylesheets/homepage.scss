@@ -1,15 +1,17 @@
-.homepage{
-    font-size:62.5%;
-   
-    *{
-        font-size: 1.2em;
-        padding:0;
-        margin:0;
-        box-sizing: border-box;
-    }
+.homepage {
+  font-size: 62.5%;
+  z-index: 0;
+  position: static;
+
+  * {
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
