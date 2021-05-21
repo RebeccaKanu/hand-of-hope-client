@@ -66,12 +66,7 @@ export default class index extends Component {
             <button>
               <Link to="#">Lire la suite &nbsp; &rarr;</Link>
             </button>
-        </article>
-
-
-        
-
-        
+        </article>    
       </div>
     );
   }
