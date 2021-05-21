@@ -5,32 +5,39 @@
 
 .LinkNav {
   font-size: 62.5%;
-  border: 5px solid gold;
+  border: 5px solid #fcd708;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 10;
-  position: absolute;
-  margin: 10%;
-  width: 100%;
-  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: "hidden";
 }
 
-.LinkNav * {
-  font-size: 1.2em;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.LinkNav .Nav_links {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.LinkNav .burgerMenu > div {
-  height: 2px;
-  width: 23px;
+.LinkNav .burgerMenu {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.LinkNav .burgerMenu div {
+  min-height: 2px;
+  min-width: 23px;
   border-radius: 2px;
   background-color: black;
   margin-top: 3px;

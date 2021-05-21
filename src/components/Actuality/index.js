@@ -26,6 +26,7 @@ export default class index extends Component {
           <h2>Les dernières actualités de l’association </h2>
           <span></span>
         </section>
+
         <article>
             <figure>
               <img className="imgcard" src={taylor} alt="taylor"/>
@@ -46,12 +47,14 @@ export default class index extends Component {
               <figcaption className="figcaption2">CAMPAGNE DE DISTRIBUTION</figcaption>
               <a className="a2"href="#">Enseignement</a>
             </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>ÉCRIS PAR MARYSE CONDÉ</p>
-            <p>Article de la campagne de distribution</p>
-            <button>
-              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-            </button>
+            <div className="box">
+              <h3>TITRE DE L'ARTICLE</h3>
+              <p>ÉCRIS PAR MARYSE CONDÉ</p>
+              <p>Article de la campagne de distribution</p>
+              <button>
+                <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+              </button>
+            </div>
         </article>
 
         <article >
@@ -64,14 +67,10 @@ export default class index extends Component {
             <p>ÉCRIS PAR MARYSE CONDÉ</p>
             <p>Article de la campagne de distribution</p>
             <button>
-              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+              <Link to="#">Lire la suite &nbsp;<em>&rarr;</em></Link>
             </button>
         </article>
 
-
-        
-
-        
       </div>
     );
   }
