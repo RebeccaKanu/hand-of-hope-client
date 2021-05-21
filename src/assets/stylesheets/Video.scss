@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: "Muli";
+    src: local("Muli"),
+      url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+  }
+  
+@font-face {
+    font-family: "Muli-Bold";
+    src: local("MuliBold"),
+      url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Quicksand-Light";
+    src: local("QuicksandLight"),
+      url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
+  }
+.video{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    h1 {
+    font-family: 'Muli';
+    }
+    h2 {
+    font-family: 'Muli-Bold';
+    color: #004aad;
+    }
+iframe{
+}
+span{
+    
+    color:black;
+}
+}
