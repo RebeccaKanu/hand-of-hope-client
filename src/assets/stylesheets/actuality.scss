@@ -1,22 +1,23 @@
-// @font-face {
-//   font-family: "Muli";
-//   src: local("Muli"), url(../../assets/fonts/muli) format("truetype");
-// }
-// // @font-face {
-// //   font-family: "Muli-Light";
-// //   src: local("MuliLight"),
-// //     url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
-// // }
-// // @font-face {
-// //   font-family: "Peace Sans", sans-serif;
-// //   src: local("PeaseSans"),
-// //     url(../fonts/peace_sans/Peace\ Sans\ Webfont.ttf) format("truetype");
-// // }
-// @font-face {
-//   font-family: "Quicksand-Light", sans-serif;
-//   src: local("QuicksandLight"),
-//     url(../fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
-// }
+@font-face {
+  font-family: "Muli";
+  src: local("Muli"),
+    url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: local("MuliExtraLight"),
+    url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: local("QuicksandRegular"),
+    url(../../assets/fonts/Quicksand/Quicksand-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Quicksand-Light";
+  src: local("QuicksandLight"),
+    url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
+}
 
 @mixin display($justify-content){
   display:flex;
@@ -39,17 +40,21 @@
   section{
     text-align: center;
     max-width: 85vw;
-    border-bottom: 2px solid ;
+    background-color: green;
     h1{
       font-size: 1rem;
     }
     h2{
       font-weight:300;
-      font-style: "Quicksand";
+      font-family: "Quicksand-Regular";
+      color: #004AAD;
       padding-bottom:10%;
     }
     .span{
-      
+      color:blue;
+      width:80%;
+      height: 5%;
+      border: 15px red solid;   
     }
   }
   figure{
@@ -73,8 +78,8 @@
     }
     a{
       z-index: 3;
-      left: 54%;
-      top: 7%;
+      left: 58%;
+      top: 6%;
       position: absolute;
       background-color: #D99827;
       opacity: 45%;
@@ -85,6 +90,9 @@
   &:hover{
     opacity: 99%;
   }
+  em{
+    color:#D99827;
+  }
     }
     figcaption{
       position: absolute;
@@ -93,48 +101,67 @@
       border:4px solid green;
       left: 25%;
       top: 27%;
+      font-family: "Muli";
     }
   } h3,p,button{
     text-align:center;
     align-items: center;
+    
   }
     h3{
       color:#004AAD;
       font-weight: 600;
       font-size: 1rem;
+      font-family: "Quicksand-Regular";
+    }
+    .box{
+
+      button{
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        color:#356178;
+        font-size: 0.8rem;
+        font-family: "Muli-ExtraLight";
+        align-items: left;
+      }
+
+    }
+    article>p{
+      font-family: "Muli-ExtraLight";
+   
     }
     p{
       font-weight:600;
-    }
-    button{
-      background: none;
-      color: inherit;
-      border: none;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-      color:#356178;
-      font-size: 0.8rem;
+      font-family: "Muli-ExtraLight";
     }
     .figcaption2{
       z-index: 4;
       position: absolute;
       left: 25%;
-      top: 27%;
+      top: 60%;
       
     }
     .a2{
+      left: 46%;
+      top: 70%;
       z-index: 4;
+      
     }
     .figcaption3{
       z-index: 4;
       position: absolute;
       left: 25%;
-      top: 27%;
+      top: 93%;
+      
+
     }
     .a3{
-      left: 2%;
-      top: 2%;
+      left: 58%;
+      top: 38%;
       z-index: 4;
     }
 }
