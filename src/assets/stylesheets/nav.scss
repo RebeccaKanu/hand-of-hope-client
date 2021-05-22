@@ -7,27 +7,23 @@
   font-size: 62.5%;
   border: 5px solid rgb(252, 215, 8);
   display: flex;
-  z-index: 10;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  box-sizing:border-box;
+  // position: relative; //push la photo en bas
+  box-sizing: border-box;
   justify-content: space-between;
-  top: 0 !important;
-  left:0 !important;
-  overflow:"hidden";
-  
-  .Nav_links{
+  overflow: "hidden";
+  z-index: 10;
+
+  .Nav_links {
     list-style: none;
     display: flex;
-    
   }
 
   .burgerMenu {
     border: 1px solid red;
-    margin:10px;
-    
-    
+    margin: 10px;
+    // position: fixed;
+
     // background-color: #f7efe9;
     div {
       min-height: 2px;
@@ -36,11 +32,8 @@
       background-color: black;
       margin-top: 3px;
       cursor: pointer;
-      
     }
   }
-  
-
 
   a:link {
     font-family: "Muli-Light";

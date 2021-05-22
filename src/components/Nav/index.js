@@ -14,6 +14,13 @@ class index extends Component {
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
       n: 1, //n va s'incrément de 1 à chaque clique,
+      //
+      width: "",
+      backgroundColor: "",
+      opacity: "",
+      transition: "",
+      height: "",
+      zIndex: 10,
     };
   }
 
@@ -68,10 +75,10 @@ class index extends Component {
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
       this.setState({
-        width: "100%",
+        width: "80vw",
         backgroundColor: "#f7efe9",
         opacity: 0.6,
-        height: "100%",
+        height: "172vw",
         transformTop: "rotate(45deg) translate(3px, 4px)",
         transformBottom: "rotate(-45deg) translate(3px, -4px)",
         background: "transparent",
@@ -86,6 +93,7 @@ class index extends Component {
         className="LinkNav"
         style={{
           backgroundColor: this.state.backgroundColor,
+
           // transition: this.state.transition,
         }}
       >
