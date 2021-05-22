@@ -1,0 +1,42 @@
+// @font-face {
+//   font-family: "Muli";
+//   src: local("Muli"), url(../../assets/fonts/muli) format("truetype");
+// }
+// // @font-face {
+// //   font-family: "Muli-Light";
+// //   src: local("MuliLight"),
+// //     url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
+// // }
+// // @font-face {
+// //   font-family: "Peace Sans", sans-serif;
+// //   src: local("PeaseSans"),
+// //     url(../fonts/peace_sans/Peace\ Sans\ Webfont.ttf) format("truetype");
+// // }
+// @font-face {
+//   font-family: "Quicksand-Light", sans-serif;
+//   src: local("QuicksandLight"),
+//     url(../fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
+// }
+
+@mixin display($justify-content){
+  display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:$justify-content;
+}    
+    
+.actuality {
+  display: flex;
+
+  .img {
+    max-width: 45%;
+    border: 5px solid blue;
+    border-radius: 4px;
+    padding: 5px;
+    
+  }
+  
+  h2 {
+     font-style: "Quicksand";
+  }
+}

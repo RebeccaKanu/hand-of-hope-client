@@ -55,8 +55,9 @@ class index extends Component {
       //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
       this.hideMenu();
       this.setState({
-        width: 0,
-        // opacity: 0,
+        width: "",
+        backgroundColor: "",
+        opacity: "",
         transition: "all 0.8s ease-out",
         transformTop: "",
         transformBottom: "",
@@ -112,7 +113,6 @@ class index extends Component {
             <a href="/sengager">{this.state.sengager}</a>
           </li>
         </ul>
-
         <div className="burgerMenu" onClick={this.compteur}>
           <div style={{ transform: this.state.transformTop }}></div>
           <div style={{ background: this.state.background }}></div>
@@ -122,5 +122,5 @@ class index extends Component {
     );
   }
 }
-
+// test
 export default index;
