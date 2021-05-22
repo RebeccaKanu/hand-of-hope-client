@@ -8,11 +8,8 @@
   border: 5px solid rgb(252, 215, 8);
   display: flex;
   position: fixed;
-  // position: relative; //push la photo en bas
   box-sizing: border-box;
   justify-content: space-between;
-  overflow: "hidden";
-  z-index: 10;
 
   .Nav_links {
     list-style: none;

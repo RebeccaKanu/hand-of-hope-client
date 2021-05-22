@@ -62,23 +62,24 @@ class index extends Component {
       //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
       this.hideMenu();
       this.setState({
-        width: "",
+        width: 0,
         backgroundColor: "",
-        opacity: "",
+        opacity: 0,
         transition: "all 0.8s ease-out",
         transformTop: "",
         transformBottom: "",
         background: "black",
+        color: "black",
       });
     } else {
       //au premier clique afficher le menu => premier clique = compteur à 1
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
       this.setState({
-        width: "80vw",
+        width: "85vw",
         backgroundColor: "#f7efe9",
         opacity: 0.6,
-        height: "172vw",
+        height: "100vh",
         transformTop: "rotate(45deg) translate(3px, 4px)",
         transformBottom: "rotate(-45deg) translate(3px, -4px)",
         background: "transparent",
