@@ -1,6 +1,6 @@
-import React from "react";
+import React,{Component} from "react";
 import { Link } from "react-router-dom";
-import "../../assets/stylesheets/contact.scss";
+// import "../../assets/stylesheets/contact.scss";
 function Contact() {
   return (
     <div className="contact">

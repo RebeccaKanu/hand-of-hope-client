@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "../../assets/images/logo-hoh.png";
 //import Nav from "../Nav";
 import Contact from "../Contact";
-import "../../assets/stylesheets/footer.scss";
+// import "../../assets/stylesheets/footer.scss";
 
 export default class index extends Component {
 

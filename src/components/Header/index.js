@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "../../assets/stylesheets/header.scss";
+import "../../assets/stylesheets/homepage.scss";
 import Header1 from "../../assets/images/Header1.jpg";
 import Header2 from "../../assets/images/Header2.jpg";
 

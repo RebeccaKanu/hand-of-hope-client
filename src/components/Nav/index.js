@@ -1,5 +1,23 @@
 import React, { Component } from "react";
-import "../../assets/stylesheets/nav.scss";
+// import "../../assets/stylesheets/nav.scss";
+
+
+// const borderYellow ={
+//   fontSize: "62.5%",
+//   border: "5px solid rgb(252, 215, 8)",
+//   display: "flex",
+//   zindex: 10,
+//   position: "fixed",
+//   boxSizing:"border-box",
+//   justifyContent: "space-between",
+//   top: "0 !important",
+//   left: "0 !important",
+//   overflow:"hidden",
+// width:"100vw",
+// height:"100vh",
+// }
+
+
 
 class index extends Component {
   constructor(props) {
@@ -55,13 +73,14 @@ class index extends Component {
       //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
       this.hideMenu();
       this.setState({
-        width: "",
+        width: 0,
         backgroundColor: "",
         opacity: "",
         transition: "all 0.8s ease-out",
         transformTop: "",
         transformBottom: "",
         background: "black",
+        
       });
     } else {
       //au premier clique afficher le menu => premier clique = compteur à 1
@@ -91,7 +110,7 @@ class index extends Component {
       >
         {/*au clique du menu burger soit le menu s'affiche (if) soit il
         disparait(else)*/}
-
+_
         <ul
           className="Nav_links"
           style={{ width: this.state.width, height: this.state.height }}
@@ -102,7 +121,7 @@ class index extends Component {
           </li>
           <li>
             <a href="/actualite">{this.state.actualite}</a>
-          </li>
+          </li> 
           <li>
             <a href="/don">{this.state.don}</a>
           </li>
@@ -114,9 +133,9 @@ class index extends Component {
           </li>
         </ul>
         <div className="burgerMenu" onClick={this.compteur}>
-          <div style={{ transform: this.state.transformTop }}></div>
-          <div style={{ background: this.state.background }}></div>
-          <div style={{ transform: this.state.transformBottom }}></div>
+          <div style={{transform: this.state.transformTop }}></div>
+          <div style={{background: this.state.background }}></div>
+          <div style={{transform: this.state.transformBottom }}></div>
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "../../assets/stylesheets/Video.scss"
+// import "../../assets/stylesheets/Video.scss"
 // import ytb from "https://www.youtube.com/embed/BAMwbICU7G4" 
 import ReactDOM from 'react-dom';
 import App from "../../App"
