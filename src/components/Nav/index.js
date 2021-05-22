@@ -68,10 +68,10 @@ class index extends Component {
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
       this.setState({
-        width: "89vw",
+        width: "100%",
         backgroundColor: "#f7efe9",
         opacity: 0.6,
-        height: "100vh",
+        height: "100%",
         transformTop: "rotate(45deg) translate(3px, 4px)",
         transformBottom: "rotate(-45deg) translate(3px, -4px)",
         background: "transparent",

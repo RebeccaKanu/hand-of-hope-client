@@ -1,0 +1,45 @@
+footer {
+  font-size: 62.5%;
+  border: 3px solid blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  margin: 2%;
+  background: pink;
+}
+
+footer div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 5px solid pink;
+  max-width: 100%;
+}
+
+footer div:nth-child(1) p {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+footer div:nth-child(1) img {
+  width: 20%;
+}
+
+footer .copyrightNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer li {
+  font-size: 1.4rem;
+}
+
+footer .Nav_links {
+  list-style-type: none;
+}
+/*# sourceMappingURL=footer.css.map */

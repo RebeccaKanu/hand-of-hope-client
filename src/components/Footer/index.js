@@ -5,16 +5,6 @@ import Contact from "../Contact";
 import "../../assets/stylesheets/footer.scss";
 
 export default class index extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       style: {
-  //         width: "40px",
-  //         height: "40px",
-  //         border: "5px solid black",
-  //       },
-  //     };
-  //   }
 
   render() {
     return (
@@ -29,11 +19,26 @@ export default class index extends Component {
 
           <div className="copyrightNav">
             <p>
-              Fait avec amour par NAWAL, JEROME ET REBECCA Tous droits réservés
-              © 2021
+              Fait avec amour par NAWAL, JEROME ET REBECCA <span>Tous droits réservés
+              © 2021</span>
             </p>
-            {/* 
-            <Nav /> */}
+            <ul className="Nav_links">
+          <li>
+            <a href="/contact"></a>
+          </li>
+          <li>
+            <a href="/actualite"></a>
+          </li>
+          <li>
+            <a href="/don"></a>
+          </li>
+          <li>
+            <a href="/nous"></a>
+          </li>
+          <li>
+            <a href="/sengager"></a>
+          </li>
+        </ul>
           </div>
           <Contact />
         </footer>
