@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../assets/stylesheets/header.scss";
-import Header1 from "../../assets/images/Header1.jpg";
+import header1 from "../../assets/images/Header1.jpg";
 import Header2 from "../../assets/images/Header2.jpg";
 
 
@@ -8,7 +8,9 @@ import Header2 from "../../assets/images/Header2.jpg";
 export default class index extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {  
+            
+        };
     }
     render() {
         return (
