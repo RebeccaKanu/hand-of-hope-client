@@ -20,7 +20,7 @@
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
-    z-index: 10;
+    position: relative;
     h1 {
     font-family: 'Muli';
     }
@@ -29,6 +29,8 @@
     color: #004aad;
     }
 iframe{
+  width:80vw;
+  height:40vh;
 }
 span{
     

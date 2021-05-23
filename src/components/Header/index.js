@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../assets/stylesheets/header.scss";
-import header1 from "../../assets/images/Header1.jpg";
+import Header1 from "../../assets/images/Header1.jpg";
 import Header2 from "../../assets/images/Header2.jpg";
 
 

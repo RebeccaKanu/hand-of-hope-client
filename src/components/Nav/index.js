@@ -14,8 +14,9 @@ class index extends Component {
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
       n: 1, //n va s'incrément de 1 à chaque clique,
+      // contactAdress: "",
     };
-  }
+  }  
 
   //on remplie le menu qui était initialement vide pour que lorsque l'on clique les éléments du menu s'affiche
   showMenu = () => {
@@ -25,8 +26,28 @@ class index extends Component {
       don: "Faire un don",
       nous: "Qui sommes nous ?",
       sengager: "S'engager",
+      // contactAdress: "Bonjour"
+
     });
   };
+
+  // componentDidUpdate () {
+
+  //   showAdress = ()=> {
+
+   
+  //     this.setState({
+    
+  //           contactAdress: "Bonjour",
+      
+  //     })
+  //     console.log('yoooooo!!!');
+  //   }
+
+  // }
+
+  
+
 
   //on revide le menu pour qu'au clique pour le femer le menu disparaisse
   hideMenu = () => {
@@ -42,6 +63,7 @@ class index extends Component {
       opacity: 0.2,
       // transition: "all 0.1s ease-out",
       height: 0,
+      
     });
   };
 
@@ -63,30 +85,34 @@ class index extends Component {
         transformTop: "",
         transformBottom: "",
         background: "black",
-        color:"black"
+        color:"black",
+        backgroundColor: "transparent",
+        boxShadow: "10px 5px 5px black",
+        // contactAdress: "",
       });
     } else {
       //au premier clique afficher le menu => premier clique = compteur à 1
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
       this.setState({
-        width: "85vw",
-        backgroundColor: "#f7efe9",
+        width: "80vw",//80vw
+        backgroundColor: "white",
         opacity: 0.6,
-        height: "100vh",
+        height: "97vh",
         transformTop: "rotate(45deg) translate(3px, 4px)",
         transformBottom: "rotate(-45deg) translate(3px, -4px)",
         background: "transparent",
-
+        // contactAdress: "Bonjour",
+        
       });
     }
   };
 
   render() {
-    console.log("compteur", this.state.compteur);
+
     return (
       <div
-        className="LinkNav"
+        className="BurgerLink"
         style={{
           backgroundColor: this.state.backgroundColor,
           // transition: this.state.transition,
@@ -96,14 +122,17 @@ class index extends Component {
         disparait(else)*/}
 
         <ul
-          className="Nav_links"
-          style={{ width: this.state.width, height: this.state.height }}
+          className="Links"
+          style={{ width: this.state.width, height: this.state.height
+             }}
         >
-          {/*changement dynamique des valeurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
-          <li>
-            <a href="/contact">{this.state.contact}</a>
+          {/*changement dynamique des va this.hideMenu();leurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+          <li className="contacts">
+            <a  href="/contact" onMouseOver={this.compteur} >{this.state.contact}</a>     
           </li>
-          <li>
+          <p>{this.state.contactAdress}</p>
+          
+          {/* <li>
             <a href="/actualite">{this.state.actualite}</a>
           </li>
           <li>
@@ -114,9 +143,11 @@ class index extends Component {
           </li>
           <li>
             <a href="/sengager">{this.state.sengager}</a>
-          </li>
+          </li> */}
         </ul>
-        <div className="burgerMenu" onClick={this.compteur}>
+        <div className="burgerMenu" onClick={this.compteur} 
+        >
+       
           <div style={{ transform: this.state.transformTop }}></div>
           <div style={{ background: this.state.background }}></div>
           <div style={{ transform: this.state.transformBottom }}></div>
