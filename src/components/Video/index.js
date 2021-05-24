@@ -25,7 +25,7 @@ export default class index extends Component {
                 <h1>Les dernière actualités de l’association </h1>
                  <h2>VIDEO EXPLICATIVE DU CONTEXTE</h2>
                  <br/>
-                <iframe  width="80%" height="80%" src="https://www.youtube.com/embed/BAMwbICU7G4"
+                <iframe controls  src="https://www.youtube.com/embed/BAMwbICU7G4"
                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                  allowfullscreen></iframe> 
                  <br/>

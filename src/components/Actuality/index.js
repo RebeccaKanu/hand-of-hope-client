@@ -36,7 +36,7 @@ export default class index extends Component {
             <h3>TITRE DE L'ARTICLE</h3>
             <p>ÉCRIS PAR MARYSE CONDÉ</p>
             <p>Article de la campagne de distribution</p>
-            <button>
+            <button className="button1">
               <Link to="#">Lire la suite &nbsp; &rarr;</Link>
             </button>
         </article>
@@ -51,7 +51,7 @@ export default class index extends Component {
               <h3>TITRE DE L'ARTICLE</h3>
               <p>ÉCRIS PAR MARYSE CONDÉ</p>
               <p>Article de la campagne de distribution</p>
-              <button>
+              <button className="button2">
                 <Link to="#">Lire la suite &nbsp; &rarr;</Link>
               </button>
             </div>
@@ -66,7 +66,7 @@ export default class index extends Component {
             <h3>TITRE DE L'ARTICLE</h3>
             <p>ÉCRIS PAR MARYSE CONDÉ</p>
             <p>Article de la campagne de distribution</p>
-            <button>
+            <button className="button3">
               <Link to="#">Lire la suite &nbsp;<em>&rarr;</em></Link>
             </button>
         </article>

@@ -3,28 +3,20 @@
   src: local("MuliLight"),
     url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
 }
-.LinkNav {
+.BurgerLink {
   font-size: 62.5%;
-  border: 5px solid rgb(252, 215, 8);
+  // border: 5px solid rgb(252, 215, 8);
   display: flex;
   z-index: 10;
   position: fixed;
   box-sizing:border-box;
   justify-content: space-between;
+ 
   
-  
-  .Nav_links{
-    list-style: none;
-    display: flex;
-    
-  }
-
   .burgerMenu {
-    border: 1px solid red;
+    // border: 1px solid red;
     margin:10px;
     
-    
-    // background-color: #f7efe9;
     div {
       min-height: 2px;
       min-width: 23px;
@@ -35,23 +27,32 @@
       
     }
   }
-  
 
-
-  a:link {
+  a {
     font-family: "Muli-Light";
     text-decoration: none;
     color: black;
     font-size: 10px;
+    
   }
-
-  .Nav_links {
-    // background-color: #f7efe9;
+  .Links {
     transition: all 0.8s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    border:4px solid yellow;
+    
+    .contacts p {
+      display: none;
+    }
+    .contacts :hover{
+      p{
+        display:block;
+      }
+    }
+    
   }
 }
 
