@@ -13,20 +13,21 @@ footer {
   border: 3px solid blue;
   justify-content: center;
   text-align: left;
-  margin: 2%;
-  background: pink;
-  
-
+  margin: 4% 12%;
+  // height:40vh;
+  // box-sizing: border-box;
   div:nth-child(1) {
     display: flex;
-    border: 5px solid pink;
     max-width: 100%;
-
+    border-bottom: 1px solid black;
+    width: 70vw;
+    padding-bottom: 4%;
     p {
       width: 50%;
       display: flex;
       text-align: left;
       font-family: "Muli-ExtraLight";
+      padding-right: 3%;
       
     }
     img {
@@ -35,14 +36,10 @@ footer {
   }
   .copyrightNav {
     display: flex;
-
+    width:40vw;
     p{
       font-family: "Muli-ExtraLight";
-      span{
-
-        font-family: "Muli-Bold";
-
-      }
+     // font-family: "Muli-Bold";  
     }
   }
   li {
@@ -51,4 +48,6 @@ footer {
   .Nav_links{
     list-style-type: none;
   }
+ 
+
 }
