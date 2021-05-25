@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Muli";
+  src: local("Muli"), url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+}
+
+.contact {
+  font-size: 62.5%;
+  min-width: 40%;
+  font-family: "Muli-ExtraLight";
+}
+
+.contact ul {
+  width: 40vw;
+}
+
+.contact * {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+/*# sourceMappingURL=contact.css.map */

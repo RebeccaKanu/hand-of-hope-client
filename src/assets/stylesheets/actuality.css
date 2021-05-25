@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "Muli";
+  src: local("Muli"), url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: local("MuliExtraLight"), url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: local("QuicksandRegular"), url(../../assets/fonts/Quicksand/Quicksand-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand-Light";
+  src: local("QuicksandLight"), url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
+}
+
+.actuality {
+  margin: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 4px solid red;
+  font-size: 62.5%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.actuality section {
+  text-align: center;
+  max-width: 85vw;
+  background-color: green;
+}
+
+.actuality section h1 {
+  font-size: 1rem;
+}
+
+.actuality section h2 {
+  font-weight: 300;
+  font-family: "Quicksand-Regular";
+  color: #004AAD;
+  padding-bottom: 10%;
+}
+
+.actuality section .span {
+  color: blue;
+  width: 80%;
+  height: 5%;
+  border: 15px red solid;
+}
+
+.actuality figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.actuality figure .imgcard {
+  left: 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  max-height: 60%;
+  top: 10%;
+  border-radius: 4px;
+  padding: 5px;
+  background-image: url("../../assets/images/taylor.jpg");
+}
+
+.actuality figure .a2 {
+  top: 70%;
+  color: red;
+}
+
+.actuality figure .a3 {
+  top: 38%;
+  color: blue;
+}
+
+.actuality figure a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 20%;
+  height: 1%;
+  z-index: 4;
+  left: 70%;
+  top: 6%;
+  position: absolute;
+  background-color: #D99827;
+  opacity: 70%;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.actuality figure a:hover {
+  opacity: 99%;
+}
+
+.actuality figure a em {
+  color: #D99827;
+}
+
+.actuality figure figcaption {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 6;
+  color: white;
+  border: 4px solid green;
+  left: 20%;
+  top: 22%;
+  width: 60%;
+  height: 2%;
+  font-family: "Muli";
+  text-align: center;
+}
+
+.actuality figure .figcaption2 {
+  top: 56%;
+}
+
+.actuality figure .figcaption3 {
+  top: 88%;
+}
+
+.actuality h3, .actuality p, .actuality button {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actuality h3 {
+  color: #004AAD;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Quicksand-Regular";
+}
+
+.actuality .button2 {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #356178;
+  font-size: 0.8rem;
+  font-family: "Muli-ExtraLight";
+  text-align: center;
+  border: 10px solid blueviolet;
+  position: relative;
+  width: 20%;
+  height: 2%;
+  left: 40%;
+}
+
+.actuality .button3 {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #356178;
+  font-size: 0.8rem;
+  font-family: "Muli-ExtraLight";
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  border: 10px solid #462be2;
+  left: 40%;
+  position: relative;
+  width: 20%;
+  height: 2%;
+}
+
+.actuality .button1 {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #356178;
+  font-size: 0.8rem;
+  font-family: "Muli-ExtraLight";
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  border: 10px solid #b1e22b;
+  left: 40%;
+  position: relative;
+  width: 20%;
+  height: 2%;
+}
+
+.actuality article > p {
+  font-family: "Muli-ExtraLight";
+}
+
+.actuality p {
+  font-weight: 600;
+  font-family: "Muli-ExtraLight";
+}
+/*# sourceMappingURL=actuality.css.map */

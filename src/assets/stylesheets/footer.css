@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Muli-Bold";
+  src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: local("MuliExtraLight"), url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+}
+
+footer {
+  font-size: 62.5%;
+  border: 3px solid blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  margin: 4% 12%;
+}
+
+footer div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  width: 70vw;
+  padding-bottom: 4%;
+}
+
+footer div:nth-child(1) p {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  font-family: "Muli-ExtraLight";
+  padding-right: 3%;
+}
+
+footer div:nth-child(1) img {
+  width: 20%;
+}
+
+footer .copyrightNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+}
+
+footer .copyrightNav p {
+  font-family: "Muli-ExtraLight";
+}
+
+footer li {
+  font-size: 1.4rem;
+}
+
+footer .Nav_links {
+  list-style-type: none;
+}
+/*# sourceMappingURL=footer.css.map */

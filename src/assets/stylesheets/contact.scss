@@ -1,6 +1,19 @@
+@font-face {
+  font-family: "Muli";
+  src: local("Muli"),
+    url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+}
+
 .contact {
   font-size: 62.5%;
-  border: 5px solid blueviolet;
+  min-width: 40%;
+  // border: 5px solid blueviolet;
+  font-family: "Muli-ExtraLight";
+
+  ul{
+    width: 40vw;
+
+  }
 
   * {
     font-size: 1.2em;
