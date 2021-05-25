@@ -45,7 +45,7 @@ header {
   }
 
   article {
-    font-size: 1.5;
+    font-size: 1.5em;
     position: absolute;
     top: 48%;
     right: 20%;
@@ -66,7 +66,7 @@ header {
       font-family: "Muli-ExtraLight";
       font-weight: 100;
       text-align: left;
-      font-size: 0.8rem;
+      font-size: 1em;
       padding: 25px;
       em {
         font-style: normal;
@@ -74,7 +74,7 @@ header {
         font-weight: 1;
         padding-bottom: 4px;
         font-family: "Muli-Bold";
-        font-size: 1rem;
+        font-size: 1.5em;
       }
     }
     a {
@@ -86,13 +86,11 @@ header {
     .enSavoirPlus {
       color: #fff38a;
       font-family: "Muli";
-      font-size: 0.9rem;
+      font-size:0.8em;
       background-color: transparent;
-      font-size: 0.7rem;
-      padding-left: 0px;
       em {
         color: #fff38a;
-        font-size: 0.9rem;
+        font-size: 0.8em;
       }
     }
   }
