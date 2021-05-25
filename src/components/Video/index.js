@@ -4,11 +4,18 @@ import "../../assets/stylesheets/Video.scss"
 import ReactDOM from 'react-dom';
 import App from "../../App"
 
+//nav
+
+
+
+
 
 export default class index extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {  
+
+        };
     }
    
 
@@ -18,9 +25,8 @@ export default class index extends Component {
                 <h1>Les dernière actualités de l’association </h1>
                  <h2>VIDEO EXPLICATIVE DU CONTEXTE</h2>
                  <br/>
-                <iframe width="80%" height="80%" src="https://www.youtube.com/embed/BAMwbICU7G4"
-                 title="YouTube video player" frameborder="0" allow="accelerometer;
-                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe controls  src="https://www.youtube.com/embed/BAMwbICU7G4"
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                  allowfullscreen></iframe> 
                  <br/>
                  <span></span>
