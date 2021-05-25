@@ -34,21 +34,23 @@
   font-size: 62.5%;
   position :relative;
   align-items: center;
-  // justify-content: space-evenly;
+ justify-content: space-evenly;
   box-sizing:border-box;
   
   section{
     text-align: center;
-    max-width: 85vw;
+    width: 40vw;
     background-color: green;
     h1{
-      font-size: 1rem;
+     font-size: 1rem;
+      max-width: 64em;
     }
     h2{
       font-weight:300;
       font-family: "Quicksand-Regular";
       color: #004AAD;
       padding-bottom:10%;
+      max-width: 64em;
     }
     .span{
       color:blue;
@@ -90,8 +92,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      width: 20%;
-      height:1%;
+      max-width: 20%;
+      max-height:1%;
       z-index: 4;
       left: 70%;
       top: 6%;
@@ -102,6 +104,7 @@
       color:white;
       font-size: 1.2rem;
       cursor: pointer;
+      padding: 8px;
       &:hover{
       opacity: 99%;
       }
@@ -114,28 +117,32 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 6;
+      z-index: 4;
       color:white;
       border:4px solid green;
       left: 20%;
       top: 22%;
-      width: 60%;
-      height:2%;
+      // max-width: 60%;
+      // max-height:2%;
       font-family: "Muli";
       text-align: center;
       
     }
       .figcaption2{
         top: 56%;
+        z-index: 4;
+
       }
       .figcaption3{
         top: 88%;
+        z-index: 4;
       }
 
   } 
   h3,p,button{
     text-align:center;
     align-items: center;
+    size: auto;
     
   }
     h3{
@@ -152,26 +159,21 @@
       background: none;
       color: inherit;
       border: none;
-      font: inherit;
       cursor: pointer;
-      outline: inherit;
       color:#356178;
       font-size: 0.8rem;
       font-family: "Muli-ExtraLight";
       text-align: center;
       border: 10px solid blueviolet;
       position:relative;
-      width: 20%;
-      height:2%;
+      // max-width: 20%;
       left: 40%;
     }
     .button3{
       background: none;
-      color: inherit;
       border: none;
-      font: inherit;
       cursor: pointer;
-      outline: inherit;
+      border-radius: 20%;
       color:#356178;
       font-size: 0.8rem;
       font-family: "Muli-ExtraLight";
@@ -179,8 +181,8 @@
       border: 10px solid rgb(70, 43, 226);
       left: 40%;
       position:relative;
-      width: 20%;
-      height:2%;
+      // max-width: 20%;
+      
     }
     .button1{
       background: none;
@@ -192,12 +194,11 @@
       color:#356178;
       font-size: 0.8rem;
       font-family: "Muli-ExtraLight";
-      align-items: left;
       border: 10px solid rgb(177, 226, 43);
       left: 40%;
       position:relative;
-      width: 20%;
-      height:2%;
+      // max-width: 20vw;
+      
     }
 
     article>p{
@@ -208,7 +209,18 @@
       font-family: "Muli-ExtraLight";
     }
     
+    
+}
+//A partir d'ordinateur
+@media (min-width: 1026px) {
+  
+}
+//jusqu'à la tablette
+@media (max-width: 900px) {
+  
 }
 
-
-
+//A partir Format de iphone 5
+@media (min-width: 320px) {
+  
+}
