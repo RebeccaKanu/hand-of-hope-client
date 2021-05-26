@@ -46,7 +46,7 @@ export default class index extends Component {
               </li>
             </ul>
           </div>
-          <Contact style={{ fontSize: '1.7em', width:"60%", paddingTop:"5%",}} li={{ fontFamily: "Muli-Bold"}} />
+          <Contact style={{ fontSize: '2.24em', width:"60%", paddingTop:"5%",}} li={{ fontFamily: "Muli-Bold"}} />
         </footer>
       </>
     );

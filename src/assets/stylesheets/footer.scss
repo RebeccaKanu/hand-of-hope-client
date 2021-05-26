@@ -50,14 +50,15 @@ footer {
       box-sizing: border-box;
     }
     .Nav{
-      padding-top: 5%;
+      padding-top:4%;
+      text-align:center;
       box-sizing: border-box;
       height:100%;
       width:50%;
       list-style-type: none;
       li:nth-child(n){
         padding-bottom: 5% ;
-        font-size: 1.2em;
+        font-size: 1.4em;
       }
       a{
         text-decoration: none;
