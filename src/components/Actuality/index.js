@@ -13,6 +13,8 @@ export default class index extends Component {
     this.state = {
       //  backgroundImage: taylor,
       // fontSize:
+      width:"280px",
+      height:"400px",
     };
   }
 
@@ -28,10 +30,10 @@ export default class index extends Component {
         <div>
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleOne} alt="taylor" width="280px"  height="400px"
+              <img className="imgcard" src={mainArticleOne} alt="taylor" style={{ width: this.state.width, height: this.state.height }}
                />
               <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-              <a href="#">Scolarité</a>
+              <a className="a1" href="#">Scolarité</a>
             </figure>
             <h3>TITRE DE L'ARTICLE</h3>
             <h4>ÉCRIS PAR MARYSE CONDÉ</h4>
@@ -43,7 +45,7 @@ export default class index extends Component {
 
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleTwo} alt="taylor" width="280px"  height="400px"/>
+              <img className="imgcard" src={mainArticleTwo} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
               <figcaption className="figcaption2">
                 CAMPAGNE DE DISTRIBUTION
               </figcaption>
@@ -61,7 +63,7 @@ export default class index extends Component {
 
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleThree} alt="taylor" width="280px" height="400px"/>
+              <img className="imgcard" src={mainArticleThree} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
               <figcaption className="figcaption3">
                 CAMPAGNE DE DISTRIBUTION
               </figcaption>

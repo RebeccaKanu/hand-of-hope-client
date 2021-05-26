@@ -94,4 +94,15 @@ header {
       }
     }
   }
+  @media(width:280px){
+    p{
+      font-size:15px!important;
+    }
+  }
+  // PIXEL 2XL
+  @media(min-width:411px){
+    p{
+      font-size:19px!important;  
+    }
+  }
 }
