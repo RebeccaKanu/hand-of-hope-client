@@ -55,38 +55,38 @@ header {
     z-index: 4;
     border: solid 0px rgba(0, 0, 0, 0.5);
     background: rgba(0, 0, 0, 0.5);
-
-    p:nth-child(1) {
+    
+    p:nth-child(2) {
       display: none;
     }
     .tagline {
+      padding: 6%;
       color: white;
       border-radius: 10px;
       font-weight: bold;
       font-family: "Muli-ExtraLight";
       font-weight: 100;
       text-align: left;
-      font-size: 18px;
-      padding: 25px;
-      em {
+      font-size: 15px;
+      .logo {
         font-style: normal;
         color: white;
         font-weight: 1;
-        padding-bottom: 4px;
         font-family: "Muli-Bold";
         font-size: 20px;
       }
     }
     a {
       background-color: rgba(255, 255, 255, 0.76);
-      text-align: center;
+      align-items: left;
       font-family: "Muli-ExtraLight";
       text-decoration: none;
+
     }
     .enSavoirPlus {
       color: #d99827;
       font-family: "Muli";
-      font-size:16px;
+      font-size:18px;
       background-color: transparent;
       em {
         color: #d99827;
@@ -101,8 +101,59 @@ header {
   }
   // PIXEL 2XL
   @media(min-width:411px){
+    em.logo{
+      font-size:24px!important;  
+    }
     p{
-      font-size:19px!important;  
+      font-size:22px!important;  
     }
   }
+  // IPAD
+  @media(min-width:768px){
+      article{
+        p:nth-child(1){
+          font-size:24px!important;
+        }
+        p:nth-child(2){
+          display:flex!important;
+          color:white!important;
+          flex-direction: column!important;
+          font-family: "Muli-ExtraLight"!important;
+          text-align: left;
+          font-size:24px!important;
+          padding-left: 6%!important;
+        }
+        .logo{
+          font-size:37px!important;
+          font-family: "Muli-Bold"!important;
+        }
+        .enSavoirPlus {
+          font-size: 28px !important;
+          background-color: transparent;
+          em {
+            color: #d99827;
+            font-size:25px!important;
+          }
+        }
+      }
+  }
+  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
+  @media(min-width:1024px){
+    article{
+      p:nth-child(n){
+        font-size:35px!important;
+      }
+      .logo{
+        font-size:45px!important;
+      }
+      .enSavoirPlus {
+        font-size: 33px!important;
+        padding-top: 3%!important;
+        em {
+          color: #d99827;
+          font-size:25px!important;
+        }
+      }
+    }
+  }  
 }

@@ -21,16 +21,16 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-margin-top: 10%;
+    margin-top: 10%;
     h1,h2{
       font-size:15px;
     }
     h1 {
-    font-family: 'Muli';
+    font-family:'Muli-ExtraLight';
     }
     h2 {
 
-    font-family: 'Muli-Bold';
+    font-family:'Muli-Bold';
     // color: #004aad;
     color: #356178;
     }
@@ -49,5 +49,13 @@ span{
     
   }
 }
-
+// IPAD
+@media(min-width:768px){
+  h1{
+    font-size:21px!important;    
+  }
+  h2{
+    font-size:18px!important;    
+  }
+}
 }

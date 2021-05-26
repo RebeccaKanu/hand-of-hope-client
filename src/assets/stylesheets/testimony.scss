@@ -32,7 +32,6 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-
   }
   span{
     // color:black;
@@ -41,7 +40,6 @@
     display:block;
     float:center;
     margin: 10%;
-
   }
   h2 {
     margin-top: 10%;
@@ -114,4 +112,20 @@
       color: #a2c2df;
     }
   }
+    /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
+    @media(min-width:1024px){
+      h1 {
+       font-size: 40px!important;
+      }
+      h2 {
+       font-size: 35px!important;  
+      }
+      h3,h5{
+        font-size:21px!important;
+      }
+      .testimony{
+        display:flex!important;
+        flex-direction: row!important;
+      }
+    }  
 }
