@@ -5,8 +5,8 @@ import logo from "../../assets/images/logo-hoh.png";
 import Contact from "../Contact";
 
 export default class index extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
       this.state={
         fontSize: "1.2em",
        
@@ -16,7 +16,7 @@ export default class index extends Component {
   render() {
     return (
       <>
-        <footer  >
+        <footer>
           <div>
             <p>Hands of hope est une association caritative née en 2020</p>
             <img src={logo} alt="logo hoh" />
@@ -46,7 +46,7 @@ export default class index extends Component {
               </li>
             </ul>
           </div>
-          <Contact className="contactFooter" />
+          <Contact style={{ fontSize: '1.7em', width:"60%", paddingTop:"5%",}} li={{ fontFamily: "Muli-Bold"}} />
         </footer>
       </>
     );
