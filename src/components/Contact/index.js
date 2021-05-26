@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../assets/stylesheets/contact.scss";
 
-const Contact = ({ style, liStyle}) => {
+const Contact = ({ style, li }) => {
   return (
     <div className="contact">
       <ul style={style}>
@@ -13,7 +13,7 @@ const Contact = ({ style, liStyle}) => {
         <li>
           <a href="mailto:handofhope1@outlook.fr">handofhope1@outlook.fr</a>
         </li>
-        <li liStyle={liStyle}>06 23 35 62 69</li>
+        <li style={li }>06 23 35 62 69</li>
       </ul>
     </div>
     )

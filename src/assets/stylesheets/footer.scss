@@ -11,7 +11,6 @@
 }
 footer {
   font-size: 62.5%;
-  // border: 3px solid blue;
   justify-content: center;
   text-align: left;
   margin: 4% 6%;
@@ -26,19 +25,13 @@ footer {
     font-size:1.4em;
   }
   div:nth-child(1) {
-    // justify-content: space-between;
     display: flex;
     width: 100%;
     padding-bottom: 4%;
-  // font-size:1.2em !important;
-    
     p {
-      // font-size:1.2em;
       padding-top: 8%;
       width: 80%;
-      display: flex;
-      // text-align: left;
-      // padding-right: 3%;    
+      display: flex;  
     }
     img {
       width: 40%;
@@ -48,14 +41,13 @@ footer {
   div:nth-child(2){
     height:100%;
     width:100%;
-    border-top: 1px solid red;
+    border-top: 1px solid black;
     display: flex;
     box-sizing: border-box;
     overflow: hidden;
     .copyright{
       width: 50%;
       box-sizing: border-box;
-      // height: 70%;
     }
     .Nav{
       padding-top: 5%;
@@ -67,18 +59,13 @@ footer {
         padding-bottom: 5% ;
         font-size: 1.2em;
       }
-      // font-size:1.2em;
-
       a{
-        // font-size:1.2em !important;
         text-decoration: none;
         color: black;
-      }  
-      
+      }      
     }
     .contactFooter{
       border:3px solid blue ;
     }
-    
   }
 }
