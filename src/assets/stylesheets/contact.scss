@@ -9,17 +9,21 @@
   min-width: 40%;
   // border: 5px solid blueviolet;
   font-family: "Muli-ExtraLight";
-
-  ul{
-    width: 40vw;
-
-  }
-
+  order:1;
   * {
-    font-size: 1.2em;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
   }
+  ul{
+    font-size: 1.2em;
+    width: 40%;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+  
 }
+

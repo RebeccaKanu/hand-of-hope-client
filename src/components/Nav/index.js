@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "../../assets/stylesheets/nav.scss";
-
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Redirect,
+//   // Link,
+// } from "react-router-dom";
 class index extends Component {
   constructor(props) {
     super(props);
@@ -89,6 +95,7 @@ class index extends Component {
   burgerMenuCompteur = () => {
     this.setState({
       compteur: this.state.compteur + this.state.n,
+     
     });
 
     if (this.state.compteur % 2) {
@@ -149,19 +156,18 @@ class index extends Component {
             <a href="/sengager">{this.state.sengager}</a>
           </li>
 
-          <div className="contactContainer">
-            <li className="contacts">
-              <a href="#" onClick={this.adressCompteur}>
-                {this.state.contact}
-              </a>
-              <div className="contactPart1">
-                <p>{this.state.contactAdressPart1}</p>
-              </div>
-              <div className="contactPart2">
-                <p>{this.state.contactAdressPart2}</p>
-              </div>
-            </li>
-          </div>
+          {/* <div className="contactContainer"> */}
+          <li className="contacts">
+            <a href="#" onClick={this.adressCompteur}>
+              {this.state.contact}
+            </a>
+            <div className="contactPart1">
+              <p>{this.state.contactAdressPart1}</p>
+            </div>
+            <div className="contactPart2">
+              <p>{this.state.contactAdressPart2}</p>
+            </div>
+          </li>
           {/* </div> */}
         </ul>
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
