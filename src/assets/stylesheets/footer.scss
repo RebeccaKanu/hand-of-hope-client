@@ -14,8 +14,9 @@ footer {
   justify-content: center;
   text-align: left;
   margin: 4% 12%;
-  // height:40vh;
-  // box-sizing: border-box;
+  font-family: "Muli-ExtraLight" !important;
+  // font-family: "Muli-Bold";  
+
   div:nth-child(1) {
     display: flex;
     max-width: 100%;
@@ -26,28 +27,27 @@ footer {
       width: 50%;
       display: flex;
       text-align: left;
-      font-family: "Muli-ExtraLight";
-      padding-right: 3%;
-      
+      padding-right: 3%;    
     }
     img {
       width: 20%;
     }
   }
+
   .copyrightNav {
     display: flex;
-    width:40vw;
-    p{
-      font-family: "Muli-ExtraLight";
-     // font-family: "Muli-Bold";  
-    }
+    width: 40vw;
+    flex-direction: column;
+    flex-direction: column;
   }
-  li {
-    font-size: 1.4rem;
-  }
-  .Nav_links{
+  .Nav_links {
+    padding-left:0;
+    width:90vw;
     list-style-type: none;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    
   }
- 
-
 }

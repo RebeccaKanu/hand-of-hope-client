@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "../../assets/stylesheets/nav.scss";
-
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Redirect,
+//   // Link,
+// } from "react-router-dom";
 class index extends Component {
   constructor(props) {
     super(props);
