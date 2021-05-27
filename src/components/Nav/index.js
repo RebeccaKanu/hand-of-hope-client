@@ -125,25 +125,24 @@ class index extends Component {
   };
   /************************/
 
-  // componentDidMount() {
-  //   // si la width de la window est > ou égale à 768 alors affiche la nav en display flex
-  //   if (window.innerWidth >= 768) {
-  //     this.setState({
-  //       contact: "Contact",
-  //       actualite: "Actualité",
-  //       don: "Faire un don",
-  //       nous: "Qui sommes nous ?",
-  //       sengager: "S'engager",
-  //       display: "flex",
-  //       paddingLeft: "25px",
-  //       marginLeft: "29px",
-  //       fontSize: "0.8rem",
-  //       marginTop: "46px",
-  //       position: "",
-  //     });
-  //   }
-  //   //le else est déjà gérer dans le component nav
-  // }
+  componentDidMount() {
+    // si la width de la window est > ou égale à 768 alors affiche la nav en display flex
+    if (window.innerWidth >= 768) {
+      this.setState({
+        contact: "Contact",
+        actualite: "Actualité",
+        don: "Faire un don",
+        nous: "Qui sommes nous ?",
+        sengager: "S'engager",
+        display: "flex",
+        paddingLeft: "25px",
+        marginLeft: "29px",
+        fontSize: "0.8rem",
+        marginTop: "46px",
+        position: "",
+      });
+    }
+  }
 
   render() {
     return (
@@ -160,43 +159,44 @@ class index extends Component {
           style={{
             width: this.state.width,
             height: this.state.height,
-            // display: this.state.display,
-            // marginLeft: this.state.marginLeft,
-            // marginTop: this.state.marginTop,
-            // position: this.state.position,
+            display: this.state.display,
+            marginLeft: this.state.marginLeft,
+            marginTop: this.state.marginTop,
+            position: this.state.position,
           }}
+          className="Links"
         >
           {/* <div> */}
           {/*changement dynamique des va this.hideMenu();leurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
           <li
-          // style={{
-          //   paddingLeft: this.state.paddingLeft,
-          //   fontSize: this.state.fontSize,
-          // }}
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
           >
             <a href="/actualite">{this.state.actualite}</a>
           </li>
           <li
-          // style={{
-          //   paddingLeft: this.state.paddingLeft,
-          //   fontSize: this.state.fontSize,
-          // }}
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
           >
             <a href="/don">{this.state.don}</a>
           </li>
           <li
-          // style={{
-          //   paddingLeft: this.state.paddingLeft,
-          //   fontSize: this.state.fontSize,
-          // }}
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
           >
             <a href="/nous">{this.state.nous}</a>
           </li>
           <li
-          // style={{
-          //   paddingLeft: this.state.paddingLeft,
-          //   fontSize: this.state.fontSize,
-          // }}
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
           >
             <a href="/sengager">{this.state.sengager}</a>
           </li>
@@ -204,10 +204,10 @@ class index extends Component {
           {/* <div className="contactContainer"> */}
           <li
             className="contacts"
-            // style={{
-            //   paddingLeft: this.state.paddingLeft,
-            //   fontSize: this.state.fontSize,
-            // }}
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
           >
             <a href="#" onClick={this.adressCompteur}>
               {this.state.contact}
