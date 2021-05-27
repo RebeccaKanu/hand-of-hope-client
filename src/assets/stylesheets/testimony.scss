@@ -112,6 +112,20 @@
       color: #a2c2df;
     }
   }
+   /////////////// SURFACE 540PX \\\\\\\\\\\\\\\   
+   @media(min-width:540px){
+      h1,
+      h2{
+        font-size:25px!important; 
+      }
+      h3,
+      h4 {
+        font-size:22px!important;  
+      }
+      p{
+        font-size:17px!important;
+      }
+    }  
  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
  @media(min-width:1024px){
    
@@ -154,7 +168,6 @@
         .blue{
           padding-bottom: 0!important;
           border-bottom:none!important;
-          // padding-top: 0!important;
         }
         .pink{
           padding-top: 8%!important;

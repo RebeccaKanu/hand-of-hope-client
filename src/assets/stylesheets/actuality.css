@@ -323,11 +323,24 @@
 }
 
 @media (min-width: 540px) {
+  .actuality h1,
+  .actuality h2 {
+    font-size: 25px !important;
+  }
   .actuality .a1, .actuality .a3 {
     left: 56% !important;
   }
   .actuality figcaption {
     left: 28% !important;
+  }
+  .actuality .a1 {
+    top: 10% !important;
+  }
+  .actuality .a2 {
+    top: 40.8% !important;
+  }
+  .actuality .a3 {
+    top: 71.5% !important;
   }
 }
 

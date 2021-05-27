@@ -316,12 +316,25 @@
   }
   // SURFACE DUO
   @media(min-width:540px){
+    h1,
+    h2{
+      font-size:25px!important; 
+    }
     .a1,.a3{
       left: 56%!important;
     }
     figcaption{
       left: 28%!important;
-    }  
+    }
+    .a1{
+      top:10%!important;
+    }
+    .a2{
+      top:40.8%!important;
+    }
+    .a3{
+      top:71.5%!important;
+    }
   }
 // IPAD
   @media(min-width:768px){
