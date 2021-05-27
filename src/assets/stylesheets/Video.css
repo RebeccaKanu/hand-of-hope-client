@@ -26,19 +26,44 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 10;
+  position: relative;
+  margin-top: 10%;
+}
+
+.video h1, .video h2 {
+  font-size: 15px;
 }
 
 .video h1 {
-  font-family: 'Muli';
+  font-family: 'Muli-ExtraLight';
 }
 
 .video h2 {
   font-family: 'Muli-Bold';
-  color: #004aad;
+  color: #356178;
+}
+
+.video iframe {
+  width: 80vw;
+  height: 40vh;
 }
 
 .video span {
   color: black;
+}
+
+@media (width: 280px) {
+  .video h1, .video h2 {
+    font-size: 13.5px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .video h1 {
+    font-size: 21px !important;
+  }
+  .video h2 {
+    font-size: 18px !important;
+  }
 }
 /*# sourceMappingURL=Video.css.map */

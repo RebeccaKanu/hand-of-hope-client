@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Muli-Bold";
+  src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Quicksand-Regular";
   src: local("QuicksandRegular"), url(../../assets/fonts/Quicksand/Quicksand-Regular.ttf);
 }
@@ -14,9 +19,8 @@
 }
 
 .testimony {
-  border-top: 1px solid black;
-  padding-top: 5%;
-  padding-left: 12%;
+  margin-top: 14%;
+  text-align: center;
 }
 
 .testimony * {
@@ -36,28 +40,40 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.testimony span {
+  background: black;
+  height: 1px;
+  display: block;
+  float: center;
+  margin: 10%;
 }
 
 .testimony h2 {
-  font-family: "Muli-ExtraLigth";
-  margin-right: 10%;
+  margin-top: 10%;
+  font-family: "Roboto-Light";
   font-weight: 100;
+  font-size: 20px;
+  text-align: center;
 }
 
 .testimony h1 {
-  font-family: "Quicksand-Regular";
-  margin-right: 10%;
-  color: black !important;
-  margin-right: 10%;
+  font-family: "Roboto-Bold";
+  color: #D29E44 !important;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .testimony .box {
   padding-top: 2%;
-  width: 70vw;
 }
 
-.testimony .box h3, .testimony .box h4 {
+.testimony .box h3,
+.testimony .box h4 {
+  font-size: 18px;
   font-weight: bold;
   color: black !important;
 }
@@ -68,42 +84,104 @@
 
 .testimony .box h4 {
   margin-top: 5px;
-  font-family: "Quicksand-Regular";
+  font-family: "Muli-Bold";
   font-weight: bold;
 }
 
 .testimony .box h5 {
-  margin-top: 10px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-bottom: 5%;
   font-family: "Quicksand-Light";
 }
 
 .testimony .box p {
+  font-size: 16px;
   font-family: "Quicksand-Regular";
 }
 
 .testimony .pink {
-  border-top: 1px solid black;
+  margin-bottom: 10%;
+  margin-top: 20%;
 }
 
 .testimony .pink h5 {
-  border-bottom: 1px solid #D140D6;
-  color: #D140D6;
+  border-bottom: 1px solid #d140d6;
+  color: #d140d6;
   padding-bottom: 2%;
+}
+
+.testimony .green {
+  margin-bottom: 10%;
 }
 
 .testimony .green h5 {
   border-bottom: 1px solid #91C877;
-  color: #91C877;
+  color: #91c877;
 }
 
 .testimony .blue {
+  margin-bottom: 10%;
   border-bottom: 1px solid black;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 .testimony .blue h5 {
-  border-bottom: 1px solid #A2C2DF;
-  color: #A2C2DF;
+  border-bottom: 1px solid #a2c2df;
+  color: #a2c2df;
+}
+
+@media (min-width: 1024px) {
+  .testimony {
+    margin: 4% 6% !important;
+  }
+  .testimony span {
+    margin: 0 !important;
+  }
+  .testimony h1 {
+    font-size: 40px !important;
+  }
+  .testimony h2 {
+    font-size: 35px !important;
+  }
+  .testimony h3, .testimony h4 {
+    font-size: 26px !important;
+  }
+  .testimony h5 {
+    font-size: 20px !important;
+  }
+  .testimony p {
+    font-size: 24px !important;
+  }
+  .testimony .allBox {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    border-bottom: 1px solid black !important;
+  }
+  .testimony .allBox .box {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 35% !important;
+    margin: 6% 2% !important;
+  }
+  .testimony .allBox .pink,
+  .testimony .allBox .blue
+.green {
+    margin-top: 0% !important;
+    padding-top: 0 !important;
+  }
+  .testimony .allBox .blue {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+  .testimony .allBox .pink {
+    padding-top: 8% !important;
+  }
 }
 /*# sourceMappingURL=testimony.css.map */
