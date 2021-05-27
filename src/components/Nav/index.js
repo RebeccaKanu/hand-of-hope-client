@@ -140,6 +140,7 @@ class index extends Component {
         fontSize: "0.8rem",
         marginTop: "46px",
         position: "",
+        flexDirection: "row",
       });
     }
   }
@@ -160,6 +161,7 @@ class index extends Component {
             width: this.state.width,
             height: this.state.height,
             display: this.state.display,
+            flexDirection: this.state.flexDirection,
             marginLeft: this.state.marginLeft,
             marginTop: this.state.marginTop,
             position: this.state.position,
