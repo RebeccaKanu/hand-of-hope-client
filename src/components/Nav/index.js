@@ -20,15 +20,10 @@ class index extends Component {
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
       n: 1, //n va s'incrément de 1 à chaque clique,
-      //
-      // width: "",
-      // backgroundColor: "",
-      // opacity: "",
-      // transition: "",
-      // height: "",
-      // zIndex: 10,
     };
   }
+
+  /************************/
 
   showAdress = () => {
     this.setState({
@@ -45,6 +40,8 @@ class index extends Component {
       contactwidth: 0,
     });
   };
+
+  /************************/
 
   //on remplie le menu qui était initialement vide pour que lorsque l'on clique les éléments du menu s'affiche
   showMenu = () => {
@@ -91,11 +88,12 @@ class index extends Component {
     });
   };
 
+  /************************/
+
   //on créer un compteur pour qu'au premier(0) clique le menu s'affiche au second(1) il disparaissent au troisième(2) il apparaissent etc...
   burgerMenuCompteur = () => {
     this.setState({
       compteur: this.state.compteur + this.state.n,
-     
     });
 
     if (this.state.compteur % 2) {
@@ -125,11 +123,26 @@ class index extends Component {
       this.hideAdress();
     }
   };
-desktoplinks = () =>{
-this.setState({
-// if(window.innerWidth=>768px)
-})
-}
+  /************************/
+
+  componentDidMount() {
+    // si la width de la window est > ou égale à 768 alors affiche la nav en display flex
+    if (window.innerWidth >= 768) {
+      this.setState({
+        contact: "Contact",
+        actualite: "Actualité",
+        don: "Faire un don",
+        nous: "Qui sommes nous ?",
+        sengager: "S'engager",
+        display: "flex",
+        paddingLeft: "25px",
+        marginLeft: "29px",
+        fontSize: "0.8rem",
+        marginTop: "46px",
+        position: "",
+      });
+    }
+  }
 
   render() {
     return (
@@ -143,26 +156,59 @@ this.setState({
         disparait(else)*/}
 
         <ul
-          className="Links" idName="desktop" 
-          style={{ width: this.state.width, height: this.state.height }}
+          style={{
+            width: this.state.width,
+            height: this.state.height,
+            display: this.state.display,
+            marginLeft: this.state.marginLeft,
+            marginTop: this.state.marginTop,
+            position: this.state.position,
+          }}
+          className="Links"
         >
           {/* <div> */}
           {/*changement dynamique des va this.hideMenu();leurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/actualite">{this.state.actualite}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/don">{this.state.don}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/nous">{this.state.nous}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/sengager">{this.state.sengager}</a>
           </li>
 
           {/* <div className="contactContainer"> */}
-          <li className="contacts">
+          <li
+            className="contacts"
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="#" onClick={this.adressCompteur}>
               {this.state.contact}
             </a>
