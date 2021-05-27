@@ -8,23 +8,24 @@ export default class index extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
       <header>
         <img className="imgHeader" src={Header2} alt="taylor" />
         <article>
+          <p className="tagline">
+            <em className="logo">Hand of Hope</em> <br />
+            rassemble des hommes et des femmes de cœur pour relever différents
+            défis. Nous sommes tous Hand of Hope ! <br />
+          </p>
           <p>
             "Une formidable aventure humaine, basée sur la générosité,
             l’énergie, une synergie de compétences et le don de soi.
           </p>
-          <p className="tagline">
-            <em>Hand of Hope</em> <br />
-            rassemble des hommes et des femmes de cœur pour relever différents
-            défis. Nous sommes tous Hand of Hope ! <br />
-            <a href="/About" className="enSavoirPlus">
-              En savoir plus <em>&rarr;</em>
-            </a>
-          </p>
+          <a href="/About" className="enSavoirPlus">
+            En savoir plus <em>&rarr;</em>
+          </a>
         </article>
       </header>
     );

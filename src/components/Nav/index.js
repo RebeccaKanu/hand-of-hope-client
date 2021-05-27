@@ -20,15 +20,10 @@ class index extends Component {
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
       n: 1, //n va s'incrément de 1 à chaque clique,
-      //
-      // width: "",
-      // backgroundColor: "",
-      // opacity: "",
-      // transition: "",
-      // height: "",
-      // zIndex: 10,
     };
   }
+
+  /************************/
 
   showAdress = () => {
     this.setState({
@@ -45,6 +40,8 @@ class index extends Component {
       contactwidth: 0,
     });
   };
+
+  /************************/
 
   //on remplie le menu qui était initialement vide pour que lorsque l'on clique les éléments du menu s'affiche
   showMenu = () => {
@@ -91,6 +88,8 @@ class index extends Component {
     });
   };
 
+  /************************/
+
   //on créer un compteur pour qu'au premier(0) clique le menu s'affiche au second(1) il disparaissent au troisième(2) il apparaissent etc...
   burgerMenuCompteur = () => {
     this.setState({
@@ -124,6 +123,27 @@ class index extends Component {
       this.hideAdress();
     }
   };
+  /************************/
+
+  componentDidMount() {
+    // si la width de la window est > ou égale à 768 alors affiche la nav en display flex
+    if (window.innerWidth >= 768) {
+      this.setState({
+        contact: "Contact",
+        actualite: "Actualité",
+        don: "Faire un don",
+        nous: "Qui sommes nous ?",
+        sengager: "S'engager",
+        display: "flex",
+        paddingLeft: "25px",
+        marginLeft: "29px",
+        fontSize: "0.8rem",
+        marginTop: "46px",
+        position: "",
+        flexDirection: "row",
+      });
+    }
+  }
 
   render() {
     return (
@@ -137,37 +157,70 @@ class index extends Component {
         disparait(else)*/}
 
         <ul
+          style={{
+            width: this.state.width,
+            height: this.state.height,
+            display: this.state.display,
+            flexDirection: this.state.flexDirection,
+            marginLeft: this.state.marginLeft,
+            marginTop: this.state.marginTop,
+            position: this.state.position,
+          }}
           className="Links"
-          style={{ width: this.state.width, height: this.state.height }}
         >
           {/* <div> */}
           {/*changement dynamique des va this.hideMenu();leurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/actualite">{this.state.actualite}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/don">{this.state.don}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/nous">{this.state.nous}</a>
           </li>
-          <li>
+          <li
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
             <a href="/sengager">{this.state.sengager}</a>
           </li>
 
-          <div className="contactContainer">
-            <li className="contacts">
-              <a href="#" onClick={this.adressCompteur}>
-                {this.state.contact}
-              </a>
-              <div className="contactPart1">
-                <p>{this.state.contactAdressPart1}</p>
-              </div>
-              <div className="contactPart2">
-                <p>{this.state.contactAdressPart2}</p>
-              </div>
-            </li>
-          </div>
+          {/* <div className="contactContainer"> */}
+          <li
+            className="contacts"
+            style={{
+              paddingLeft: this.state.paddingLeft,
+              fontSize: this.state.fontSize,
+            }}
+          >
+            <a href="#" onClick={this.adressCompteur}>
+              {this.state.contact}
+            </a>
+            <div className="contactPart1">
+              <p>{this.state.contactAdressPart1}</p>
+            </div>
+            <div className="contactPart2">
+              <p>{this.state.contactAdressPart2}</p>
+            </div>
+          </li>
           {/* </div> */}
         </ul>
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
