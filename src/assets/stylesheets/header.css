@@ -1,6 +1,16 @@
 @font-face {
-  font-family: "Muli-Light";
-  src: local("MuliLight"), url(../../assets/fonts/muli/Muli-Light.ttf) format("truetype");
+  font-family: "Muli";
+  src: local("Muli"), url(../../assets/fonts/muli/Muli.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: local("MuliExtraLight"), url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
 }
 
 header {
@@ -22,49 +32,139 @@ header {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 !important;
 }
 
 header .imgHeader {
-  min-height: 80vh;
-  max-width: 100Vw;
-  position: relative;
-  margin: 0;
-  padding: 0%;
-  z-index: 2;
-  -webkit-filter: grayscale(60%);
-          filter: grayscale(60%);
+  margin: 0 !important;
+  opacity: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  -webkit-filter: saturate(5%) contrast(125%);
+          filter: saturate(5%) contrast(125%);
 }
 
 header article {
-  font-size: 1.5;
+  font-size: 16px;
   position: absolute;
-  top: 60%;
-  right: 4%;
+  top: 48%;
+  right: 20%;
+  width: 80%;
+  height: 45%;
   border-radius: 10px;
   z-index: 4;
-  border: solid 2px black;
-  width: 80%;
+  border: solid 0px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-header article p:nth-child(1) {
+header article p:nth-child(2) {
   display: none;
 }
 
 header article .tagline {
-  color: black;
+  padding: 6%;
+  color: white;
+  border-radius: 10px;
   font-weight: bold;
-  font-family: "Muli-Light";
-  font-weight: 500;
+  font-family: "Muli-ExtraLight";
+  font-weight: 100;
+  text-align: left;
+  font-size: 15px;
 }
 
-header article .tagline em {
+header article .tagline .logo {
   font-style: normal;
-  color: #D99827;
+  color: white;
   font-weight: 1;
-  padding-bottom: 4px;
+  font-family: "Muli-Bold";
+  font-size: 20px;
 }
 
 header article a {
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.76);
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "Muli-ExtraLight";
+  text-decoration: none;
+}
+
+header article .enSavoirPlus {
+  color: #d99827;
+  font-family: "Muli";
+  font-size: 18px;
+  background-color: transparent;
+}
+
+header article .enSavoirPlus em {
+  color: #d99827;
+  font-size: 16px;
+}
+
+@media (width: 280px) {
+  header p {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 411px) {
+  header em.logo {
+    font-size: 24px !important;
+  }
+  header p {
+    font-size: 22px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  header article p:nth-child(1) {
+    font-size: 24px !important;
+  }
+  header article p:nth-child(2) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    color: white !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    font-family: "Muli-ExtraLight" !important;
+    text-align: left;
+    font-size: 24px !important;
+    padding-left: 6% !important;
+  }
+  header article .logo {
+    font-size: 37px !important;
+    font-family: "Muli-Bold" !important;
+  }
+  header article .enSavoirPlus {
+    font-size: 28px !important;
+    background-color: transparent;
+  }
+  header article .enSavoirPlus em {
+    color: #d99827;
+    font-size: 25px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  header article p:nth-child(n) {
+    font-size: 35px !important;
+  }
+  header article .logo {
+    font-size: 45px !important;
+  }
+  header article .enSavoirPlus {
+    font-size: 33px !important;
+    padding-top: 3% !important;
+  }
+  header article .enSavoirPlus em {
+    color: #d99827;
+    font-size: 25px !important;
+  }
 }
 /*# sourceMappingURL=header.css.map */
