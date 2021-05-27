@@ -36,7 +36,6 @@ export default class index extends Component {
               <a className="a1" href="#">Scolarité</a>
             </figure>
             <h3>TITRE DE L'ARTICLE</h3>
-            <h4>ÉCRIS PAR MARYSE CONDÉ</h4>
             <p>Article de la campagne de distribution</p>
             <button className="button1">
               <Link to="#">Lire la suite &nbsp; &rarr;</Link>
@@ -54,7 +53,6 @@ export default class index extends Component {
               </a>
             </figure>
               <h3>TITRE DE L'ARTICLE</h3>
-              <h4>ÉCRIS PAR MARYSE CONDÉ</h4>
               <p>Article de la campagne de distribution</p>
               <button className="button2">
                 <Link to="#">Lire la suite &nbsp; &rarr;</Link>
@@ -72,7 +70,6 @@ export default class index extends Component {
               </a>
             </figure>
             <h3>TITRE DE L'ARTICLE</h3>
-            <h4>ÉCRIS PAR MARYSE CONDÉ</h4>
             <p>Article de la campagne de distribution</p>
             <button className="button3">
               <Link to="#">
