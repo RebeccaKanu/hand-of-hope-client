@@ -12,6 +12,11 @@
   src: local("MuliBold"),
     url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("RobotoBold"),
+    url(../../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
 header {
   display: flex;
   justify-content: center;
@@ -25,6 +30,8 @@ header {
   // border: 10px solid green;
   overflow: hidden;
   margin: 0 !important;
+
+  
   .imgHeader {
     margin: 0 !important;
     opacity: rgba(0, 0, 0, 0.7);
@@ -68,7 +75,7 @@ header {
       font-weight: 100;
       text-align: left;
       font-size: 15px;
-      .logo {
+      .titleTagline {
         font-style: normal;
         color: white;
         font-weight: 1;
@@ -101,7 +108,7 @@ header {
   }
   // PIXEL 2XL
   @media(min-width:411px){
-    em.logo{
+    em.titleTagline{
       font-size:24px!important;  
     }
     p{
@@ -123,7 +130,7 @@ header {
           font-size:24px!important;
           padding-left: 6%!important;
         }
-        .logo{
+        .titleTagline{
           font-size:37px!important;
           font-family: "Muli-Bold"!important;
         }
@@ -139,15 +146,95 @@ header {
   }
   /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
   @media(min-width:1024px){
+    display:flex!important;
+    flex-direction: column!important;
+    // position:static;
+    height: 100vh!important;
+    .logo{
+      p{
+        color: black;
+        font-family: "Muli-Bold"!important;
+      }
+    }
+
+      p:nth-child(1){
+        border: 2px solid rgb(216, 203, 22);
+        z-index: 4;
+
+      }
+      p:nth-child(2){
+        border: 2px solid teal;
+        position: relative;
+        z-index: 2;
+        // top: 190%;
+        left: 30%;
+        color: white;
+        font-family: "Muli-Bold"!important;
+        font-size: 2.1rem;
+      }
+     
+    //  section{
+        
+    //    width: 40%;
+    //  }
+   
+    .imgHeader {
+      // width: 70%;
+      object-position: right 75%!important;
+      clip: rect(0, 600px, 342px,600px)!important;
+      top:1%;
+      border:5px solid red!important;
+      // flex-direction:co!important;
+      // object-position:right70%!important;
+      // height: 568px;
+      // width: 300px;
+      // position: relative;
+      // margin: 0;
+      // padding: 0%;
+      // z-index: 2;
+      // z-index: 2;
+      // display: contents;
+      // border: 3px violet solid;
+      // height: 100vh!important;
+      box-sizing: border-box;
+      // margin-left:40%!important;
+      // overflow: hidden;
+      // display:flex!important;
+      justify-content: flex-end!important;
+      align-items:flex-end!important;
+      position: absolute;
+      // z-index: 1;
+
+    }
+   
     article{
+
+      display: flex;
+      background-color: transparent!important;
+      color:black!important;
+      flex-direction:column!important;
+      div .logo{
+        display: flex;
+        flex-direction:column!important;
+        align-items:flex-start!important;
+        border: 5px solid yellow;
+        justify-content:flex-start!important;
+        // z-index:8!important;
+        p{
+          color :blue!important;
+        
+        // z-index:8!important;
+          
+        }
       p:nth-child(n){
         font-size:35px!important;
       }
-      .logo{
-        font-size:45px!important;
+      .titleTagline{
+        font-size:4px!important;
+        color: #d99827!important;
       }
       .enSavoirPlus {
-        font-size: 33px!important;
+        font-size: 3px!important;
         padding-top: 3%!important;
         em {
           color: #d99827;
@@ -155,5 +242,40 @@ header {
         }
       }
     }
+      // div.logo{
+
+      //   display: flex;
+      //   flex-direction:column!important;
+      //   align-items: left!important;
+      //   border: 5px solid yellow;
+      //   justify-content: left!important;
+      //   z-index:8!important;
+      //   color :blue!important;
+      //   p{
+      //     color:rgb(128, 0, 17);
+      //   z-index:8!important;
+          
+      //   }
+     
+        
+
+
+      }
+    
+    .facebookLink{
+      transform: rotate(180deg)!important;
+      font-family:"Roboto-Bold"!important;
+      writing-mode: vertical-lr!important;
+      color: white!important;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      z-index: 2;
+      text-transform: capitalize!important;
+      font-size:20px!important;
+      text-decoration: none!important;
+      display: flex!important;
+      justify-content: left;
+      
+    }
+
   }  
 }

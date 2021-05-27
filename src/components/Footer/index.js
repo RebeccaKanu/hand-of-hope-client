@@ -50,11 +50,18 @@ export default class index extends Component {
         border: "3px solid red"
       });
     } 
+
   };
   
-  
+// this.fontSize:
+//   }
+
+  // variable qui ferait reference au style exemple fontSize mais sans unitée 
+      
   
   render() {
+
+
     return (
       <>
       
