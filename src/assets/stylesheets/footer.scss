@@ -22,7 +22,7 @@ footer {
     list-style: none;
   }
   p{
-    font-size:1.4em;
+    font-size:1.6em;
   }
   div:nth-child(1) {
     display: flex;
@@ -35,7 +35,6 @@ footer {
     }
     img {
       width: 40%;
-
     }
   }
   div:nth-child(2){
@@ -50,14 +49,15 @@ footer {
       box-sizing: border-box;
     }
     .Nav{
-      padding-top: 5%;
+      padding-top:4%;
+      text-align:center;
       box-sizing: border-box;
       height:100%;
       width:50%;
       list-style-type: none;
       li:nth-child(n){
         padding-bottom: 5% ;
-        font-size: 1.2em;
+        font-size: 1.6em;
       }
       a{
         text-decoration: none;
@@ -67,5 +67,12 @@ footer {
     .contactFooter{
       border:3px solid blue ;
     }
+ /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
+     @media(min-width:1024px){
+    
+      p{
+       font-size:2em ;
+     }
+    }  
   }
 }

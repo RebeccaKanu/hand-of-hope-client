@@ -125,6 +125,11 @@ class index extends Component {
       this.hideAdress();
     }
   };
+desktoplinks = () =>{
+this.setState({
+// if(window.innerWidth=>768px)
+})
+}
 
   render() {
     return (
@@ -138,7 +143,7 @@ class index extends Component {
         disparait(else)*/}
 
         <ul
-          className="Links"
+          className="Links" idName="desktop" 
           style={{ width: this.state.width, height: this.state.height }}
         >
           {/* <div> */}
