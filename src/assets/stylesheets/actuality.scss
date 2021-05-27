@@ -327,47 +327,85 @@
   @media(min-width:768px){
     .a1,.a3{
       left: 53%!important;
+
     }
     figcaption{
       left: 35%!important;
+      
     }  
   }
   /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
   @media(min-width:1024px){
+    div{
+      // border:3px solid red;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
     h1 {
      font-size: 40px!important;
     }
     h2 {
      font-size: 35px!important;  
     }
+    h3{
+      font-size: 26px!important;
+    }
+
+    p{font-size: 26px!important;}
+
+    h4{
+      font-size: 22px!important;
+   }
+   .button1,.button2,.button3{
+    font-size: 28px!important;
+   }
     article{ 
       display:inline-block!important;
+      // text-align: center;
+      width: 30%;
+      h3,h4,p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // margin:0 5% 0 9%!important;   
+      }
       img{
-        margin:10%!important;
+        display: block;
       }
         .a1{
-          left:19.12%!important;
-          top: 31.5% !important;
-          border:5px double  #d99827!important;
-          border: 5px inset #d99827!important; ;
+          left:20.4% !important;
+          top: 24.5% !important;
+          
+          
         }
         .a2{
-          margin: 0!important;
-          left: 46% !important;
-          background: transparent!important;
-          border:5px double  #d99827!important;
-          background-color:white!important;
-          top: 31.5% !important;   
+          // margin: 0!important;
+          left: 45.2%!important;
+          // background: transparent!important;
+          // border:5px double  #d99827!important;
+          // background-color:rgba(255, 255, 255, 0)!important;
+          top: 24.5% !important;   
         }
         .a3{
-          top: 31.5% !important;
-          left: 84%!important;   
+          left: 80.5%!important;   
+          top: 24.5% !important;   
         }
-  // figcaption{
-  //   left: 35%!important;
-  // }
-
-
+        figcaption{
+          top: 67%!important;
+          left: 6% !important;
+          font-size: 18px!important;
+          // height:0vh!important;
+          // width: 15%!important;
+          // color:red!important; 
+        }
+        .figcaption2{
+          left: 36.5%!important; 
+        }
+        .figcaption3{
+          left: 66.3%!important;     
+        }
   }
 }
 
