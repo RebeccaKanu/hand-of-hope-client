@@ -12,6 +12,11 @@
   src: local("MuliBold"),
     url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("RobotoBold"),
+    url(../../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
 header {
   display: flex;
   justify-content: center;
@@ -25,6 +30,7 @@ header {
   // border: 10px solid green;
   overflow: hidden;
   margin: 0 !important;
+
   .imgHeader {
     margin: 0 !important;
     opacity: rgba(0, 0, 0, 0.7);
@@ -55,7 +61,7 @@ header {
     z-index: 4;
     border: solid 0px rgba(0, 0, 0, 0.5);
     background: rgba(0, 0, 0, 0.5);
-    
+
     p:nth-child(2) {
       display: none;
     }
@@ -68,7 +74,7 @@ header {
       font-weight: 100;
       text-align: left;
       font-size: 15px;
-      .logo {
+      .titleTagline {
         font-style: normal;
         color: white;
         font-weight: 1;
@@ -81,12 +87,11 @@ header {
       align-items: left;
       font-family: "Muli-ExtraLight";
       text-decoration: none;
-
     }
     .enSavoirPlus {
       color: #d99827;
       font-family: "Muli";
-      font-size:18px;
+      font-size: 18px;
       background-color: transparent;
       em {
         color: #d99827;
@@ -94,66 +99,176 @@ header {
       }
     }
   }
-  @media(width:280px){
-    p{
-      font-size:15px!important;
+  @media (width: 280px) {
+    p {
+      font-size: 15px !important;
     }
   }
   // PIXEL 2XL
-  @media(min-width:411px){
-    em.logo{
-      font-size:24px!important;  
+  @media (min-width: 411px) {
+    em.titleTagline {
+      font-size: 24px !important;
     }
-    p{
-      font-size:22px!important;  
+    p {
+      font-size: 22px !important;
     }
   }
   // IPAD
-  @media(min-width:768px){
-      article{
-        p:nth-child(1){
-          font-size:24px!important;
-        }
-        p:nth-child(2){
-          display:flex!important;
-          color:white!important;
-          flex-direction: column!important;
-          font-family: "Muli-ExtraLight"!important;
-          text-align: left;
-          font-size:24px!important;
-          padding-left: 6%!important;
-        }
-        .logo{
-          font-size:37px!important;
-          font-family: "Muli-Bold"!important;
-        }
-        .enSavoirPlus {
-          font-size: 28px !important;
-          background-color: transparent;
-          em {
-            color: #d99827;
-            font-size:25px!important;
-          }
-        }
+  @media (min-width: 768px) {
+    article {
+      p:nth-child(1) {
+        font-size: 24px !important;
       }
-  }
-  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
-  @media(min-width:1024px){
-    article{
-      p:nth-child(n){
-        font-size:35px!important;
+      p:nth-child(2) {
+        display: flex !important;
+        color: white !important;
+        flex-direction: column !important;
+        font-family: "Muli-ExtraLight" !important;
+        text-align: left;
+        font-size: 24px !important;
+        padding-left: 6% !important;
       }
-      .logo{
-        font-size:45px!important;
+      .titleTagline {
+        font-size: 37px !important;
+        font-family: "Muli-Bold" !important;
       }
       .enSavoirPlus {
-        font-size: 33px!important;
-        padding-top: 3%!important;
+        font-size: 28px !important;
+        background-color: transparent;
         em {
           color: #d99827;
-          font-size:25px!important;
+          font-size: 25px !important;
         }
       }
     }
-  }  
+  }
+  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
+  @media (min-width: 1024px) {
+    display: flex !important;
+    flex-direction: column !important;
+    // position:static;
+    height: 100vh !important;
+    .logo {
+      p {
+        color: black;
+        font-family: "Muli-Bold" !important;
+      }
+    }
+
+    p:nth-child(1) {
+      border: 2px solid rgb(216, 203, 22);
+      z-index: 4;
+    }
+    p:nth-child(2) {
+      border: 2px solid teal;
+      position: relative;
+      z-index: 2;
+      // top: 190%;
+      left: 30%;
+      color: white;
+      font-family: "Muli-Bold" !important;
+      font-size: 2.1rem;
+    }
+    section {
+      .imgHeader {
+        // height: 282px !important;
+        display: block !important;
+        width: 600px;
+        // object-position: right 75% !important;
+        top: 1%;
+        border: 5px solid red !important;
+        // flex-direction:co!important;
+        // object-position:right70%!important;
+        // height: 568px;
+        // width: 300px;
+        // position: relative;
+        // margin: 0;
+        // padding: 0%;
+        // z-index: 2;
+        // z-index: 2;
+        // display: contents;
+        // border: 3px violet solid;
+        // height: 100vh!important;
+        box-sizing: border-box;
+        // margin-left:40%!important;
+        // overflow: hidden;
+        // display:flex!important;
+        justify-content: flex-end !important;
+        align-items: flex-end !important;
+        position: absolute;
+        // z-index: 1;
+      }
+
+      .facebookLink {
+        transform: rotate(180deg) !important;
+        font-family: "Roboto-Bold" !important;
+        writing-mode: vertical-lr !important;
+        color: white !important;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+        z-index: 2;
+        text-transform: capitalize !important;
+        font-size: 20px !important;
+        text-decoration: none !important;
+        display: flex !important;
+        justify-content: left;
+      }
+    }
+
+    article {
+      display: flex;
+      background-color: transparent !important;
+      color: black !important;
+      flex-direction: column !important;
+      div .logo {
+        // width: 50%;
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        border: 5px solid yellow;
+        justify-content: flex-start !important;
+        // position: absolute;
+        // top: 1%;
+        div.logo > img {
+          // position: absolute;
+          // top: 1%;
+        }
+        // z-index:8!important;
+        p {
+          color: blue !important;
+
+          // z-index:8!important;
+        }
+        p:nth-child(n) {
+          font-size: 35px !important;
+        }
+        .titleTagline {
+          font-size: 4px !important;
+          color: #d99827 !important;
+        }
+        .enSavoirPlus {
+          font-size: 3px !important;
+          padding-top: 3% !important;
+          em {
+            color: #d99827;
+            font-size: 25px !important;
+          }
+        }
+      }
+      // div.logo{
+
+      //   display: flex;
+      //   flex-direction:column!important;
+      //   align-items: left!important;
+      //   border: 5px solid yellow;
+      //   justify-content: left!important;
+      //   z-index:8!important;
+      //   color :blue!important;
+      //   p{
+      //     color:rgb(128, 0, 17);
+      //   z-index:8!important;
+
+      //   }
+    }
+  }
 }

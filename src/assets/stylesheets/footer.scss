@@ -10,7 +10,6 @@
     url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
 }
 footer {
-  font-size: 62.5%;
   justify-content: center;
   text-align: left;
   margin: 4% 6%;
@@ -20,9 +19,6 @@ footer {
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-  }
-  p{
-    font-size:1.6em;
   }
   div:nth-child(1) {
     display: flex;
@@ -57,7 +53,6 @@ footer {
       list-style-type: none;
       li:nth-child(n){
         padding-bottom: 5% ;
-        font-size: 1.6em;
       }
       a{
         text-decoration: none;
@@ -67,12 +62,21 @@ footer {
     .contactFooter{
       border:3px solid blue ;
     }
+
  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
-     @media(min-width:1024px){
-    
-      p{
-       font-size:2em ;
-     }
-    }  
+    //  @media(min-width:1024px){
+    //   div:nth-child(1) p > *{
+    //   display:fle
+    //  }
+
+    // div:nth-child(1) f{
+    //    font-size: 2em!important; 
+//     //   }
+// p{
+//   font-size: 20px!important;
+// }
+// *{
+//   font-size: 20px!important;
+// }
   }
 }

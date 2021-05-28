@@ -126,7 +126,7 @@ class index extends Component {
   /************************/
 
   componentDidMount() {
-    // si la width de la window est > ou égale à 768 alors affiche la nav en display flex
+    // si la width de la window est > ou égale à 768 alors affiche la nav
     if (window.innerWidth >= 768) {
       this.setState({
         contact: "Contact",
@@ -165,6 +165,7 @@ class index extends Component {
             marginLeft: this.state.marginLeft,
             marginTop: this.state.marginTop,
             position: this.state.position,
+            flexDirection: this.state.flexDirection,
           }}
           className="Links"
         >
