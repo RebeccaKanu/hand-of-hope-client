@@ -126,7 +126,7 @@ class index extends Component {
   /************************/
 
   componentDidMount() {
-    // si la width de la window est > ou égale à 768 alors affiche la nav 
+    // si la width de la window est > ou égale à 768 alors affiche la nav
     if (window.innerWidth >= 768) {
       this.setState({
         contact: "Contact",
@@ -135,12 +135,12 @@ class index extends Component {
         nous: "Qui sommes nous ?",
         sengager: "S'engager",
         display: "flex",
-        paddingLeft: "25px",
-        marginLeft: "29px",
-        fontSize: "0.8rem",
-        marginTop: "46px",
-        position: "",
-        flexDirection:"row"
+        paddingLeft: "3%",
+        marginLeft: "0",
+        flexDirection: "row",
+        width:"80vw",
+        // alignItems:"flexEnd",
+        // justifyConten
       });
     }
   }

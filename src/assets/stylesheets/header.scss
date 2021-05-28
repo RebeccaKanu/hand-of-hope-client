@@ -17,6 +17,17 @@
   src: local("RobotoBold"),
     url(../../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("RobotoLight"),
+    url(../../assets/fonts/Roboto/Roboto-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Quicksand-Light";
+  src: local("QuicksandLight"),
+    url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
+}
 header {
   display: flex;
   justify-content: center;
@@ -31,7 +42,6 @@ header {
   overflow: hidden;
   margin: 0 !important;
 
-  
   .imgHeader {
     margin: 0 !important;
     opacity: rgba(0, 0, 0, 0.7);
@@ -62,220 +72,183 @@ header {
     z-index: 4;
     border: solid 0px rgba(0, 0, 0, 0.5);
     background: rgba(0, 0, 0, 0.5);
-    
+
     p:nth-child(2) {
-      display: none;
+      text-align: left;
     }
     .tagline {
       padding: 6%;
-      color: white;
-      border-radius: 10px;
-      font-weight: bold;
-      font-family: "Muli-ExtraLight";
-      font-weight: 100;
-      text-align: left;
-      font-size: 15px;
-      .titleTagline {
-        font-style: normal;
-        color: white;
-        font-weight: 1;
-        font-family: "Muli-Bold";
-        font-size: 20px;
-      }
+      display: none;
     }
     a {
       background-color: rgba(255, 255, 255, 0.76);
       align-items: left;
       font-family: "Muli-ExtraLight";
       text-decoration: none;
-
     }
     .enSavoirPlus {
       color: #d99827;
       font-family: "Muli";
-      font-size:18px;
+      font-size: 18px;
       background-color: transparent;
       em {
+        font-family: "Muli-Bold";
         color: #d99827;
         font-size: 16px;
       }
     }
   }
-  @media(width:280px){
-    p{
-      font-size:15px!important;
+  @media (width: 280px) {
+    p {
+      font-size: 15px !important;
     }
   }
   // PIXEL 2XL
-  @media(min-width:411px){
-    em.titleTagline{
-      font-size:24px!important;  
+  @media (min-width: 411px) {
+    em.titleTagline {
+      font-size: 24px !important;
     }
-    p{
-      font-size:22px!important;  
+    p {
+      font-size: 22px !important;
     }
   }
   // IPAD
-  @media(min-width:768px){
-      article{
-        p:nth-child(1){
-          font-size:24px!important;
-        }
-        p:nth-child(2){
-          display:flex!important;
-          color:white!important;
-          flex-direction: column!important;
-          font-family: "Muli-ExtraLight"!important;
-          text-align: left;
-          font-size:24px!important;
-          padding-left: 6%!important;
-        }
-        .titleTagline{
-          font-size:37px!important;
-          font-family: "Muli-Bold"!important;
-        }
-        .enSavoirPlus {
-          font-size: 28px !important;
-          background-color: transparent;
-          em {
-            color: #d99827;
-            font-size:25px!important;
-          }
-        }
+  @media (min-width: 768px) {
+    article {
+      p:nth-child(1) {
+        font-size: 24px !important;
       }
-  }
-  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
-  @media(min-width:1024px){
-    display:flex!important;
-    flex-direction: column!important;
-    // position:static;
-    height: 100vh!important;
-    .logo{
-      p{
-        color: black;
-        font-family: "Muli-Bold"!important;
+      p:nth-child(2) {
+        display: flex !important;
+        color: white !important;
+        flex-direction: column !important;
+        font-family: "Muli-ExtraLight" !important;
+        text-align: left;
+        font-size: 24px !important;
+        padding-left: 6% !important;
       }
-    }
-
-      p:nth-child(1){
-        border: 2px solid rgb(216, 203, 22);
-        z-index: 4;
-
-      }
-      p:nth-child(2){
-        border: 2px solid teal;
-        position: relative;
-        z-index: 2;
-        // top: 190%;
-        left: 30%;
-        color: white;
-        font-family: "Muli-Bold"!important;
-        font-size: 2.1rem;
-      }
-     
-    //  section{
-        
-    //    width: 40%;
-    //  }
-   
-    .imgHeader {
-      // width: 70%;
-      object-position: right 75%!important;
-      clip: rect(0, 600px, 342px,600px)!important;
-      top:1%;
-      border:5px solid red!important;
-      // flex-direction:co!important;
-      // object-position:right70%!important;
-      // height: 568px;
-      // width: 300px;
-      // position: relative;
-      // margin: 0;
-      // padding: 0%;
-      // z-index: 2;
-      // z-index: 2;
-      // display: contents;
-      // border: 3px violet solid;
-      // height: 100vh!important;
-      box-sizing: border-box;
-      // margin-left:40%!important;
-      // overflow: hidden;
-      // display:flex!important;
-      justify-content: flex-end!important;
-      align-items:flex-end!important;
-      position: absolute;
-      // z-index: 1;
-
-    }
-   
-    article{
-
-      display: flex;
-      background-color: transparent!important;
-      color:black!important;
-      flex-direction:column!important;
-      div .logo{
-        display: flex;
-        flex-direction:column!important;
-        align-items:flex-start!important;
-        border: 5px solid yellow;
-        justify-content:flex-start!important;
-        // z-index:8!important;
-        p{
-          color :blue!important;
-        
-        // z-index:8!important;
-          
-        }
-      p:nth-child(n){
-        font-size:35px!important;
-      }
-      .titleTagline{
-        font-size:4px!important;
-        color: #d99827!important;
+      .titleTagline {
+        font-size: 37px !important;
+        font-family: "Muli-Bold" !important;
       }
       .enSavoirPlus {
-        font-size: 3px!important;
-        padding-top: 3%!important;
+        font-size: 28px !important;
+        background-color: transparent;
         em {
           color: #d99827;
-          font-size:25px!important;
+          font-size: 25px !important;
         }
       }
     }
-      // div.logo{
+  }
+  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
+  // IPAD PRO 1024PX
+  @media (min-width: 1024px) {
+    display: flex !important;
+    flex-direction: column !important;
+    // position:static;
+    height: 100vh !important;
 
-      //   display: flex;
-      //   flex-direction:column!important;
-      //   align-items: left!important;
-      //   border: 5px solid yellow;
-      //   justify-content: left!important;
-      //   z-index:8!important;
-      //   color :blue!important;
-      //   p{
-      //     color:rgb(128, 0, 17);
-      //   z-index:8!important;
-          
-      //   }
-     
-        
-
-
+    article {
+      background: none !important;
+      border: 3px solid red !important;
+      font-size: 20px !important;
+      width: 41vw;
+      height: 98vh;
+      top: 0;
+      right: 58%;
+      font-size: 29px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      /////// LOGO + SLOGAN
+      .logo {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height:80vh;
+        img {
+          width: 50%;
+        }
+        p {
+          color: rgb(43, 93,153) !important;
+          font-family: "Roboto-Light" !important;
+          text-shadow: #a2c2df -1px -1px!important;
+          // border: 2px solid rgb(216, 203, 22);
+          z-index: 4;
+          font-size: 15px !important;
+          text-align: center;
+          justify-content: center;
+          padding: 1%;
+        }
       }
-    
-    .facebookLink{
-      transform: rotate(180deg)!important;
-      font-family:"Roboto-Bold"!important;
-      writing-mode: vertical-lr!important;
-      color: white!important;
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-      z-index: 2;
-      text-transform: capitalize!important;
-      font-size:20px!important;
-      text-decoration: none!important;
-      display: flex!important;
-      justify-content: left;
-      
-    }
+      ////// TAGLINE + TITLE DESKTOP
+      .taglineDesktop {
+        font-family: "Roboto-Light";
+        // margin-top: 76%;
+        margin-bottom: 2%;
+        text-align: left !important;
+        font-size: 43px !important;
+        padding: 4%;
 
-  }  
+        .titleTaglineDesktop {
+          text-align: center !important;
+          display: block !important;
+          // font-size: 60px !important;
+          color: #d99827;
+          text-align: left !important;
+          font-family: "Roboto-Bold";
+          margin-bottom: 10%;
+        }
+      }
+      .enSavoirPlus {
+        font-size: 38px !important;
+        margin-top: 10% !important;
+        border: 1px solid black !important;
+        transform: translateX(4%);
+        margin: 0% 8%;
+        transition: all 0.3s;
+        border-radius: 5px;
+      }
+    }
+    /////////// HEADER IMAGE +  svg FACEBOOK + LINK ///
+    section {
+      transform: scaleX(-1);
+      opacity: rgba(0, 0, 0, 0.7);
+      filter: saturate(5%) contrast(125%);
+      box-sizing: border-box;
+      background-size: cover;
+      background-image: url("../images/Header-tablette-pro.jpg") !important;
+      border: 5px solid red !important;
+      background-repeat: no-repeat;
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+      width: 63vw;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      left: 24%;
+      box-sizing: border-box;
+      .facebookLink {
+        //  transform: rotate(180deg)!important;
+        font-family: "Roboto-Bold" !important;
+        writing-mode: vertical-rl !important;
+        color: white !important;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+        z-index: 2;
+        text-transform: capitalize !important;
+        font-size: 29px !important;
+        text-decoration: none !important;
+        display: flex !important;
+        justify-content: left;
+        transform: scaleX(-1);
+        margin: 90% 0% 0% 11% !important;
+        // position:absolute;
+      }
+      .imgHeader {
+        display: none;
+      }
+    }
+  }
 }
