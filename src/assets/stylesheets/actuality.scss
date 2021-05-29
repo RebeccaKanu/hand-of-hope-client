@@ -348,7 +348,7 @@
     }  
   }
   /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
-  @media(min-width:1024px){
+  @media only screen and (min-device-width: 1024px) {
     div{
       // border:3px solid red;
       display:flex;

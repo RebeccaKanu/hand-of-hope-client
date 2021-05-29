@@ -34,10 +34,10 @@ export default class index extends Component {
           </p>
           <p className="taglineDesktop">
             <em className="titleTaglineDesktop">Hand of Hope</em>
-            Une formidable aventure humaine, basée sur la générosité, l’énergie,
-            une synergie de compétences et le don de soi.
+            "Une formidable aventure humaine, basée sur la générosité, l’énergie,
+            une synergie de compétences et le don de soi. "
           </p>
-          <div></div>
+          
           <a href="/About" className="enSavoirPlus">
             En savoir plus <em>&rarr;</em>
           </a>
