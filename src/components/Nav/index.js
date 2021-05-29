@@ -135,12 +135,21 @@ class index extends Component {
         nous: "Qui sommes nous ?",
         sengager: "S'engager",
         display: "flex",
+<<<<<<< HEAD
         paddingLeft: "25px",
         marginLeft: "29px",
         fontSize: "0.8rem",
         marginTop: "46px",
         position: "",
         flexDirection: "row",
+=======
+        paddingLeft: "3%",
+        marginLeft: "0",
+        flexDirection: "row",
+        width:"80vw",
+        // alignItems:"flexEnd",
+        // justifyConten
+>>>>>>> 8d80824c33ed0fc83462e334ef9018879387cef2
       });
     }
   }
