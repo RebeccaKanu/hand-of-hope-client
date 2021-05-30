@@ -21,7 +21,7 @@ export default class index extends Component {
           <div className="logo">
             <img
               src={logo}
-              // style={{ width: this.state.width, height: this.state.height }}
+              // style={{ width: this.state.width, height: this.state.height}}
             />
             <p>Ensemble pour un monde meilleur</p>
           </div>

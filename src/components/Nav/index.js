@@ -5,12 +5,9 @@ class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //on initialise le menu avec des strings vides car initialement il ne s'affiche pas tant que l'on a pas cliqué sur le burger menu
-      contact: "",
-      actualite: "",
-      don: "",
-      nous: "",
-      sengager: "",
+      //on initialise le menu à vide car initialement il ne s'affiche pas tant que l'on a pas cliqué sur le burger menu
+      navStates: [],
+
       //on initialise un compteur pour gérer l'affichage conditionnellement c'est à dire au premier(0) clique afficher le menu au deuxième le caher ainsi de suite
       compteur: 0,
       n: 1, //n va s'incrément de 1 à chaque clique,
@@ -40,18 +37,19 @@ class index extends Component {
   //on remplie le menu qui était initialement vide pour que lorsque l'on clique les éléments du menu s'affiche
   showMenu = () => {
     this.setState({
-      contact: "Contact",
-      actualite: "Actualité",
-      don: "Faire un don",
-      nous: "Qui sommes nous ?",
-      sengager: "S'engager",
-      // style
+     navStates: ["contact",
+                 "actualite", 
+                 "don", 
+                 "nous", 
+                 "sengager"], 
+      visibility:"visibily",
+      transformTop: "rotate(45deg) translate(3px, 4px)",
+      transformBottom: "rotate(-45deg) translate(3px, -4px)",
+      //style
       width: "80vw", //80vw
       backgroundColor: "white",
       opacity: 0.6,
       height: "97vh",
-      transformTop: "rotate(45deg) translate(3px, 4px)",
-      transformBottom: "rotate(-45deg) translate(3px, -4px)",
       background: "transparent",
     });
   };
@@ -59,15 +57,9 @@ class index extends Component {
   //on revide le menu pour qu'au clique pour le femer le menu disparaisse
   hideMenu = () => {
     this.setState({
-      contact: "",
-      actualite: "",
-      don: "",
-      nous: "",
-      sengager: "",
-      // opacity: 0.2,
-      // transition: "all 0.1s ease-out",
+      navStates: [],
       height: 0,
-      //ce qui dans la fonction compteur
+      visibility:"hidden",
       width: 0,
       backgroundColor: "",
       opacity: 0,
@@ -76,7 +68,6 @@ class index extends Component {
       transformBottom: "",
       background: "black",
       color: "black",
-      // backgroundColor: "transparent",//?
       boxShadow: "10px 5px 5px black",
       contactAdress: "",
     });
@@ -106,71 +97,64 @@ class index extends Component {
       compteur: this.state.compteur + this.state.n,
     });
 
-    if (this.state.compteur % 2) {
-      //au deuxième clique cacher le menu => deuxième clique = compteur à 2
-      //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
-      this.showAdress();
-    } else {
-      //au premier clique afficher le menu => premier clique = compteur à 1
-      //autrement dit si compteur = chiffre pair afficher le menu
-
-      this.hideAdress();
+    if (window.innerWidth < 768) {
+      if (this.state.compteur % 2) {
+        //au deuxième clique cacher le menu => deuxième clique = compteur à 2
+        //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
+        this.showAdress();
+      } else {
+        //au premier clique afficher le menu => premier clique = compteur à 1
+        //autrement dit si compteur = chiffre pair afficher le menu
+        this.hideAdress();
+      }
     }
   };
   /************************/
-
-  componentWillMount() {
-    if (window.innerWidth >= 768) {
-      this.setState({
-        contact: "Contact",
-        actualite: "Actualité",
-        don: "Faire un don",
-        nous: "Qui sommes nous ?",
-        sengager: "S'engager",
-        display: "flex",
-        paddingLeft: "3%",
-        marginLeft: "0",
-        flexDirection: "row",
-        width: "80vw",
-        // alignItems:"flexEnd",
-        // justifyConten
-      });
-    }
-  }
+/////////////// BROUILLONS NAV ////////////////////////////
+  // componentWillMount() {
+  //   if (window.innerWidth >= 768) {
+  //     this.setState({
+  //       display: "flex",
+  //       paddingLeft: "2%",
+  //       // marginLeft: "35%",
+  //       // marginRight: "1%",
+  //       // justifyContent:"",
+  //       flexDirection: "row",
+  //       width: "90vw",
+  //       fontSize: "1rem",
+  //       fontS: "0.6rem",
+  //       // alignItems: "flex-end",
+  //       justifyContent: "flex-end",
+  //       visibility: "visible",
+  //     });
+  //   }
+   
 
   render() {
+    const navArray = this.state.navStates;
+    const iterateNav = navArray.map((el) => <li><a href={el}>{el}</a></li>);
+    
     return (
       <div
         className="BurgerLink"
         style={{
           backgroundColor: this.state.backgroundColor,
         }}
-      >
-        {/*au clique du menu burger soit le menu s'affiche (if) soit il
-        disparait(else)*/}
-
-        <ul
-          style={{
-            width: this.state.width,
-            height: this.state.height,
-            display: this.state.display,
-            flexDirection: this.state.flexDirection,
-            marginLeft: this.state.marginLeft,
-            marginTop: this.state.marginTop,
-            position: this.state.position,
-            flexDirection: this.state.flexDirection,
-          }}
-          className="Links"
-        >
-          {/* <div> */}
-          {/*changement dynamique des va this.hideMenu();leurs des liens de nav en alternant entre string vide et valeur exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+      > 
+        {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+        {/* ul menuBurger disponible version mobile composant only JS */}
+        <ul style={{border: "5px solid pink"}}>{iterateNav}</ul>
+        
+        {/* ul menuBurger disponible version desktop*/} 
+        <ul className="Links">  
+         
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/actualite">{this.state.actualite}</a>
+            <a href="/actualite">ACTUALITÉ</a>
           </li>
           <li
             style={{
@@ -178,7 +162,7 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/don">{this.state.don}</a>
+            <a href="/don">Don</a>
           </li>
           <li
             style={{
@@ -186,7 +170,7 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/nous">{this.state.nous}</a>
+            <a href="/nous">A propos de nous</a>
           </li>
           <li
             style={{
@@ -194,15 +178,14 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/sengager">{this.state.sengager}</a>
+            <a href="/sengager">S'engager</a>
           </li>
 
-          {/* <div className="contactContainer"> */}
           <li
             className="contacts"
             style={{
               paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
+              fontSize: this.state.fontS,
             }}
           >
             <a href="#" onClick={this.adressCompteur}>
@@ -215,7 +198,6 @@ class index extends Component {
               <p>{this.state.contactAdressPart2}</p>
             </div>
           </li>
-          {/* </div> */}
         </ul>
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
           <div style={{ transform: this.state.transformTop }}></div>
@@ -226,5 +208,4 @@ class index extends Component {
     );
   }
 }
-// test
 export default index;
