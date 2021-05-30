@@ -52,8 +52,13 @@ header article {
   position: absolute;
   top: 48%;
   right: 20%;
+<<<<<<< HEAD
+  width: 69%;
+  height: 40%;
+=======
   width: 80%;
   height: 45%;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   border-radius: 10px;
   z-index: 4;
   border: solid 0px rgba(0, 0, 0, 0.5);
@@ -65,34 +70,65 @@ header article p:nth-child(2) {
 }
 
 header article .tagline {
+<<<<<<< HEAD
+=======
   padding: 6%;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   color: white;
   border-radius: 10px;
   font-weight: bold;
   font-family: "Muli-ExtraLight";
   font-weight: 100;
   text-align: left;
+<<<<<<< HEAD
+  font-size: 0.8rem;
+  padding: 25px;
+=======
   font-size: 15px;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 header article .tagline .logo {
   font-style: normal;
   color: white;
   font-weight: 1;
+<<<<<<< HEAD
+  padding-bottom: 4px;
+  font-family: "Muli-Bold";
+  font-size: 1rem;
+=======
   font-family: "Muli-Bold";
   font-size: 20px;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 header article a {
   background-color: rgba(255, 255, 255, 0.76);
+<<<<<<< HEAD
+  text-align: center;
+=======
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   font-family: "Muli-ExtraLight";
   text-decoration: none;
 }
 
 header article .enSavoirPlus {
+<<<<<<< HEAD
+  color: #fff38a;
+  font-family: "Muli";
+  font-size: 0.9rem;
+  background-color: transparent;
+  font-size: 0.7rem;
+  padding-left: 0px;
+}
+
+header article .enSavoirPlus em {
+  color: #fff38a;
+  font-size: 0.9rem;
+=======
   color: #d99827;
   font-family: "Muli";
   font-size: 18px;
@@ -166,5 +202,6 @@ header article .enSavoirPlus em {
     color: #d99827;
     font-size: 25px !important;
   }
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 /*# sourceMappingURL=header.css.map */

@@ -59,6 +59,9 @@
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+<<<<<<< HEAD
+  border: 4px solid yellow;
+=======
 }
 
 .BurgerLink .contacts a {
@@ -86,5 +89,6 @@
     color: black !important;
     z-index: 8;
   }
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 /*# sourceMappingURL=nav.css.map */

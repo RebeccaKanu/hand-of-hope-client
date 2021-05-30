@@ -27,11 +27,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+<<<<<<< HEAD
+=======
   margin-top: 10%;
 }
 
 .video h1, .video h2 {
   font-size: 15px;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 .video h1 {
@@ -41,6 +44,11 @@
 .video h2 {
   font-family: 'Muli-Bold';
   color: #356178;
+}
+
+.video iframe {
+  width: 80vw;
+  height: 40vh;
 }
 
 .video iframe {

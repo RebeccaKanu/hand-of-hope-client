@@ -7,9 +7,16 @@
   font-size: 62.5%;
   min-width: 40%;
   font-family: "Muli-ExtraLight";
+<<<<<<< HEAD
+}
+
+.contact ul {
+  width: 40vw;
+=======
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 .contact * {

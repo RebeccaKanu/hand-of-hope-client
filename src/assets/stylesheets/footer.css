@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 .homepage {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
@@ -26,6 +28,7 @@
           align-items: center;
 }
 
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 @font-face {
   font-family: "Muli-Bold";
   src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
@@ -42,6 +45,9 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
+<<<<<<< HEAD
+  margin: 4% 12%;
+=======
   margin: 4% 6%;
   font-family: "Muli-ExtraLight" !important;
 }
@@ -56,13 +62,20 @@ footer * {
 
 footer p {
   font-size: 1.6em;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 footer div:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  width: 70vw;
+=======
   width: 100%;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   padding-bottom: 4%;
 }
 
@@ -72,6 +85,12 @@ footer div:nth-child(1) p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+  text-align: left;
+  font-family: "Muli-ExtraLight";
+  padding-right: 3%;
+=======
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 footer div:nth-child(1) img {
@@ -85,9 +104,17 @@ footer div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+  width: 40vw;
+}
+
+footer .copyrightNav p {
+  font-family: "Muli-ExtraLight";
+=======
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+>>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 footer div:nth-child(2) .copyright {
