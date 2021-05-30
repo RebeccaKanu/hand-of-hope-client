@@ -14,6 +14,7 @@
   position: fixed;
   box-sizing: border-box;
   justify-content: space-between;
+  // align-items: flex-end;
   z-index: 10;
 
   .burgerMenu {
@@ -28,59 +29,131 @@
       cursor: pointer;
     }
   }
-  a {
-    font-family: "Muli-Light";
-    text-decoration: none;
-    color: black;
-    font-size: 1.5em;
-  }
   .Links {
     transition: all 0.8s ease-out;
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
-    // border: 4px solid yellow;
-
-  }
-  .contacts a{
-
-    font-family: "Muli-Light";
-    font-size:1.5em !important;
-  }
-
-
-     // SURFACE DUO
-  @media(min-width:540px){
     
+    
+    a{
+      font-family: "Muli-Light";
+      text-decoration: none;
+      color: black;
+      font-size: 22px;
+      // display:none;  
+    }
+  }
+  .contacts a {
+    font-family: "Muli-Light";
+    font-size: 22px;
+  }
+
+  // SURFACE DUO
+  @media (min-width: 540px){
+    .Links {
+      color: rgb(0, 0, 0) !important;
+      border: 3px solid blue;
+      z-index: 3!important;
+      // right: 100% !important;
+      top: 3% !important;
+      display: none !important;
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+      a {
+        // display: flex !important;
+        font-family: "Muli-Light";
+        font-size: 16px !important;
+        color: black !important;
+        // display:none;
+      }
+      li {
+        display: flex !important;
+      }
+    }
   }
   // IPAD
-  @media(min-width:768px){
+  @media (min-width: 768px) {
     .burgerMenu {
+      display: none;
+    }
+      ul:nth-child(1){
       display:none;
-    }
-    li{
-      display: flex!important;
-      color:black;
-      display: flex!important;
-      color:black !important;
+    } 
+    .Links {
+      color: rgb(0, 0, 0) !important;
+      border: 3px solid blue;
+      z-index: 3!important;
+      // right: 100% !important;
+      top: 3% !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+      a {
+        display: flex !important;
+        font-family: "Muli-Light";
+        font-size: 16px !important;
+        color: black !important;
+        // display:none;
+      }
+
+    li {
+      display: flex !important;
+      color: black;
+      display: flex !important;
+      color: black !important;
       z-index: 8;
     }
+
     .desktop {
-      display: flex!important;
-      color:black !important;
+      display: flex !important;
+      color: black !important;
       z-index: 8;
     }
-  } 
-  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
-  @media(min-width:1024px){
+    
+  }
+  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
+  @media only screen and (min-device-width: 1024px) {
     // .a1,.a3{
     //   left: 60.9%!important;
     // }
+    .Links{
+      visibility: visible!important;
+    }
+    // .BurgerLink {
 
+    //   font-size: 62.5%;
+    //     display: flex;
+    //     position: fixed;
+    //     box-sizing: border-box;
+    //     justify-content: flex-end;
+    //     align-items: flex-end;
+    //     z-index: 10;
+    //     border: 2px solid blue;;
+
+    // }
+
+    // .Links {
+    //   color: rgb(0, 0, 0) !important;
+    //   border: 3px solid blue;
+    //   z-index: 3!important;
+    //   // right: 100% !important;
+    //   top: 3% !important;
+    //   display: flex !important;
+    //   justify-content: flex-end !important;
+    //   align-items: flex-end !important;
+    //   li {
+    //     display: flex !important;
+    //     a {
+    //       display: flex !important;
+    //       font-family: "Muli-Light";
+    //       font-size: 16px !important;
+    //       color: black !important;
+    //     }
+    //   }
+    // }
   }
-
-  
-
+  }
 }
