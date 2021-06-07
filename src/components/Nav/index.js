@@ -38,12 +38,8 @@ class index extends Component {
   //on remplie le menu qui était initialement vide pour que lorsque l'on clique les éléments du menu s'affiche
   showMenu = () => {
     this.setState({
-     navStates: ["contact",
-                 "actualite", 
-                 "don", 
-                 "nous", 
-                 "sengager"], 
-      visibility:"visibily",
+      navStates: ["contact", "actualite", "don", "nous", "sengager"],
+      visibility: "visibily",
       transformTop: "rotate(45deg) translate(3px, 4px)",
       transformBottom: "rotate(-45deg) translate(3px, -4px)",
       //style
@@ -60,7 +56,7 @@ class index extends Component {
     this.setState({
       navStates: [],
       height: 0,
-      visibility:"hidden",
+      visibility: "hidden",
       width: 0,
       backgroundColor: "",
       opacity: 0,
@@ -111,7 +107,7 @@ class index extends Component {
     }
   };
   /************************/
-/////////////// BROUILLONS NAV ////////////////////////////
+  /////////////// BROUILLONS NAV ////////////////////////////
   // componentWillMount() {
   //   if (window.innerWidth >= 768) {
   //     this.setState({
@@ -129,33 +125,35 @@ class index extends Component {
   //       visibility: "visible",
   //     });
   //   }
-   
 
   render() {
     const navArray = this.state.navStates;
-    const iterateNav = navArray.map((el) => <li><a href={el}>{el}</a></li>);
-    
+    const iterateNav = navArray.map((el) => (
+      <li>
+        <a href={el}>{el}</a>
+      </li>
+    ));
+
     return (
       <div
         className="BurgerLink"
         style={{
           backgroundColor: this.state.backgroundColor,
         }}
-      > 
+      >
         {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
         {/* ul menuBurger disponible version mobile composant only JS */}
-        <ul style={{border: "5px solid pink"}}>{iterateNav}</ul>
-        
-        {/* ul menuBurger disponible version desktop*/} 
-        <ul className="Links">  
-         
+        <ul style={{ border: "5px solid pink" }}>{iterateNav}</ul>
+
+        {/* ul menuBurger disponible version desktop*/}
+        <ul className="Links">
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/actualite">ACTUALITÉ</a>
+            <a href="/actualite">Actualité</a>
           </li>
           <li
             style={{
@@ -171,7 +169,7 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/nous">A propos de nous</a>
+            <a href="/aPropos">A propos de nous</a>
           </li>
           <li
             style={{

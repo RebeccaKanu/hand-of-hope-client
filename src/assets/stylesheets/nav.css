@@ -35,42 +35,91 @@
   cursor: pointer;
 }
 
-.BurgerLink a {
-  font-family: "Muli-Light";
-  text-decoration: none;
-  color: black;
-  font-size: 1.5em;
-}
-
 .BurgerLink .Links {
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
 }
 
+.BurgerLink .Links a {
+  font-family: "Muli-Light";
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+
 .BurgerLink .contacts a {
   font-family: "Muli-Light";
-  font-size: 1.5em !important;
+  font-size: 22px;
+}
+
+@media (min-width: 540px) {
+  .BurgerLink .Links {
+    color: black !important;
+    border: 3px solid blue;
+    z-index: 3 !important;
+    top: 3% !important;
+    display: none !important;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+  }
+  .BurgerLink .Links a {
+    font-family: "Muli-Light";
+    font-size: 16px !important;
+    color: black !important;
+  }
+  .BurgerLink .Links li {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }
 
 @media (min-width: 768px) {
   .BurgerLink .burgerMenu {
     display: none;
   }
-  .BurgerLink li {
+  .BurgerLink ul:nth-child(1) {
+    display: none;
+  }
+  .BurgerLink .Links {
+    color: black !important;
+    border: 3px solid blue;
+    z-index: 3 !important;
+    top: 3% !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+  }
+  .BurgerLink .Links a {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    font-family: "Muli-Light";
+    font-size: 16px !important;
+    color: black !important;
+  }
+  .BurgerLink .Links li {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -79,12 +128,18 @@
     color: black !important;
     z-index: 8;
   }
-  .BurgerLink .desktop {
+  .BurgerLink .Links .desktop {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     color: black !important;
     z-index: 8;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-device-width: 1024px) {
+  .BurgerLink .Links {
+    visibility: visible !important;
   }
 }
 /*# sourceMappingURL=nav.css.map */
