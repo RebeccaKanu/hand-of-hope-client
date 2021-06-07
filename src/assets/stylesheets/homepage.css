@@ -1,5 +1,5 @@
 .homepage {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
