@@ -27,10 +27,8 @@ export default class index extends Component {
       });
 
       console.log("RESPONSE", response.data);
-    } catch (e) {
-      this.setState({
-        error: "erreur server",
-      });
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -40,77 +38,108 @@ export default class index extends Component {
         <section>
           <h1>DERNIERES ACTUS</h1>
           <h2>Les dernières actualités de l’association </h2>
-          <span></span>
         </section>
 
-        <div>
-          <article>
-            <figure>
-              <img
-                className="imgcard"
-                src={mainArticleOne}
-                alt="taylor"
-                style={{ width: this.state.width, height: this.state.height }}
-              />
-              <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-              <a className="a1" href="#">
-                Scolarité
-              </a>
-            </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>Article de la campagne de distribution</p>
-            <button className="button1">
-              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-            </button>
-          </article>
+        {this.state.data.map((element, index) => {
+          return (
+            <div key={index}>
+              <article>
+                <figure>
+                  <img
+                    className="imgcard"
+                    src={mainArticleOne}
+                    alt="taylor"
+                    style={{
+                      width: this.state.width,
+                      height: this.state.height,
+                    }}
+                  />
+                  <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
+                  <a className="a1" href="#">
+                    Scolarité
+                  </a>
+                </figure>
 
-          <article>
-            <figure>
-              <img
-                className="imgcard"
-                src={mainArticleTwo}
-                alt="taylor"
-                style={{ width: this.state.width, height: this.state.height }}
-              />
-              <figcaption className="figcaption2">
-                CAMPAGNE DE DISTRIBUTION
-              </figcaption>
-              <a className="a2" href="#">
-                Enseignement
-              </a>
-            </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>Article de la campagne de distribution</p>
-            <button className="button2">
-              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-            </button>
-          </article>
+                <h3>{element.title}</h3>
+                <p>Article de la campagne de distribution</p>
 
-          <article>
-            <figure>
-              <img
-                className="imgcard"
-                src={mainArticleThree}
-                alt="taylor"
-                style={{ width: this.state.width, height: this.state.height }}
-              />
-              <figcaption className="figcaption3">
-                CAMPAGNE DE DISTRIBUTION
-              </figcaption>
-              <a className="a3" href="#">
-                Scolarité
-              </a>
-            </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>Article de la campagne de distribution</p>
-            <button className="button3">
-              <Link to="#">
-                Lire la suite &nbsp;<em>&rarr;</em>
-              </Link>
-            </button>
-          </article>
-        </div>
+                <button className="button1">
+                  <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+                </button>
+              </article>
+            </div>
+          );
+        })}
       </div>
+
+      // <div>
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleOne}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
+      //       <a className="a1" href="#">
+      //         Scolarité
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button1">
+      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+      //     </button>
+      //   </article>
+
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleTwo}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption className="figcaption2">
+      //         CAMPAGNE DE DISTRIBUTION
+      //       </figcaption>
+      //       <a className="a2" href="#">
+      //         Enseignement
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button2">
+      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+      //     </button>
+      //   </article>
+
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleThree}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption className="figcaption3">
+      //         CAMPAGNE DE DISTRIBUTION
+      //       </figcaption>
+      //       <a className="a3" href="#">
+      //         Scolarité
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button3">
+      //       <Link to="#">
+      //         Lire la suite &nbsp;<em>&rarr;</em>
+      //       </Link>
+      //     </button>
+      //   </article>
+      // </div>
+      // </div>
     );
   }
 }
