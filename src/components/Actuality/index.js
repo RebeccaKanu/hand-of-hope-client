@@ -5,17 +5,33 @@ import mainArticleOne from "../../assets/images/bon_prenatale_2.jpeg";
 import mainArticleTwo from "../../assets/images/orphelinat_3.jpeg";
 import mainArticleThree from "../../assets/images/distribution_club_2.jpeg";
 import "../../assets/stylesheets/actuality.scss";
-
+import { lastArticle } from "../../services/";
 
 export default class index extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      //  backgroundImage: taylor,
-      // fontSize:
-      width:"280px",
-      height:"400px",
+      width: "280px",
+      height: "400px",
+      data: [], //data intialisé à vide car il n'y a pas encore de requête
+      error: null,
     };
+  }
+
+  async componentDidMount() {
+    try {
+      const response = await lastArticle.getLastArticle();
+
+      this.setState({
+        data: response.data,
+      });
+
+      console.log("RESPONSE", response.data);
+    } catch (e) {
+      this.setState({
+        error: "erreur server",
+      });
+    }
   }
 
   render() {
@@ -30,10 +46,16 @@ export default class index extends Component {
         <div>
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleOne} alt="taylor" style={{ width: this.state.width, height: this.state.height }}
-               />
+              <img
+                className="imgcard"
+                src={mainArticleOne}
+                alt="taylor"
+                style={{ width: this.state.width, height: this.state.height }}
+              />
               <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-              <a className="a1" href="#">Scolarité</a>
+              <a className="a1" href="#">
+                Scolarité
+              </a>
             </figure>
             <h3>TITRE DE L'ARTICLE</h3>
             <p>Article de la campagne de distribution</p>
@@ -44,7 +66,12 @@ export default class index extends Component {
 
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleTwo} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
+              <img
+                className="imgcard"
+                src={mainArticleTwo}
+                alt="taylor"
+                style={{ width: this.state.width, height: this.state.height }}
+              />
               <figcaption className="figcaption2">
                 CAMPAGNE DE DISTRIBUTION
               </figcaption>
@@ -52,16 +79,21 @@ export default class index extends Component {
                 Enseignement
               </a>
             </figure>
-              <h3>TITRE DE L'ARTICLE</h3>
-              <p>Article de la campagne de distribution</p>
-              <button className="button2">
-                <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-              </button>
+            <h3>TITRE DE L'ARTICLE</h3>
+            <p>Article de la campagne de distribution</p>
+            <button className="button2">
+              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+            </button>
           </article>
 
           <article>
             <figure>
-              <img className="imgcard" src={mainArticleThree} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
+              <img
+                className="imgcard"
+                src={mainArticleThree}
+                alt="taylor"
+                style={{ width: this.state.width, height: this.state.height }}
+              />
               <figcaption className="figcaption3">
                 CAMPAGNE DE DISTRIBUTION
               </figcaption>

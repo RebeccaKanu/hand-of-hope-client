@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../assets/stylesheets/aboutUs.scss";
+import "../../assets/stylesheets/sengager.scss";
 
 export default class index extends Component {
   render() {

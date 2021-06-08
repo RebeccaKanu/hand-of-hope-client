@@ -152,7 +152,7 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/actualite">Actualité</a>
+            <a href="/dernierArticles">Actualité</a>
           </li>
           <li
             style={{
