@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import "../../assets/stylesheets/testimony.scss";
-
+import { lastReviews } from "../../services/";
 
 
 export default class index extends Component {
-    // constructor(props){
-    //    super(props);
-    //    this.state = {
+    constructor(props){
+       super(props);
+       this.state = {
     //     sectionLegende: "",
     //     sectionTitle: "",
     //     //
@@ -14,11 +14,25 @@ export default class index extends Component {
     //     boxTitle2: "", 
     //     boxTitle3: "", 
     //     boxParagraphe: ""
-    //   };
-    // }
-  
+        data: [],
+        error: null,
+      };
+    }
+    async componentDidMount() {
+        try {
+            const response = lastReviews.getLastReviews();
+            this.setState({
+                data: response.data,
+            });
+            console.log("RESPONSE", response.data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
     render() {
+        console.log("RESPONSE", this.state.data);
         return (
+
             <div className="testimony">
                 <span></span>
                 <h2>Que pensez-vous de nous?</h2>
