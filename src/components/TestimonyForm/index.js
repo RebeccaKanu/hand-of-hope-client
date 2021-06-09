@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import {addAReview} from "../../services/formulaireTesimonyconnect";
 
     const wait = function(duration = 1000) {
         return new Promise((resolve) => {
@@ -9,16 +10,17 @@ import { useForm } from "react-hook-form";
 function Index() {
 
     const{register, handleSubmit, formState, errors} = useForm()
-    const {isSubmitting} = formState 
+    const { isSubmitting } = formState 
     
     const onSubmit = async data =>{
         console.log(data)
-        await wait(2000)
+        await wait(4000);
     }
 
     return (
         <>
-        <h1>votre message</h1>
+        <h1>Votre message</h1>
+
         <form action="/" method="post" class="ui form" onSubmit={handleSubmit(onsubmit)}>
             
             <div class=" fiels">

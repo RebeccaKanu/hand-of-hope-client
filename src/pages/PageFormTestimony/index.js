@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import TestimonyForm from '../../components/TestimonyForm';
-import Nav from '../../components/Nav';
-import Footer from '../../components/Footer';
-
-
 
 
 class index extends Component {
@@ -14,9 +10,7 @@ class index extends Component {
     render() {
         return (
             <>
-            <Nav/>
             <TestimonyForm/>
-            <Footer/>
             </>
         );
     }
