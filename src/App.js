@@ -5,12 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import ReactDOM from "react-dom";
 import Nav from "../src/components/Nav";
 import Footer from "../src/components/Footer";
-<<<<<<< HEAD
-// import Video from "../src/components/Video";
-=======
 import Video from "../src/components/Video";
 import Actuality from "../src/components/Actuality";
->>>>>>> d71aad762862860ff1b5fadb2956f17f4d28303d
 
 function App() {
   return (
