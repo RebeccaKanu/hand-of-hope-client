@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../../assets/stylesheets/sengager.scss";
+import CheckoutForm from '../../components/CheckoutFormStripe/'
+
 
 export default class index extends Component {
   render() {
@@ -9,6 +11,7 @@ export default class index extends Component {
 
         <div className="ligne"></div>
 
+
         <p>
           Pour faire connaître <span>hand of hope</span> : faites-nous connaître
           en parlant de nous dans votre entourage, votre famille, au travail, au
@@ -17,6 +20,8 @@ export default class index extends Component {
           questions sur le bénévolat? Une idée? Un projet? Contactez nous !{" "}
           <a href="#"></a>
         </p>
+        <CheckoutForm></CheckoutForm>
+
       </div>
     );
   }

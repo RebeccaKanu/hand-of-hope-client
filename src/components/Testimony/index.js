@@ -10,12 +10,15 @@ export default class index extends Component {
     //     sectionLegende: "",
     //     sectionTitle: "",
     //     //
+            // data:[],
+            // error:null
     //     boxTitle: "",
     //     boxTitle2: "", 
     //     boxTitle3: "", 
     //     boxParagraphe: ""
     //   };
     // }
+    // async componentDidMount 
   
     render() {
         return (
@@ -42,6 +45,7 @@ export default class index extends Component {
                         <h5>De Kinkasha (ZAIRE)</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel </p>
                     </div>
+                    <button>laissez un commentaire</button>
                 </div>
 
             </div>

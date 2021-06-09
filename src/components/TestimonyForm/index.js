@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { useForm } from "react-hook-form";
 
     const wait = function(duration = 1000) {
         return new Promise((resolve) => {
             window.setTimeout(resolve, duration)
         })
     }
-function index(){
+function Index() {
 
-    const{registrer, handleSubmit, formState, errors} = useForm()
+    const{register, handleSubmit, formState, errors} = useForm()
     const {isSubmitting} = formState 
     
     const onSubmit = async data =>{
         console.log(data)
         await wait(2000)
     }
-    
-    
+
     return (
         <>
         <h1>votre message</h1>
@@ -23,16 +23,16 @@ function index(){
             
             <div class=" fiels">
                 <label htmlFor="last_name">Votre nom</label>
-                <input type="text" id="last_name" name="last_name" ref={registrer({required: true})} minlength="4" maxlength="8" size="10"></input>
+                <input type="text" id="last_name" name="last_name" {...register('test', { required: true })} minlength="4" maxlength="8" size="10"></input>
 
                 <label htmlFor="first_name">Votre prénom</label>
-                <input type="text" id="first_name" name="first_name" ref={registrer({required: true})} minlength="4" maxlength="8" size="10"></input>
+                <input type="text" id="first_name" name="first_name" {...register('test', { required: true })} minlength="4" maxlength="8" size="10"></input>
 
                 <label htmlFor="role">Votre Metier</label>
-                <input type="text" id="role" name="role" ref={registrer({required: true})} minlength="4" maxlength="8" size="10"></input>
+                <input type="text" id="role" name="role" {...register('test', { required: true })} minlength="4" maxlength="8" size="10"></input>
 
                 <label htmlFor="opinion">Message</label>
-                <textarea name="opinion" id="opinion"  ref={registrer({required: true})}></textarea>
+                <textarea name="opinion" id="opinion"  {...register('test', { required: true })}></textarea>
 
             </div>
 
@@ -47,4 +47,4 @@ function index(){
     
 }
 
-export default index;
+export default Index;
