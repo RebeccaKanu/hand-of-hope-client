@@ -2,7 +2,7 @@ import HomePage from "../src/pages/Homepage";
 import Sengager from "../src/pages/Sengager";
 import AboutUs from "../src/pages/AboutUs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Nav from "../src/components/Nav";
 import Footer from "../src/components/Footer";
 import Video from "../src/components/Video";

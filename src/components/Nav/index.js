@@ -14,6 +14,7 @@ class index extends Component {
       n: 1, //n va s'incrément de 1 à chaque clique,
     };
   }
+  
 
   /************************/
 

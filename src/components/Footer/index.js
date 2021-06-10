@@ -8,10 +8,11 @@ export default class index extends Component {
   constructor(props){
     super(props)
       this.state={
-       fontSize: "16px",
+       fontSize: "16px!important",
        width: "60%",
        paddingTop:"5%",
        contactFont: "16px",
+      //  finish: true
       }
   }
   // componentWillUnmount(){
@@ -32,13 +33,13 @@ export default class index extends Component {
   // }
 
   // window.addEventListener('load', this.handleLoad);
-  
+ 
 
   componentDidMount () {
    
     if(window.innerWidth >= 768) {
       this.setState({
-        fontSize:"29px",
+        fontSize:"20px",
         width: "70%",
         border: "3px solid red"
       });
@@ -50,8 +51,20 @@ export default class index extends Component {
         border: "3px solid red"
       });
     } 
+    // if(window.innerWidth < 1024) {
+    //   this.setState({
+    //     appear : "none!important"
+    //   })
+    // }else if (window.innerWidth >540){
+
+    // }
 
   };
+  // appear () => {
+  //   this.setState({
+
+  //   })
+  // }
   
 // this.fontSize:
 //   }
@@ -67,35 +80,45 @@ export default class index extends Component {
       
         <footer>
           <div>
-            <p style= {{fontSize: this.state.fontSize}}>Hands of hope est une association caritative née en 2020</p>
+            <p style= {{fontSize: this.state.fontSize, paddingTop:"0%!important"}}>Hands of hope est une association caritative née en 2020</p>
             <img src={logo} alt="logo hoh" />
           </div>
-          <div>
-            <div className="copyright">
-              <p style= {{fontSize: this.state.fontSize}}>
-                Fait avec amour par NAWAL, JEROME ET REBECCA <br />
-                Tous droits réservés © 2021
-              </p>
+
+            {/* <div className="contactDesktop">
+            <Contact style={{fontSize:this.state.fontSize, width:"20vw", paddingTop:"5%",paddingLeft:"17%", borderLeft:"1px solid black", height:"50vh",display:"flex", flexDirection:"column"}} li={{ fontFamily: "Muli-Bold"}} />
+            </div> */}
+          <div className="footerDesktop">
+
+
+                <div className="copyright">
+                  <p style= {{fontSize: this.state.fontSize}}>
+                    Fait avec amour par NAWAL, JEROME ET REBECCA <br />
+                    Tous droits réservés © 2021
+                  </p>
+                </div>
+
+                <ul style= {{fontSize: this.state.fontSize}} className="Nav">
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                  <li>
+                    <Link to="/actualite">Actualitée</Link>
+                  </li>
+                  <li>
+                    <Link to="/don">Faire un don</Link>
+                  </li>
+                  <li>
+                    <Link to="/nous">Qui sommes-nous ?</Link>
+                  </li>
+                  <li>
+                    <Link to="/sengager">S'engager</Link>
+                  </li>
+                </ul>
+
+                <div className="contactMobile">
+                <Contact style={{fontSize:this.state.fontSize, width:"60%", paddingTop:"5%",border:"4px solid black"}} li={{ fontFamily: "Muli-Bold"}} />
+                </div>
             </div>
-            <ul style= {{fontSize: this.state.fontSize}} className="Nav">
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
-                <Link to="/actualite">Actualitée</Link>
-              </li>
-              <li>
-                <Link to="/don">Faire un don</Link>
-              </li>
-              <li>
-                <Link to="/nous">Qui sommes-nous ?</Link>
-              </li>
-              <li>
-                <Link to="/sengager">S'engager</Link>
-              </li>
-            </ul>
-          </div>
-          <Contact style={{fontSize:this.state.fontSize, width:"60%", paddingTop:"5%",}} li={{ fontFamily: "Muli-Bold"}} />
         </footer>
       </>
     );
