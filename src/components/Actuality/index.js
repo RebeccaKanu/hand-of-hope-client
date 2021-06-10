@@ -47,7 +47,8 @@ export default class index extends Component {
                 <figure>
                   <img
                     className="imgcard"
-                    src={mainArticleOne}
+                    // src={mainArticleOne}
+                    src={element.img}
                     alt="taylor"
                     style={{
                       width: this.state.width,
@@ -56,12 +57,12 @@ export default class index extends Component {
                   />
                   <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
                   <a className="a1" href="#">
-                    Scolarité
+                    {element.tags}
                   </a>
                 </figure>
 
                 <h3>{element.title}</h3>
-                <p>Article de la campagne de distribution</p>
+                <p>{element.content_article}</p>
 
                 <button className="button1">
                   <Link to="#">Lire la suite &nbsp; &rarr;</Link>

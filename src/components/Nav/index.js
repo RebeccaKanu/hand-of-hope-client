@@ -5,6 +5,7 @@ class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      button: "",
       //on initialise le menu à vide car initialement il ne s'affiche pas tant que l'on a pas cliqué sur le burger menu
       navStates: [],
 
@@ -105,6 +106,7 @@ class index extends Component {
       }
     }
   };
+
   /************************/
   /////////////// BROUILLONS NAV ////////////////////////////
   // componentWillMount() {
@@ -195,6 +197,13 @@ class index extends Component {
             <div className="contactPart2">
               <p>{this.state.contactAdressPart2}</p>
             </div>
+          </li>
+
+          <li>
+            <a href="/adminlogin">Connexion</a>
+          </li>
+          <li>
+            <a href="/logout">Déconnexion</a>
           </li>
         </ul>
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
