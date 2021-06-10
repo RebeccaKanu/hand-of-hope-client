@@ -7,30 +7,22 @@ export default class index extends Component {
     constructor(props){
        super(props);
        this.state = {
-    //     sectionLegende: "",
-    //     sectionTitle: "",
-    //     //
-    //     boxTitle: "",
-    //     boxTitle2: "", 
-    //     boxTitle3: "", 
-    //     boxParagraphe: ""
         data: [],
         error: null,
       };
     }
     async componentDidMount() {
         try {
-            const response = lastReviews.getLastReviews();
+            const response =  await lastReviews.getLastReviews();
             this.setState({
                 data: response.data,
             });
-            console.log("RESPONSE", response.data)
+            console.log("RESSSS", response.data)
         } catch (error) {
             console.log(error);
         }
     }
     render() {
-        console.log("RESPONSE", this.state.data);
         return (
 
             <div className="testimony">
@@ -38,27 +30,42 @@ export default class index extends Component {
                 <h2>Que pensez-vous de nous?</h2>
                 <h1>TÉMOIGNAGES</h1>
                 <div className="allBox">
-                    <div className="box pink">
-                        <h3>Fally</h3> 
-                        <h4>Bénificiarire</h4>
-                        <h5>De Kinkasha (ZAIRE)</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel</p>
-                    </div>
-                    <div className="box green">
-                        <h3>Fally</h3>
-                        <h4>Bénificiarire</h4>
-                        <h5>De Kinkasha (ZAIRE)</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel</p>
-                    </div>
-                    <div className="box blue">
-                        <h3>Fally</h3>
-                        <h4>Bénificiarire</h4>
-                        <h5>De Kinkasha (ZAIRE)</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel </p>
-                    </div>
+                {this.state.data.map((el, index) => {
+                 return (
+                    //? condition ternaire 
+                    <div key={index} className="box ">
+                        <h3>{el.first_name}&#160;{el.last_name}</h3> 
+                        <h5>{el.role}</h5>
+                        {/* <h5>De Kinkasha (ZAIRE)</h5> */}
+                        <p>{el.opinion}</p>
+                    </div> 
+                  );
+                })}
+         
                 </div>
 
             </div>
         )
     }
 }
+
+
+   //////////////* STATIC -V BELLOW *////////////
+            //          <div className="box pink">
+            //             <h3>Fally</h3> 
+            //             <h4>Bénificiarire</h4>
+            //             <h5>De Kinkasha (ZAIRE)</h5>
+            //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel</p>
+            //         </div>
+            //         <div className="box green">
+            //             <h3>Fally</h3>
+            //             <h4>Bénificiarire</h4>
+            //             <h5>De Kinkasha (ZAIRE)</h5>
+            //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel</p>
+            //         </div>
+            //         <div className="box blue">
+            //             <h3>Fally</h3>
+            //             <h4>Bénificiarire</h4>
+            //             <h5>De Kinkasha (ZAIRE)</h5>
+            //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium libero vel </p>
+            // </div>
