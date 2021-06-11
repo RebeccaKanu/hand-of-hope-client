@@ -18,7 +18,7 @@ class ReactLabel extends React.Component {
 
 class ReactForm extends React.Component {
   
-  static contextType = appContext;
+  // static contextType = appContext;
 
   constructor(props) {
     super(props);
@@ -34,6 +34,7 @@ class ReactForm extends React.Component {
   handleChange = (e) => {
     //récupère les valeurs du champs de formulaire dynamiquement
     const { name, value } = e.target;
+ 
     this.setState({ [name]: value }); //met à jour email, user_name et password
     console.log("name", value);
   };
@@ -57,7 +58,7 @@ class ReactForm extends React.Component {
       // console.log(response.data);
 
        localStorage.setItem('token', response.data.token);
-       this.context.setAuth(true);
+      //  this.context.setAuth(true);
        this.props.history.push('/adminPage');
 
       //   this.context.setAuth(true); => commenté par moi
@@ -68,7 +69,7 @@ class ReactForm extends React.Component {
     
     } catch (error) {
       console.error(error);
-      this.setState({ error: error });
+      this.setState({ error:error });
     }
   };
 
@@ -85,8 +86,8 @@ class ReactForm extends React.Component {
     !this.state.valid && (formClass += "error");
     return (
 
-    <appContext.Consumer>
-      {(store) => (
+    // <appContext.Consumer>
+      // {(store) => (
 
       <form action="POST" className={formClass} onSubmit={this.handleSubmit}>
         <fieldset className="form-group">
@@ -127,7 +128,7 @@ class ReactForm extends React.Component {
           />
         </fieldset>
 
-        {!this.state.valid && <p className="alert-danger">Please try again</p>}
+        {!this.state.valid && <p className="alert-danger">Please try again </p>}
         <input
           id="formButton"
           className="btn btn-primary"
@@ -137,8 +138,8 @@ class ReactForm extends React.Component {
         />
       </form>
 
-      )}
-    </appContext.Consumer>
+    //   )}
+    // {/* </appContext.Consumer> */}
 
       
     );
