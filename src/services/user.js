@@ -6,4 +6,6 @@ const userService = {
     return await api.post("/api/adminlogin", user);
   },
 };
+
+
 export default userService;
