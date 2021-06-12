@@ -1,4 +1,4 @@
-import React ,{ useState, Component} from "react";
+import React  from "react";
 import HomePage from "../src/pages/Homepage";
 import Sengager from "../src/pages/Sengager";
 import AboutUs from "../src/pages/AboutUs";
