@@ -1,5 +1,6 @@
-import lastArticle from "./lastArticle";
+import ArticleService from "./ArticleService";
 import userService from "./user";
-import lastReviews from "./lastReviews"
+import lastReviews from "./lastReviews";
+import reviewService from './review';
 
-export { lastArticle, userService, lastReviews };
+export { ArticleService, userService, lastReviews, reviewService};

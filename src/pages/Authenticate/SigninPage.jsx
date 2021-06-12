@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-// import appContext from "../../store";
 import { BrowserRouter as Link } from "react-router-dom";
 import { userService } from "../../services/";
 // import "../../assets/stylesheets/singInPage.scss";
+import appContext from "../../store";
 import "../../assets/stylesheets/loginForm.scss";
+
 
 class ReactLabel extends React.Component {
   constructor() {
@@ -16,6 +17,9 @@ class ReactLabel extends React.Component {
 }
 
 class ReactForm extends React.Component {
+  
+  // static contextType = appContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,39 +34,36 @@ class ReactForm extends React.Component {
   handleChange = (e) => {
     //récupère les valeurs du champs de formulaire dynamiquement
     const { name, value } = e.target;
+ 
     this.setState({ [name]: value }); //met à jour email, user_name et password
     console.log("name", value);
   };
 
   handleSubmit = async (e) => {
-    var input = this.refs.myInput;
-    var inputValue = input.value;
-    if (inputValue !== "test") {
-      this.setState({
-        valid: false,
-      });
-    }
     e.preventDefault();
+
     try {
       const response = await userService.signin(
         // on envoie les values comme paramètre de la fonction qui fait la requête post des éléments email, user_name et password.
         this.state.email, //ici on récupère les valeurs actualisées/mis à jour à chaque tentative de remplissage de l'input/champs de formulaire
         this.state.user_name,
         this.state.password
-      );
-      console.log(response.data);
+      );  
 
-      localStorage.setItem("token", response.data.token);
+       localStorage.setItem('token', response.data.token);
+      //  this.context.setAuth(true);
+      
+       this.props.history.push('/adminPage');
 
       //   this.context.setAuth(true); => commenté par moi
       //   const { email, user_name, password } = response.data.user;// commenté par moi
       //   this.context.setUserInfos(email, user_name, password); => commenté par moi
       // console.log(this.appContext); => commenté par moi
       //   console.log(this.context); => commenté par moi
-      this.props.history.push("/AdminPage");
+    
     } catch (error) {
       console.error(error);
-      this.setState({ error: error });
+      this.setState({ error:error });
     }
   };
 
@@ -74,10 +75,14 @@ class ReactForm extends React.Component {
   // }
 
   render() {
-    let formClass = "react-form";
-    !this.state.valid && (formClass += " error");
+
+    
     return (
-      <form action="POST" className={formClass} onSubmit={this.handleSubmit}>
+
+    // <appContext.Consumer>
+      // {(store) => (
+
+      <form action="POST"  onSubmit={this.handleSubmit}>
         <fieldset className="form-group">
           <ReactLabel htmlFor="user_name" title="Username:" />
           <input
@@ -116,7 +121,7 @@ class ReactForm extends React.Component {
           />
         </fieldset>
 
-        {!this.state.valid && <p className="alert-danger">Please try again</p>}
+        {!this.state.valid && <p className="alert-danger">Please try again </p>}
         <input
           id="formButton"
           className="btn btn-primary"
@@ -125,10 +130,14 @@ class ReactForm extends React.Component {
           onClick={this.handleSubmit}
         />
       </form>
+
+    //   )}
+    // {/* </appContext.Consumer> */}
+
+      
     );
   }
 }
 
-const Success = () => <h2>Thank you!</h2>;
 
 export default ReactForm;
