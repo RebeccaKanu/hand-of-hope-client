@@ -40,14 +40,8 @@ class ReactForm extends React.Component {
   };
 
   handleSubmit = async (e) => {
-    var input = this.refs.myInput;
-    var inputValue = input.value;
-    if (inputValue !== "test") {
-      this.setState({
-        valid: false,
-      });
-    }
     e.preventDefault();
+
     try {
       const response = await userService.signin(
         // on envoie les values comme paramètre de la fonction qui fait la requête post des éléments email, user_name et password.
@@ -55,10 +49,10 @@ class ReactForm extends React.Component {
         this.state.user_name,
         this.state.password
       );  
-      // console.log(response.data);
 
        localStorage.setItem('token', response.data.token);
       //  this.context.setAuth(true);
+      
        this.props.history.push('/adminPage');
 
       //   this.context.setAuth(true); => commenté par moi
@@ -82,14 +76,13 @@ class ReactForm extends React.Component {
 
   render() {
 
-    let formClass = "react-form";
-    !this.state.valid && (formClass += "error");
+    
     return (
 
     // <appContext.Consumer>
       // {(store) => (
 
-      <form action="POST" className={formClass} onSubmit={this.handleSubmit}>
+      <form action="POST"  onSubmit={this.handleSubmit}>
         <fieldset className="form-group">
           <ReactLabel htmlFor="user_name" title="Username:" />
           <input
