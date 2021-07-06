@@ -5,12 +5,14 @@
 
 @font-face {
   font-family: "Muli-ExtraLight";
-  src: local("MuliExtraLight"), url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+  src: local("MuliExtraLight"),
+    url(../../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Muli-Bold";
-  src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
+  src: local("MuliBold"),
+    url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
 }
 
 header {
@@ -18,20 +20,20 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   position: relative;
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
   margin: 0 !important;
 }
@@ -41,10 +43,10 @@ header .imgHeader {
   opacity: rgba(0, 0, 0, 0.7);
   height: 100vh;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   -webkit-filter: saturate(5%) contrast(125%);
-          filter: saturate(5%) contrast(125%);
+  filter: saturate(5%) contrast(125%);
 }
 
 header article {
@@ -52,13 +54,8 @@ header article {
   position: absolute;
   top: 48%;
   right: 20%;
-<<<<<<< HEAD
-  width: 69%;
-  height: 40%;
-=======
   width: 80%;
   height: 45%;
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   border-radius: 10px;
   z-index: 4;
   border: solid 0px rgba(0, 0, 0, 0.5);
@@ -70,65 +67,34 @@ header article p:nth-child(2) {
 }
 
 header article .tagline {
-<<<<<<< HEAD
-=======
   padding: 6%;
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
   color: white;
   border-radius: 10px;
   font-weight: bold;
   font-family: "Muli-ExtraLight";
   font-weight: 100;
   text-align: left;
-<<<<<<< HEAD
-  font-size: 0.8rem;
-  padding: 25px;
-=======
   font-size: 15px;
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 header article .tagline .logo {
   font-style: normal;
   color: white;
   font-weight: 1;
-<<<<<<< HEAD
-  padding-bottom: 4px;
-  font-family: "Muli-Bold";
-  font-size: 1rem;
-=======
   font-family: "Muli-Bold";
   font-size: 20px;
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 
 header article a {
   background-color: rgba(255, 255, 255, 0.76);
-<<<<<<< HEAD
-  text-align: center;
-=======
   -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
+  -ms-flex-align: left;
+  align-items: left;
   font-family: "Muli-ExtraLight";
   text-decoration: none;
 }
 
 header article .enSavoirPlus {
-<<<<<<< HEAD
-  color: #fff38a;
-  font-family: "Muli";
-  font-size: 0.9rem;
-  background-color: transparent;
-  font-size: 0.7rem;
-  padding-left: 0px;
-}
-
-header article .enSavoirPlus em {
-  color: #fff38a;
-  font-size: 0.9rem;
-=======
   color: #d99827;
   font-family: "Muli";
   font-size: 18px;
@@ -166,8 +132,8 @@ header article .enSavoirPlus em {
     color: white !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
     font-family: "Muli-ExtraLight" !important;
     text-align: left;
     font-size: 24px !important;
@@ -202,6 +168,5 @@ header article .enSavoirPlus em {
     color: #d99827;
     font-size: 25px !important;
   }
->>>>>>> b10f0412be9bd7647a017f7a9065cc7d9a4b24e1
 }
 /*# sourceMappingURL=header.css.map */
