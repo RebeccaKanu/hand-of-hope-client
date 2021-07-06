@@ -5,17 +5,31 @@ import mainArticleOne from "../../assets/images/bon_prenatale_2.jpeg";
 import mainArticleTwo from "../../assets/images/orphelinat_3.jpeg";
 import mainArticleThree from "../../assets/images/distribution_club_2.jpeg";
 import "../../assets/stylesheets/actuality.scss";
-
+import { ArticleService } from "../../services/";
 
 export default class index extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      //  backgroundImage: taylor,
-      // fontSize:
-      width:"280px",
-      height:"400px",
+      width: "280px",
+      height: "400px",
+      data: [], //data intialisé à vide car il n'y a pas encore de requête
+      error: null,
     };
+  }
+
+  async componentDidMount() {
+    try {
+      const response = await ArticleService.getLastArticle();
+
+      this.setState({
+        data: response.data,
+      });
+
+      console.log("RESPONSE", response.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
@@ -24,61 +38,109 @@ export default class index extends Component {
         <section>
           <h1>DERNIERES ACTUS</h1>
           <h2>Les dernières actualités de l’association </h2>
-          <span></span>
         </section>
 
-        <div>
-          <article>
-            <figure>
-              <img className="imgcard" src={mainArticleOne} alt="taylor" style={{ width: this.state.width, height: this.state.height }}
-               />
-              <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-              <a className="a1" href="#">Scolarité</a>
-            </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>Article de la campagne de distribution</p>
-            <button className="button1">
-              <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-            </button>
-          </article>
+        {this.state.data.map((element, index) => {
+          return (
+            <div key={index}>
+              <article>
+                <figure>
+                  <img
+                    className="imgcard"
+                    // src={mainArticleOne}
+                    src={element.img}
+                    alt="taylor"
+                    style={{
+                      width: this.state.width,
+                      height: this.state.height,
+                    }}
+                  />
+                  <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
+                  <a className="a1" href="#">
+                    {element.tags}
+                  </a>
+                </figure>
 
-          <article>
-            <figure>
-              <img className="imgcard" src={mainArticleTwo} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
-              <figcaption className="figcaption2">
-                CAMPAGNE DE DISTRIBUTION
-              </figcaption>
-              <a className="a2" href="#">
-                Enseignement
-              </a>
-            </figure>
-              <h3>TITRE DE L'ARTICLE</h3>
-              <p>Article de la campagne de distribution</p>
-              <button className="button2">
-                <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-              </button>
-          </article>
+                <h3>{element.title}</h3>
+                <p>{element.content_article}</p>
 
-          <article>
-            <figure>
-              <img className="imgcard" src={mainArticleThree} alt="taylor" style={{ width: this.state.width, height: this.state.height }}/>
-              <figcaption className="figcaption3">
-                CAMPAGNE DE DISTRIBUTION
-              </figcaption>
-              <a className="a3" href="#">
-                Scolarité
-              </a>
-            </figure>
-            <h3>TITRE DE L'ARTICLE</h3>
-            <p>Article de la campagne de distribution</p>
-            <button className="button3">
-              <Link to="#">
-                Lire la suite &nbsp;<em>&rarr;</em>
-              </Link>
-            </button>
-          </article>
-        </div>
+                <button className="button1">
+                  <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+                </button>
+              </article>
+            </div>
+          );
+        })}
       </div>
+
+      // <div>
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleOne}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
+      //       <a className="a1" href="#">
+      //         Scolarité
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button1">
+      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+      //     </button>
+      //   </article>
+
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleTwo}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption className="figcaption2">
+      //         CAMPAGNE DE DISTRIBUTION
+      //       </figcaption>
+      //       <a className="a2" href="#">
+      //         Enseignement
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button2">
+      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
+      //     </button>
+      //   </article>
+
+      //   <article>
+      //     <figure>
+      //       <img
+      //         className="imgcard"
+      //         src={mainArticleThree}
+      //         alt="taylor"
+      //         style={{ width: this.state.width, height: this.state.height }}
+      //       />
+      //       <figcaption className="figcaption3">
+      //         CAMPAGNE DE DISTRIBUTION
+      //       </figcaption>
+      //       <a className="a3" href="#">
+      //         Scolarité
+      //       </a>
+      //     </figure>
+      //     <h3>TITRE DE L'ARTICLE</h3>
+      //     <p>Article de la campagne de distribution</p>
+      //     <button className="button3">
+      //       <Link to="#">
+      //         Lire la suite &nbsp;<em>&rarr;</em>
+      //       </Link>
+      //     </button>
+      //   </article>
+      // </div>
+      // </div>
     );
   }
 }

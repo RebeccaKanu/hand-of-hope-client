@@ -76,6 +76,9 @@
   }
   // IPAD
   @media (min-width: 768px) {
+   
+    left:50%;
+    
     .burgerMenu {
       display: none;
     }
@@ -88,7 +91,9 @@
       z-index: 3!important;
       // right: 100% !important;
       top: 3% !important;
+     
       display: flex !important;
+      flex-direction:row ;
       justify-content: flex-end !important;
       align-items: flex-end !important;
       a {
