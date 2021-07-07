@@ -5,7 +5,6 @@ import { ArticleService } from "../../services/";
 import appContext from '../../store';
 import axios from 'axios'
 
-
 //const token = JSON.parse(localStorage.getItem('auth')).token
 //  function () => {}
 // const response = await /api/articles(token);
@@ -34,36 +33,33 @@ export default class index extends Component {
     author_article:"",
     video:""
    };
-   
+
  }
- 
 
  async componentDidMount() {
 
-   
-  
     try {
       const response = await ArticleService.getAllArticle();
-  
+
       this.setState({
         data: response.data,
       });
-  
+
     } catch (error) {
-      
+
     }
 }
 
 handleChange = (e) => {
  //récupère les valeurs du champs de formulaire dynamiquement
  const { name, value } = e.target;
- 
+
  this.setState({ [name]: value }); //met à jour email, user_name et password
  console.log("name", value);
 
 }
 handleChangeImage = (e) => {
-  const img = e.target.files[0] 
+  const img = e.target.files[0]
   const reader =  new FileReader();
 
   if (img){
@@ -71,12 +67,8 @@ handleChangeImage = (e) => {
     const image = reader.result
     reader.addEventListener('load', () => this.setState({image}))
   }
-  
-  
-  
+
 }
-
-
 
 handleSubmit = (e) => {
   e.preventDefault();
@@ -91,25 +83,19 @@ const article = {
 
 }
  const config = {
-   
+
    headers: {authorization :`Bearer ${localStorage.getItem("token")}`},
    body : JSON.stringify(article)
  }
 
 axios.post('http://localhost:4000/api/article', config)
 
-
-
 }
-
-
 
   render() {
     return (
       <div>
         <h1>Bonjour!</h1>
-
-
 
         <form action="POST"  onSubmit={this.handleSubmit} encType = "multipart/form-data">
 
@@ -123,7 +109,7 @@ axios.post('http://localhost:4000/api/article', config)
             onChange={this.handleChange}
           />
         </fieldset>
-          
+
         <fieldset className="form-group">
           <label htmlFor="video" title="video:" />
           <input
@@ -179,7 +165,6 @@ axios.post('http://localhost:4000/api/article', config)
           />
         </fieldset>
 
-        
         <input
           id="formButton"
           className="btn btn-primary"
@@ -191,4 +176,3 @@ axios.post('http://localhost:4000/api/article', config)
     );
   }
 }
-
