@@ -26,7 +26,7 @@ export default class index extends Component {
         data: response.data,
       });
 
-      console.log("RESPONSE", response.data);
+      console.log("RESPONSE");
     } catch (error) {
       console.log(error);
     }
@@ -47,7 +47,7 @@ export default class index extends Component {
                 <figure>
                   <img
                     className="imgcard"
-                    // src={mainArticleOne}
+                    src={mainArticleOne}
                     src={element.img}
                     alt="taylor"
                     style={{

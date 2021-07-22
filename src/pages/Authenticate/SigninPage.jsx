@@ -35,13 +35,13 @@ class ReactForm extends React.Component {
   };
 
   handleSubmit = async (e) => {
-    var input = this.refs.myInput;
-    var inputValue = input.value;
-    if (inputValue !== "test") {
-      this.setState({
-        valid: false,
-      });
-    }
+    // var input = this.refs.myInput;
+    // var inputValue = input.value;
+    // if (inputValue !== "test") {
+    //   this.setState({
+    //     valid: false,
+    //   });
+    // }
     e.preventDefault();
     try {
       const response = await userService.signin(
