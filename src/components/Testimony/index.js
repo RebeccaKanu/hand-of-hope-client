@@ -32,11 +32,9 @@ export default class index extends Component {
                 <div className="allBox">
                 {this.state.data.map((el, index) => {
                  return (
-                    //? condition ternaire 
                     <div key={index} className="box ">
                         <h3>{el.first_name}&#160;{el.last_name}</h3> 
                         <h5>{el.role}</h5>
-                        {/* <h5>De Kinkasha (ZAIRE)</h5> */}
                         <p>{el.opinion}</p>
                     </div> 
                   );
