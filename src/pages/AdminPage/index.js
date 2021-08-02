@@ -4,67 +4,6 @@ import { ArticleService } from "../../services/";
 import axios from 'axios'
 import '../../../src/assets/stylesheets/adminPage.scss'
 
-//  LAST ARTICLE 
-
-export class LastArticle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: "280px",
-      height: "400px",
-      data: [], //data intialisé à vide car il n'y a pas encore de requête
-      error: null,
-    };
-  }
-  async componentDidMount(){
-   try {
-   const resLastArticle = await axios.get(`http://localhost:4000/api/dernierArticles`);
-   console.log("DATAAAAAA", resLastArticle)
-      this.setState({
-          data: resLastArticle.data,
-        });
-   }
-   catch (error) {
-     console.error(error);
-     this.setState({ error:error });
-   }
- }
-
-  render() {
-    return (
-      <div className="lastArticle" style={{border:"3px solid red"}}>
-        <section>
-          <h1> les 3 DERNIERES ACTUALITÉS</h1>
-        </section>
-
-         {this.state.data.map((element, index) => {
-          return (
-            <div key={index}>
-               <img
-                    src={element.img}
-                    alt={element.title}
-                    style={{
-                      width: this.state.width,
-                      height: this.state.height,
-                    }}
-                  />
-              <article><button>Ajouter</button>                    
-              <button>suprimer</button>
-              <button>modifier</button>
-                <h3>{element.title}</h3>
-                <p>{element.resume_article}</p>
-                <p>{element.content_article}</p>
-                <p>{element.author_article}</p>
-              </article>
-
-              
-            </div>
-          );
-        })} 
-      </div>
-    )
-  }
-}
 
 //ALL ARTICLE
 export class AllArticle extends Component {
@@ -99,7 +38,7 @@ export class AllArticle extends Component {
           <h1>Tous les articles</h1>
         </section>
 
-        {this.state.data.map((element, index) => {
+        {/* {this.state.data.map((element, index) => {
           return (
             <div key={index}>
               
@@ -113,7 +52,7 @@ export class AllArticle extends Component {
               </article>
             </div>
           );
-        })} 
+        })}  */}
               
       </div>  
     )
@@ -172,90 +111,10 @@ export class AllTestimony extends Component {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //const token = JSON.parse(localStorage.getItem('auth')).token
 //  function () => {}
 // const response = await /api/articles(token);
 // if( token){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // FORM ADD ARTICLE 
 
@@ -434,11 +293,10 @@ class AdminPage extends Component {
     return (
       <section>
       <h1>Bonjour!</h1>
-      <reLastTestimony/>
+      {/* <reLastTestimony/> */}
       <AllTestimony/>
-     <LastArticle/>
      <AllArticle/>
-     <FormulaireArticle/>
+     {/* <FormulaireArticle/> */}
      </section>
     );
   }

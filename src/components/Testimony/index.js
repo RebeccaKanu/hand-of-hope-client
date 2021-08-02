@@ -17,7 +17,7 @@ export default class index extends Component {
             this.setState({
                 data: response.data,
             });
-            console.log("RESSSS", response.data)
+            console.log("testimony data", response.data)
         } catch (error) {
             console.log(error);
         }

@@ -13,7 +13,7 @@ export default class index extends Component {
     this.state = {
       width: "280px",
       height: "400px",
-      data: [], //data intialisé à vide car il n'y a pas encore de requête
+      data: [], 
       error: null,
     };
   }
@@ -26,7 +26,7 @@ export default class index extends Component {
         data: response.data,
       });
 
-      console.log("RESPONSE", response.data);
+      console.log("3 last articles", response.data);
     } catch (error) {
       console.log(error);
     }
@@ -72,75 +72,6 @@ export default class index extends Component {
           );
         })}
       </div>
-
-      // <div>
-      //   <article>
-      //     <figure>
-      //       <img
-      //         className="imgcard"
-      //         src={mainArticleOne}
-      //         alt="taylor"
-      //         style={{ width: this.state.width, height: this.state.height }}
-      //       />
-      //       <figcaption>CAMPAGNE DE DISTRIBUTION</figcaption>
-      //       <a className="a1" href="#">
-      //         Scolarité
-      //       </a>
-      //     </figure>
-      //     <h3>TITRE DE L'ARTICLE</h3>
-      //     <p>Article de la campagne de distribution</p>
-      //     <button className="button1">
-      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-      //     </button>
-      //   </article>
-
-      //   <article>
-      //     <figure>
-      //       <img
-      //         className="imgcard"
-      //         src={mainArticleTwo}
-      //         alt="taylor"
-      //         style={{ width: this.state.width, height: this.state.height }}
-      //       />
-      //       <figcaption className="figcaption2">
-      //         CAMPAGNE DE DISTRIBUTION
-      //       </figcaption>
-      //       <a className="a2" href="#">
-      //         Enseignement
-      //       </a>
-      //     </figure>
-      //     <h3>TITRE DE L'ARTICLE</h3>
-      //     <p>Article de la campagne de distribution</p>
-      //     <button className="button2">
-      //       <Link to="#">Lire la suite &nbsp; &rarr;</Link>
-      //     </button>
-      //   </article>
-
-      //   <article>
-      //     <figure>
-      //       <img
-      //         className="imgcard"
-      //         src={mainArticleThree}
-      //         alt="taylor"
-      //         style={{ width: this.state.width, height: this.state.height }}
-      //       />
-      //       <figcaption className="figcaption3">
-      //         CAMPAGNE DE DISTRIBUTION
-      //       </figcaption>
-      //       <a className="a3" href="#">
-      //         Scolarité
-      //       </a>
-      //     </figure>
-      //     <h3>TITRE DE L'ARTICLE</h3>
-      //     <p>Article de la campagne de distribution</p>
-      //     <button className="button3">
-      //       <Link to="#">
-      //         Lire la suite &nbsp;<em>&rarr;</em>
-      //       </Link>
-      //     </button>
-      //   </article>
-      // </div>
-      // </div>
     );
   }
 }

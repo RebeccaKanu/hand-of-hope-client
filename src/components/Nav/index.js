@@ -14,7 +14,6 @@ class index extends Component {
       n: 1, //n va s'incrément de 1 à chaque clique,
     };
   }
-  
 
   /************************/
 
@@ -143,7 +142,6 @@ class index extends Component {
           backgroundColor: this.state.backgroundColor,
         }}
       >
-        
         {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
         {/* ul menuBurger disponible version mobile composant only JS */}
         <ul style={{ border: "5px solid pink" }}>{iterateNav}</ul>
@@ -174,9 +172,6 @@ class index extends Component {
           >
             <a href="/aPropos">A propos de nous</a>
           </li>
-
-      
-
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
@@ -185,7 +180,6 @@ class index extends Component {
           >
             <a href="/sengager">S'engager</a>
           </li>
-
           <li
             className="contacts"
             style={{
@@ -203,24 +197,16 @@ class index extends Component {
               <p>{this.state.contactAdressPart2}</p>
             </div>
           </li>
-            
-         
-  
-    )
-           
-              
+          )
           <li>
             <a href="/adminlogin">Connexion</a>
           </li>
           <li>
             <a href="/logout">Déconnexion</a>
           </li>
-            <li>test</li>
-            
-          
+          <li>test</li>
         </ul>
-           
-          
+
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
           <div style={{ transform: this.state.transformTop }}></div>
           <div style={{ background: this.state.background }}></div>

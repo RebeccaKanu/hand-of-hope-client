@@ -5,12 +5,12 @@ import axios from 'axios';
 
 async function addAReview (reviewers) {
     
-    const reqConfig = {
-            last_name :review.last_name,
-            first_name :review.first_name,
-            opinion:review.opinion,
-            role:review.role
-    }
+    // const reqConfig = {
+    //         last_name :review.last_name,
+    //         first_name :review.first_name,
+    //         opinion:review.opinion,
+    //         role:review.role
+    // }
 
     try{
         const response = await axios.post('http://localhost:4000/api/votrePetitMot',reqConfig);
