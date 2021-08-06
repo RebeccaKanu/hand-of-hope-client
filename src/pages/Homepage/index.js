@@ -16,6 +16,7 @@ export default class index extends Component {
         <Actuality />
         <Video />
         <Testimony />
+        <a href="/api/votrePetitMot">Témoignez!</a>
       </div>
     );
   }

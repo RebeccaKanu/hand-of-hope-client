@@ -13,6 +13,7 @@ import Footer from "../src/components/Footer";
 import Actuality from "../src/components/Actuality";
 import Login from "../src/pages/Authenticate/SigninPage";
 import AdminPage from "../src/pages/AdminPage";
+import TestimonyForm from "../src/components/TestimonyForm"
 
 function PrivateRoute(props) {
   const token = localStorage.getItem("token");
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/derniersArticles" component={Actuality} />
           <Route exact path="/adminlogin" component={Login} />
           <Route exact path="/logout" component={HomePage} />
+          <Route exact path="/api/votrePetitMot"component={TestimonyForm}/>
           <PrivateRoute path="/adminPage" component={AdminPage} />
         </Switch>
         <Footer />

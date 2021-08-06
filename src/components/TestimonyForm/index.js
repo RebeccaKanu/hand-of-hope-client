@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Link } from "react-router-dom";
-import { reviewService } from "../../services/";
+import { reviewService } from "../../services";
 
 import "../../assets/stylesheets/TestimonyForm.scss";
 
@@ -46,9 +46,9 @@ class index extends Component {
         this.state.role
       );
 
-      // console.log("responseeeeee", response);
+      console.log("responseeeeee", response);
 
-    //   this.props.history.push("/");
+      this.props.history.push("/");
     } catch (error) {
       console.error(error);
       this.setState({ error: error });
