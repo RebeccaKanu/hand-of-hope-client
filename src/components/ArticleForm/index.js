@@ -1,177 +1,108 @@
-import React, { Component } from "react";
-// import appContext from '../../store';
-import axios from "axios";
-import "../../../src/assets/stylesheets/adminPage.scss";
+import React, {Component} from 'react';
+import { BrowserRouter as Link } from "react-router-dom";
+import { postArticle } from "../../services";
+
+import "../../assets/stylesheets/TestimonyForm.scss";
+
+
+   
+export class ArticleForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+          title: "",
+          img: "",
+          tags: "",
+          resume_article: "",
+          content_article: "",
+          author_article: "",
+          video: "", 
+          admin_id: "",
+          error: null,
+            
+         };
+    }
 
 
 
-//const token = JSON.parse(localStorage.getItem('auth')).token
-//  function () => {}
-// const response = await /api/articles(token);
-// if( token){
+  handleChange = (e) => {
+    
+    const { name, value } = e.target;
 
-// FORM ADD ARTICLE 
+    this.setState({ [name]: value }); 
+    console.log("name", value);
+  };
 
-// export class FormulaireArticle extends Component {
-//   // static contextType = appContext;
+  handleSubmit = async (e) => {
+ 
+    // var input = this.refs.myInput;
+    // var inputValue = input.value;
+    // if (inputValue === " ") {
+    //   this.setState({
+    //     valid: false,
+    //   });
+    // }
+    e.preventDefault();
+    try {
+      const response = await postArticle.publishArticle(
+        this.state.title,
+        this.state.img,
+        this.state.tags,
+        this.state.resume_article,
+        this.state.content_article,
+        this.state.author_article,
+        this.state.video,
+        this.state.admin_id,
+      );
 
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//     //  token: this.parse(localStorage.getItem('auth')).token ,
-//     data: [], //data intialisé à vide car il n'y a pas encore de requête
-//     error: null,
-//     title:"",
-//     image:"",
-//     tags:"",
-//     resume_article:"",
-//     content_article:"",
-//     author_article:"",
-//     video:""
-//    };
+      console.log("responseeeeee", response);
 
-//  }
+      // this.props.history.push("/");
+    } catch (error) {
+      console.error(error);
+      this.setState({ error: error });
+    }
+  };
+    render() {
+        return (
+            <>
+        <h1>Votre article</h1>
 
-//  async componentDidMount() {
+        <form  action="POST"  className="ui form"  onSubmit={this.handleSubmit}>
+            
+            <div class=" fiels">
+                <label htmlFor="title">Titre</label>
+                <input type="text" id="title" name="title" required onChange={this.handleChange}  value={this.state.title}/>
 
-//     try {
-//       const response = await ArticleService.getAllArticle();
+                <label htmlFor="img">Image</label>
+                <input type="text" id="img" name="img" required onChange={this.handleChange} value={this.state.img}/>
 
-//       this.setState({
-//         data: response.data,
-//       });
+                <label htmlFor="tags">Tags</label>
+                <input type="text" id="tags" name="tags"  required onChange={this.handleChange} value={this.state.tags}/>
 
-//     } catch (error) {
+                <label htmlFor="resume_article">Résumé</label>
+                <input name="resume_article" id="resume_article" required onChange={this.handleChange} value={this.state.resume_article}/>
 
-//     }
-// }
+                <label htmlFor="content_article">Contenu de l'article</label>
+                <input name="content_article" id="content_article" required onChange={this.handleChange} value={this.state.content_article}/>
 
-// handleChange = (e) => {
-//  //récupère les valeurs du champs de formulaire dynamiquement
-//  const { name, value } = e.target;
+                <label htmlFor="author_article">Autheur</label>
+                <input name="author_article" id="author_article" required onChange={this.handleChange} value={this.state.author_article}/>
 
-//  this.setState({ [name]: value }); //met à jour email, user_name et password
-//  console.log("name", value);
+                <label htmlFor="video">Vidéo</label>
+                <input name="video" id="video" required onChange={this.handleChange} value={this.state.video}/>
 
-// }
-// handleChangeImage = (e) => {
-//   const img = e.target.files[0]
-//   const reader =  new FileReader();
+                <label htmlFor="admin_id">/</label>
+                <input name="admin_id" id="admin_id" required onChange={this.handleChange} value={this.state.admin_id}/>
 
-//   if (img){
-//     reader.readAsDataURL(img)
-//     const image = reader.result
-//     reader.addEventListener('load', () => this.setState({image}))
-//   }
+            </div>
+            
+            <button type="submit" class="ui blue label submit icon button" onClick={this.handleSubmit}>
+            <i class="icone edit"></i> Envoyer
+            </button>
+        </form>
+        </>
+        );
+    }
+}
 
-  
-// }
-
-// handleSubmit = (e) => {
-//   e.preventDefault();
-// const article = {
-//   title:this.state.title,
-//   tags:this.state.tags,
-//   resume_article:this.state.resume_article,
-//   content_article:this.state.content_article,
-//   author_article:this.state.author_article,
-//   video:this.state.video,
-//   image:this.state.image
-
-// }
-//  const config = {
-
-//    headers: {authorization :`Bearer ${localStorage.getItem("token")}`},
-//    body : JSON.stringify(article)
-//  }
-
-// axios.post('http://localhost:4000/api/article', config)
-
-// }
-//   render() {
-//     return (
-//       <div>
-//         <form action="POST"  onSubmit={this.handleSubmit} encType = "multipart/form-data">
-
-//         <fieldset className="form-group">
-//           <label htmlFor="title" title="title:" />
-//           <input
-//             id="title"
-//             className="form-input"
-//             name="title"
-//             type="text"
-//             onChange={this.handleChange}
-//           />
-//         </fieldset>
-
-//         <fieldset className="form-group">
-//           <label htmlFor="video" title="video:" />
-//           <input
-//             id="video"
-//             className="form-input"
-//             name="resume_article"
-//             type="text"
-//             onChange={this.handleChange}
-//           />
-//         </fieldset>
-
-//         <fieldset className="form-group">
-//           <label htmlFor="content_article" title="content_article:" />
-//           <input
-//             id="content_article"
-//             className="form-input"
-//             name="content_article"
-//             type="text"
-//             onChange={this.handleChange}
-//           />
-//         </fieldset>
-
-//         <fieldset className="form-group">
-//           <label htmlFor="resume_article" title="resume_article:" />
-//           <input
-//             id="resume_article"
-//             className="form-input"
-//             name="resume_article"
-//             type="text"
-//             onChange={this.handleChange}
-//           />
-//         </fieldset>
-
-//         <fieldset className="form-group">
-//           <label htmlFor="tags" title="tags:" />
-//           <input
-//             id="tags"
-//             className="form-input"
-//             name="tags"
-//             type="text"
-//             onChange={this.handleChange}
-//           />
-//         </fieldset>
-
-//         <fieldset className="form-group">
-//           <label htmlFor="image" title="image:" />
-//           <input
-//             id="image"
-//             className="form-input"
-//             name="image"
-//             type="file"
-//             onChange={this.handleChangeImage}
-//           />
-//         </fieldset>
-
-//         <input
-//           id="formButton"
-//           className="btn btn-primary"
-//           type="submit"
-//           placeholder="Send message"
-//         />
-//             {/* <section>
-//               <button > Ajouter </button>
-//               <button > suprimer </button>
-//               <button > modifier </button>
-//             </section> */}
-//       </form>
-//       </div>
-//     );
-//   }
-// }

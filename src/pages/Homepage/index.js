@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Nav from "../../components/Nav/";
+import Nav from "../../components/Nav";
 import "../../assets/stylesheets/homepage.scss";
 import Actuality from "../../components/Actuality";
 import Header from "../../components/Header";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import appContext from '../../store';
 import axios from "axios";
-import "../../../src/assets/stylesheets/adminPage.scss";
+import "../../assets/stylesheets/adminPage.scss";
 
 export class AllArticle extends Component {
   constructor(props) {

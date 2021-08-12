@@ -43,6 +43,9 @@ footer {
   text-align: left;
   margin: 4% 6%;
   font-family: "Muli-ExtraLight" !important;
+  -webkit-box-ordinal-group: 1 !important;
+      -ms-flex-order: 0 !important;
+          order: 0 !important;
 }
 
 footer * {
@@ -112,5 +115,76 @@ footer div:nth-child(2) .Nav a {
 
 footer div:nth-child(2) .contactFooter {
   border: 3px solid blue;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  footer div:nth-child(1) {
+    padding-top: 0 !important;
+    padding-bottom: 1% !important;
+    width: 20vw !important;
+    padding-right: 2% !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    padding-top: 2% !important;
+    margin-right: 5% !important;
+    max-height: 35vh !important;
+  }
+  footer div:nth-child(1) p:nth-child(1) {
+    padding-top: 0% !important;
+    min-width: 10vw !important;
+  }
+  footer div:nth-child(1) img {
+    min-width: 10vw !important;
+    max-height: 26vh !important;
+  }
+  footer div:nth-child(2) {
+    border-top: none !important;
+  }
+  footer .footerDesktop {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    height: 50vh !important;
+    width: 50vw !important;
+  }
+  footer .footerDesktop .copyright {
+    width: 20vw !important;
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
+    height: 20vh !important;
+  }
+  footer .footerDesktop .Nav {
+    width: 22vw !important;
+    -webkit-box-ordinal-group: 1 !important;
+        -ms-flex-order: 0 !important;
+            order: 0 !important;
+    padding-top: 2% !important;
+    padding-top: 4%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+    width: 50%;
+    list-style-type: none;
+  }
+  footer .footerDesktop .Nav li:nth-child(n) {
+    padding-bottom: 5%;
+  }
+  footer .footerDesktop .Nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

@@ -5,7 +5,7 @@ import mainArticleOne from "../../assets/images/bon_prenatale_2.jpeg";
 import mainArticleTwo from "../../assets/images/orphelinat_3.jpeg";
 import mainArticleThree from "../../assets/images/distribution_club_2.jpeg";
 import "../../assets/stylesheets/actuality.scss";
-import { ArticleService } from "../../services/";
+import { ArticleService } from "../../services";
 
 export default class index extends Component {
   constructor(props) {

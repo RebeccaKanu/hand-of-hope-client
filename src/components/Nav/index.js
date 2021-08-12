@@ -198,13 +198,6 @@ class index extends Component {
             </div>
           </li>
           )
-          <li>
-            <a href="/adminlogin">Connexion</a>
-          </li>
-          <li>
-            <a href="/logout">Déconnexion</a>
-          </li>
-          <li>test</li>
         </ul>
 
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>

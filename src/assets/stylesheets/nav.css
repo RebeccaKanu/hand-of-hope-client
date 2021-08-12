@@ -90,6 +90,9 @@
 }
 
 @media (min-width: 768px) {
+  .BurgerLink {
+    left: 50%;
+  }
   .BurgerLink .burgerMenu {
     display: none;
   }
@@ -104,6 +107,10 @@
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;

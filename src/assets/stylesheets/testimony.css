@@ -79,7 +79,7 @@
 }
 
 .testimony .box h3 {
-  font-family: "Quicksand-Regular";
+  font-family: "Quicksand-Light";
 }
 
 .testimony .box h4 {
@@ -92,7 +92,7 @@
   font-size: 18px;
   margin-top: 2%;
   margin-bottom: 5%;
-  font-family: "Quicksand-Light";
+  font-family: "Muli-Bold";
 }
 
 .testimony .box p {
@@ -100,33 +100,22 @@
   font-family: "Quicksand-Regular";
 }
 
-.testimony .pink {
-  margin-bottom: 10%;
-  margin-top: 20%;
-}
-
-.testimony .pink h5 {
+.testimony :nth-child(1) h5 {
   border-bottom: 1px solid #d140d6;
   color: #d140d6;
   padding-bottom: 2%;
 }
 
-.testimony .green {
-  margin-bottom: 10%;
-}
-
-.testimony .green h5 {
+.testimony :nth-child(2) h5 {
   border-bottom: 1px solid #91C877;
   color: #91c877;
 }
 
-.testimony .blue {
+.testimony :nth-child(3) {
   margin-bottom: 10%;
-  border-bottom: 1px solid black;
-  padding-bottom: 10%;
 }
 
-.testimony .blue h5 {
+.testimony :nth-child(3) h5 {
   border-bottom: 1px solid #a2c2df;
   color: #a2c2df;
 }
@@ -184,18 +173,17 @@
     width: 35% !important;
     margin: 6% 2% !important;
   }
-  .testimony .allBox .pink,
-  .testimony .allBox .blue
-.green {
+  .testimony .allBox :nth-child(n) {
     margin-top: 0% !important;
     padding-top: 0 !important;
   }
-  .testimony .allBox .blue {
+  .testimony .allBox :nth-child(3) h5,
+  .testimony .allBox :nth-child(2) h5 {
+    padding-bottom: 2% !important;
+  }
+  .testimony .allBox :nth-child(3) {
     padding-bottom: 0 !important;
     border-bottom: none !important;
-  }
-  .testimony .allBox .pink {
-    padding-top: 8% !important;
   }
 }
 /*# sourceMappingURL=testimony.css.map */

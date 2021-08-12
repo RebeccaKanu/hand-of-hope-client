@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../assets/stylesheets/testimony.scss";
-import { lastReviews } from "../../services/";
+import { lastReviews } from "../../services";
 
 
 export default class index extends Component {

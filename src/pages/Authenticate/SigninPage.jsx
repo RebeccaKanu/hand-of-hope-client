@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Link } from "react-router-dom";
-import { userService } from "../../services/";
+import { userService } from "../../services";
 // import "../../assets/stylesheets/singInPage.scss";
 import appContext from "../../store";
 import "../../assets/stylesheets/loginForm.scss";

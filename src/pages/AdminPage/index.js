@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import {AllArticle} from "../../components/AllArticles";
 import {AllTestimony} from "../../components/AllTestimony";
+import {ArticleForm} from "../../components/ArticleForm"
 // import appContext from '../../store';
 import axios from 'axios'
-import '../../../src/assets/stylesheets/adminPage.scss'
+import '../../assets/stylesheets/adminPage.scss'
 
 
 class AdminPage extends Component {
@@ -14,10 +15,10 @@ class AdminPage extends Component {
   render() {
     return (
       <section>
-      <h1>Bonjour!</h1>
-      <AllTestimony/>
-     <AllArticle/>
-     {/* <FormulaireArticle/> */}
+        <h1>Bonjour!</h1>
+        <AllTestimony/>
+        <AllArticle/>
+        <ArticleForm/>
      </section>
     );
   }
