@@ -4,7 +4,7 @@ import { reviewService } from "../../services"
 import axios from "axios";
 import "../../../src/assets/stylesheets/adminPage.scss";
 
-export class Testimonies extends Component {
+export class TestimonyDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,26 +12,48 @@ export class Testimonies extends Component {
       error: null,
     };
   }
- 
-  async componentDidMount() {
-    try {
+  handleClick = async () => {
+    const testimonyId = this.props.match.params.id;
 
-      const  resAllTestimony = await reviewService.allTestimony();
-     
+    console.log("testi id", testimonyId);
+    // this.props.history.push("/article/" + articleId);
+    try{
+      await reviewService.deleteOneTestimony(testimonyId);
+      // this.props.history.push("/article/");
+    }
+    catch(error){
       this.setState({
-        data: resAllTestimony.data,
+        error: error
       });
+
+    }
+  };
+  async componentDidMount() {
+    this.GetOneTestimony();
+  }
+  GetOneTestimony = async () => {
+    const testimonyId = this.props.match.params.id;
+
+    // console.log("idd", articleId);
+
+    try {
+      const getAnArticle = await reviewService.getOneTestimony(testimonyId);
+      //
+      this.setState({
+        data: getAnArticle.data,
+      });
+      //
     } catch (error) {
-      console.error(error);
       this.setState({ error: error });
     }
-  }
+  };
 
   render() {
     return (
       <div style={{ border: "3px solid green" }}>
         <section>
-          <h1>Tous les commentaires</h1>
+
+          <h1>Bonjour</h1>
           {this.state.data.map((element, index) => {
             return (
               <div key={index}>
@@ -40,7 +62,7 @@ export class Testimonies extends Component {
                   <p>{element.role}</p>
                   <p>{element.opinion}</p>
                 </div>
-                <button><a href={"/votrePetitMot/" + element.id}>Details</a></button>
+                <button onClick={this.handleClick}>supprimer</button>
               </div>
             );
           })}

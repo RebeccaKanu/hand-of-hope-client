@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import {AllArticle} from "../../components/AllArticles";
-import {AllTestimony} from "../../components/AllTestimony";
-import {ArticleForm} from "../../components/ArticleForm"
+// import {AllArticle} from "../../components/AllArticles";
+// import {AllTestimony} from "../../components/AllTestimony";
+// import {ArticleForm} from "../../components/ArticleForm";
+import Header from '../../components/Header'
 // import appContext from '../../store';
 import axios from 'axios'
 import '../../assets/stylesheets/adminPage.scss'
@@ -12,13 +13,22 @@ class AdminPage extends Component {
     super(props);
     this.state = {  };
   }
+  logout() {
+    localStorage.clear();
+    window.location.href = '/';
+  }
   render() {
     return (
       <section>
-        <h1>Bonjour!</h1>
-        <AllTestimony/>
-        <AllArticle/>
-        <ArticleForm/>
+
+        <ul className="Links">      
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/temoignages">Témoignages</a></li>
+          <li><a href="/logout" onClick={this.logout}>Déconnexion</a></li>     
+        </ul>
+        
+        <h1>Bonjour {/*Nom de l'admin!*/}</h1>
+
      </section>
     );
   }

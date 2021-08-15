@@ -26,7 +26,6 @@ export default class index extends Component {
         data: response.data,
       });
 
-      console.log("3 last articles", response.data);
     } catch (error) {
       console.log(error);
     }

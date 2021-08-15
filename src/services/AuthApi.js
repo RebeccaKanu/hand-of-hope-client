@@ -1,3 +1,3 @@
-export function hasAuthenticated() {
-    return false;
-}
+// export function hasAuthenticated() {
+//     return false;
+// }

@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Link } from "react-router-dom";
-import { ArticleService} from "../../services";
+import { ArticleService } from "../../services";
 
 import "../../assets/stylesheets/TestimonyForm.scss";
-
-
    
-export class ArticleForm extends Component {
+export class ArticleUpdateForm extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -32,9 +30,13 @@ export class ArticleForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    const articleId = this.props.match.params.article_id;
+
+    console.log("testi id", articleId);
 
     try {
-      const response = await ArticleService.publishArticle(
+      const response = await ArticleService.updateOneArticle(
+        articleId, 
         this.state.title,
         this.state.img,
         this.state.tags,

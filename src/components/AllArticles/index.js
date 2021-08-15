@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 // import appContext from '../../store';
 import axios from "axios";
+import { ArticleService } from "../../services";
+import { ArticleForm } from "../ArticleForm";
 import "../../assets/stylesheets/adminPage.scss";
 
-export class AllArticle extends Component {
+export class Articles extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,45 +14,48 @@ export class AllArticle extends Component {
     };
   }
   async componentDidMount() {
+    this.GETALLARTICLE();
+  }
+  GETALLARTICLE = async () => {
     try {
-      const resAllArticle = await axios.get(
-        `http://localhost:4000/api/articles`
-      );
+      const getAllArticle = await ArticleService.getAllArticle();
+   
       this.setState({
-        data: resAllArticle.data,
-      });
-      console.log("article response", resAllArticle.data);
+        data: getAllArticle.data,
+      })
+      //
+     
     } catch (error) {
-      console.error(error);
+ 
       this.setState({ error: error });
     }
-  }
+  };
 
   render() {
     return (
       <div style={{ border: "3px solid pink" }}>
         <section>
           <h1>Tous les articles</h1>
+
+          {this.state.data.map((element, index) => {
+            return (
+              <div key={index}>
+                <article>
+                  <h2><a href={'/adminArticleDetails/' + element.article_id}>{element.title}</a></h2>
+                  <p><a href={'/adminArticleDetails/' + element.article_id}>{element.resume_article}</a></p>
+                  <p><a href={'/adminArticleDetails/' + element.article_id}>{element.content_article}</a></p>
+                  <p><a href={'/adminArticleDetails/' + element.article_id}>{element.author_article}</a></p>
+                </article>
+              </div>
+            );
+          })}
         </section>
 
-        {this.state.data.map((element, index) => {
-          return (
-            <div key={index}>
-              <article>
-                <button>Ajouter</button>
-                <button>suprimer</button>
-                <button>modifier</button>
-                <h2>{element.title}</h2>
-                <p>{element.resume_article}</p>
-                <p>{element.content_article}</p>
-                <p>{element.author_article}</p>
-              </article>
-            </div>
-          );
-        })}
+        <section>
+          <h1>Poster un article</h1>
+              <ArticleForm/>
+        </section>
       </div>
     );
   }
 }
-
-

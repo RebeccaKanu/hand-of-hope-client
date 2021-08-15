@@ -197,7 +197,7 @@ class index extends Component {
               <p>{this.state.contactAdressPart2}</p>
             </div>
           </li>
-          )
+  
         </ul>
 
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>

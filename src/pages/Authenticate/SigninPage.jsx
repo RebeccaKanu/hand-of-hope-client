@@ -36,7 +36,7 @@ class ReactForm extends React.Component {
     const { name, value } = e.target;
  
     this.setState({ [name]: value }); //met à jour email, user_name et password
-    console.log("name", value);
+   
   };
 
   handleSubmit = async (e) => {

@@ -4,6 +4,7 @@ import Header1 from "../../assets/images/Header1.jpg";
 import Header2 from "../../assets/images/Header2.jpeg";
 import logo from "../../assets/images/logo_hoh_officiel.jpeg";
 import Headerprotablett from "../../assets/images/Header-tablette-pro.jpg";
+
 import facebook from "../../assets/images/facebook.svg";
 export default class index extends Component {
   constructor(props) {
