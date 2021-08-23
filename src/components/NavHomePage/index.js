@@ -148,14 +148,6 @@ class index extends Component {
 
         {/* ul menuBurger disponible version desktop*/}
         <ul className="Links">
-        <li
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
-            }}
-          >
-            <a href="/">Accueil</a>
-          </li>
 
           <li
             style={{

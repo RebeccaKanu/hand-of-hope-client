@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import fondateur from "../../assets/images/fondateur_hop.jpg";
+import  Nav  from "../../components/Nav/index"
 import "../../assets/stylesheets/aboutUs.scss";
+// import CheckoutWithStripe from "../../components/Don/CheckoutWithStripe";
 
 export default class index extends Component {
   render() {
     return (
       <div class="aboutUsContainer">
+        <Nav/>
         <h1>NOTRE HISTOIRE</h1>
 
         <div className="ligne"></div>
@@ -46,6 +49,8 @@ export default class index extends Component {
             </ul>
           </div>
         </div>
+        {/*  DON */}
+        {/* <CheckoutWithStripe /> */}
       </div>
     );
   }

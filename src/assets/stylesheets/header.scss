@@ -28,6 +28,13 @@
   src: local("QuicksandLight"),
     url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Peace Sans";
+  src: local("PeaceSans"),
+    url(../../assets/fonts/peace_sans/PeaceSansWebfont.ttf) format("truetype");
+}
+
+
 header {
   display: flex;
   justify-content: center;
@@ -170,6 +177,21 @@ header {
     // position:static;
     // height: 100vh !important;
 
+    .HomepageImage {
+      
+      margin-right: 238px;//new rebecca à transposer: TAILLE IMAGE DESKTOP
+      margin-top: -51px;
+    
+      .facebookLegend { //new rebecca àà transposer
+       
+        // border: 2px solid blue;
+        margin-right: 825px;
+        color: gray;
+      }
+    }
+
+   
+
     article {
       padding-top: 10% !important;
       background: none !important;
@@ -183,10 +205,15 @@ header {
       display: flex !important;
       flex-direction: column !important;
       /////// LOGO + SLOGAN
+
+      .tagline{
+        color: transparent  !important;
+      }
+
       .logo {
         display: flex !important;
 
-        justify-content: space-around;    
+        justify-content: space-around;
         align-items: center;
         flex-direction: column;
 
@@ -194,26 +221,32 @@ header {
           max-width: 18% !important;
         }
         p {
-          color: rgb(43, 93, 153) !important;
+          color: black !important;
           font-family: "Roboto-Light" !important;
-          text-shadow: #a2c2df -1px -1px !important;
+          // text-shadow: #a2c2df -1px -1px !important;
           z-index: 4;
-          font-size: 15px !important;
+          font-size: 11px !important;
           text-align: center;
           justify-content: center;
           padding: 1%;
+          width: 95px;
         }
       }
       ////// TAGLINE + TITLE DESKTOP
       .taglineDesktop {
         display: block !important;
         font-family: "Roboto-Light";
-        // margin-top: 76%;
         margin-bottom: 2%;
         text-align: left !important;
-        font-size: 25px !important;
+        font-size: 19px !important;
         padding: 4%;
         color: black !important;
+        width: 59%;
+        margin-left: 37px;
+        span {
+          font-family: "Peace Sans";
+          font-size: 2.4rem;
+        }
       }
       .taglineDesktop .titleTaglineDesktop {
         display: none !important;
@@ -252,12 +285,6 @@ header {
       left: 24%;
       box-sizing: border-box;
       .facebookLink {
-        //  transform: rotate(180deg)!important;
-        font-family: "Roboto-Bold" !important;
-        writing-mode: vertical-rl !important;
-        color: white !important;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-          1px 1px 0 #000;
         z-index: 2;
         text-transform: capitalize !important;
         font-size: 29px !important;
@@ -265,8 +292,13 @@ header {
         display: flex !important;
         justify-content: left;
         transform: scaleX(-1);
-        margin: 5% 0% 0% 11% !important;
-        // position:absolute;
+        margin: 5% 102% 5% 11% !important;
+        img {
+         
+          margin-right: 37px;
+          height: 22px;
+          margin-top: -30px;
+        }
       }
       .imgHeader {
         display: none;

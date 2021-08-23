@@ -30,13 +30,6 @@ class index extends Component {
 
   handleSubmit = async (e) => {
  
-    // var input = this.refs.myInput;
-    // var inputValue = input.value;
-    // if (inputValue === " ") {
-    //   this.setState({
-    //     valid: false,
-    //   });
-    // }
     e.preventDefault();
     try {
       const response = await reviewService.testimony(
@@ -45,8 +38,6 @@ class index extends Component {
         this.state.opinion,
         this.state.role
       );
-
-      console.log("responseeeeee", response);
 
       this.props.history.push("/");
     } catch (error) {

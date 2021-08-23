@@ -17,21 +17,11 @@ class index extends Component {
 
   /************************/
 
-  showAdress = () => {
-    this.setState({
-      contactAdressPart1: "5 allée de la Houdiarde",
-      contactAdressPart2: "VEMARS 95470",
-    });
-  };
+  logout() {
+    localStorage.clear();
+    window.location.href = "/";
+  }
 
-  hideAdress = () => {
-    this.setState({
-      contactAdressPart1: "",
-      contactAdressPart2: "",
-      contactHeight: 0,
-      contactwidth: 0,
-    });
-  };
 
   /************************/
 
@@ -82,50 +72,13 @@ class index extends Component {
       //au deuxième clique cacher le menu => deuxième clique = compteur à 2
       //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
       this.hideMenu();
-      this.hideAdress();
     } else {
       //au premier clique afficher le menu => premier clique = compteur à 1
       //autrement dit si compteur = chiffre pair afficher le menu
       this.showMenu();
     }
   };
-  adressCompteur = () => {
-    this.setState({
-      compteur: this.state.compteur + this.state.n,
-    });
 
-    if (window.innerWidth < 768) {
-      if (this.state.compteur % 2) {
-        //au deuxième clique cacher le menu => deuxième clique = compteur à 2
-        //autrement dit si le compteur = chiffre impair cacher le menu (soit 1 pour le deuxième clique, 3 pour le troisième clique etc...) sachant que le deuxième clique sera forcément pour fermer le menu
-        this.showAdress();
-      } else {
-        //au premier clique afficher le menu => premier clique = compteur à 1
-        //autrement dit si compteur = chiffre pair afficher le menu
-        this.hideAdress();
-      }
-    }
-  };
-
-  /************************/
-  /////////////// BROUILLONS NAV ////////////////////////////
-  // componentWillMount() {
-  //   if (window.innerWidth >= 768) {
-  //     this.setState({
-  //       display: "flex",
-  //       paddingLeft: "2%",
-  //       // marginLeft: "35%",
-  //       // marginRight: "1%",
-  //       // justifyContent:"",
-  //       flexDirection: "row",
-  //       width: "90vw",
-  //       fontSize: "1rem",
-  //       fontS: "0.6rem",
-  //       // alignItems: "flex-end",
-  //       justifyContent: "flex-end",
-  //       visibility: "visible",
-  //     });
-  //   }
 
   render() {
     const navArray = this.state.navStates;
@@ -148,13 +101,13 @@ class index extends Component {
 
         {/* ul menuBurger disponible version desktop*/}
         <ul className="Links">
-        <li
+          <li
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/">Accueil</a>
+            <a href="/articles">Article</a>
           </li>
 
           <li
@@ -163,43 +116,19 @@ class index extends Component {
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/allArticles">Actualité</a>
+            <a href="/temoignages">Témoignages</a>
           </li>
-     
+
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontSize,
             }}
           >
-            <a href="/aPropos">A propos de nous</a>
-          </li>
-          <li
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
-            }}
-          >
-            <a href="/sengager">S'engager</a>
-          </li>
-          <li
-            className="contacts"
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontS,
-            }}
-          >
-            <a href="#" onClick={this.adressCompteur}>
-              {this.state.contact}
+            <a href="/logout" onClick={this.logout}>
+             Déconnexion
             </a>
-            <div className="contactPart1">
-              <p>{this.state.contactAdressPart1}</p>
-            </div>
-            <div className="contactPart2">
-              <p>{this.state.contactAdressPart2}</p>
-            </div>
           </li>
-  
         </ul>
 
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>

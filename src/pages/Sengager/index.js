@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import  Nav  from "../../components/Nav/index"
 import "../../assets/stylesheets/sengager.scss";
+
 
 export default class index extends Component {
   render() {
     return (
       <div class="sengagerContainer">
+         <Nav />
         <h1>S'ENGAGER AVEC NOUS</h1>
 
         <div className="ligne"></div>

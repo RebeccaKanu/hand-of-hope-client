@@ -1,37 +1,72 @@
+
 import React, { Component } from "react";
-// import {AllArticle} from "../../components/AllArticles";
-// import {AllTestimony} from "../../components/AllTestimony";
-// import {ArticleForm} from "../../components/ArticleForm";
-import Header from '../../components/Header'
-// import appContext from '../../store';
-import axios from 'axios'
-import '../../assets/stylesheets/adminPage.scss'
+import { ArticleForm } from "../../components/ArticleForm/index";
+import connectedUser2 from "../../assets/images/connectedUser2.jpg";
+import "../../assets/stylesheets/test.scss";
 
-
-class AdminPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  };
-  }
+export default class test extends Component {
   logout() {
     localStorage.clear();
-    window.location.href = '/';
+    window.location.href = "/";
   }
+
   render() {
     return (
-      <section>
+      <div class="all">
+        <div class="admin-header">
+          <div class="header-text">
+            <h3>Back-office</h3>
 
-        <ul className="Links">      
-          <li><a href="/articles">Articles</a></li>
-          <li><a href="/temoignages">Témoignages</a></li>
-          <li><a href="/logout" onClick={this.logout}>Déconnexion</a></li>     
-        </ul>
+            <div class="header-greet">
+              <span>
+                <i class="fa">&#xf007;</i> Bonjour Mizu
+              </span>
+
+              <img
+                src={connectedUser2}
+                alt="admin profil picture"
+                class="AdminPhoto"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-sidebar">
+          <ul>
         
-        <h1>Bonjour {/*Nom de l'admin!*/}</h1>
+            <li>
+              <a href="/articles" class="white">
+                {" "}
+                Articles
+              </a>
+            </li>
 
-     </section>
+            <li>
+              <a href="/temoignages" class="white">
+                Témoignages
+              </a>
+            </li>
+
+            <li>
+              <a href="/logout" onClick={this.logout} class="white">
+                Déconnexion
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="center-content">
+          <div class="all-border">
+            <div class="shows-location">
+              <div class="location-text">
+                <span class="location">Créer un article</span>
+              </div>
+            </div>
+          </div>
+
+          <ArticleForm />
+        </div>
+      </div>
     );
   }
 }
-
-export default AdminPage;

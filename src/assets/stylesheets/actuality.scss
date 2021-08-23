@@ -35,8 +35,6 @@
     url(../../assets/fonts/peace_sans/PeaceSansWebfont.ttf) format("truetype");
 }
 
-
-
 @mixin display($justify-content) {
   display: flex;
   flex-direction: column;
@@ -44,7 +42,20 @@
   justify-content: $justify-content;
 }
 
+////@at-root
+
+
+.actualityHover:hover{
+   width: 290px;
+   height: 390px;
+   border: 7px solid red;
+   transition: width 10s height 3s;
+
+}
+
+
 .actuality {
+ 
   margin: 4%;
   display: flex;
   flex-direction: column;
@@ -60,18 +71,19 @@
     max-width: 85vw;
 
     h1 {
-      margin-top: 10px;
+      // margin-top: 10px;////AVANT REFA REB
+      margin-top: 69px;///////////////A TRANSPOSER
       // font-size: 2em;
       letter-spacing: 1px;
       font-family: "Roboto-Bold";
-      font-weight:-400;
+      font-weight: -400;
       color: #d99827;
     }
     h2 {
       font-weight: 300;
       font-family: "Roboto-Light";
       color: black;
-      padding-bottom: 10%;  
+      padding-bottom: 10%;
       // font-size:1.8em;
     }
     .span {
@@ -80,7 +92,7 @@
       height: 5%;
       border: 15px red solid;
     }
-  }  
+  }
   figure {
     display: flex;
     flex-direction: column;
@@ -96,10 +108,9 @@
       top: 10%;
       border-radius: 4px;
       padding: 5px;
-
     }
-    a{
-      font-family:"Roboto-Bold";
+    a {
+      font-family: "Roboto-Bold";
       font-size: 22.1px;
     }
     .a3 {
@@ -163,7 +174,7 @@
       cursor: pointer;
       padding: 2%;
       box-shadow: 10px 5px #00000000;
-      
+
       em {
         color: #d99827;
       }
@@ -179,21 +190,20 @@
       // left: 11%;
       left: 10%;
       top: 27%;
-      max-width:90%;
-      font-size:16px!important;
+      max-width: 90%;
+      font-size: 16px !important;
       // height: 2%;
       font-family: "Muli";
       text-align: center;
-
     }
     .figcaption2 {
       top: 58%;
     }
     .figcaption3 {
-      top:89.5%;
+      top: 89.5%;
     }
   }
-  
+
   h3,
   p,
   button {
@@ -204,17 +214,17 @@
     color: black;
     font-weight: 600;
     // font-size: 1em!important;
-    font-size: 18px!important;
+    font-size: 18px !important;
     color: #356178;
     font-family: "Muli-ExtraLight";
   }
-  h4{
+  h4 {
     font-family: "Muli-ExtraLight";
-    font-size: 16px!important;
+    font-size: 16px !important;
     text-align: center;
   }
-  p{
-    font-size: 16px!important;
+  p {
+    font-size: 16px !important;
     font-weight: 600;
     font-family: "Muli-ExtraLight";
   }
@@ -228,7 +238,7 @@
     cursor: pointer;
     outline: inherit;
     color: #356178;
-    font-size:16px!important;
+    font-size: 16px !important;
     font-family: "Muli-ExtraLight";
     text-align: center;
     // border: 10px solid blueviolet;
@@ -243,7 +253,7 @@
     cursor: pointer;
     outline: inherit;
     color: #356178;
-    font-size:16px!important;
+    font-size: 16px !important;
     font-family: "Muli-ExtraLight";
     align-items: left;
     // border: 10px solid rgb(70, 43, 226);
@@ -258,7 +268,7 @@
     cursor: pointer;
     outline: inherit;
     color: #356178;
-    font-size:16px!important;
+    font-size: 16px !important;
     font-family: "Muli-ExtraLight";
     align-items: left;
     // border: 10px solid rgb(177, 226, 43);
@@ -266,162 +276,173 @@
     position: relative;
     height: 2%;
   }
-//////////////////////////// MEDIA QUERY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-///galaxy Fold
-  @media(width:280px){
-    .a1,.a3{
-      left: 65.5%!important;
+  //////////////////////////// MEDIA QUERY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  ///galaxy Fold
+  @media (width: 280px) {
+    .a1,
+    .a3 {
+      left: 65.5% !important;
     }
-    figcaption{
-      left: 6.5%!important;
-      font-size:12px!important;
-      width:90%!important;
-    } 
-    p{
-      font-size:14px!important;
-      
+    figcaption {
+      left: 6.5% !important;
+      font-size: 12px !important;
+      width: 90% !important;
+    }
+    p {
+      font-size: 14px !important;
     }
   }
-  @media(min-width:360px){
-    .a1,.a3{
-      left: 60.9%!important;
+  @media (min-width: 360px) {
+    .a1,
+    .a3 {
+      left: 60.9% !important;
     }
-    figcaption{
-      left: 16%!important;
-    }  
+    figcaption {
+      left: 16% !important;
+    }
   }
-  @media(min-width:375px){
-    .a1,.a3{
-      left: 60.5%!important;
+  @media (min-width: 375px) {
+    .a1,
+    .a3 {
+      left: 60.5% !important;
     }
-    figcaption{
-      left: 17%!important;
-    }  
+    figcaption {
+      left: 17% !important;
+    }
   }
-// PIXEL 2XL
-  @media(min-width:411px){
-    .a1,.a3{
-      left: 59.2%!important;
+  // PIXEL 2XL
+  @media (min-width: 411px) {
+    .a1,
+    .a3 {
+      left: 59.2% !important;
     }
-    .a2{
-      left: 45.6%!important;
+    .a2 {
+      left: 45.6% !important;
     }
 
-    figcaption{
-      left: 19.5%!important;
-    } 
-    h1,h2{
-      font-size:20px!important;
+    figcaption {
+      left: 19.5% !important;
+    }
+    h1,
+    h2 {
+      font-size: 20px !important;
     }
   }
   // SURFACE DUO
-  @media(min-width:540px){
+  @media (min-width: 540px) {
     h1,
-    h2{
-      font-size:25px!important; 
+    h2 {
+      font-size: 25px !important;
     }
-    .a1,.a3{
-      left: 56%!important;
+    .a1,
+    .a3 {
+      left: 56% !important;
     }
-    figcaption{
-      left: 28%!important;
+    figcaption {
+      left: 28% !important;
     }
-    .a1{
-      top:10%!important;
+    .a1 {
+      top: 10% !important;
     }
-    .a2{
-      top:40.8%!important;
+    .a2 {
+      top: 40.8% !important;
     }
-    .a3{
-      top:71.5%!important;
+    .a3 {
+      top: 71.5% !important;
     }
   }
-// IPAD
-  @media(min-width:768px){
-    .a1,.a3{
-      left: 53%!important;
-
+  // IPAD
+  @media (min-width: 768px) {
+    .a1,
+    .a3 {
+      left: 53% !important;
     }
-    figcaption{
-      left: 35%!important;
-      
-    }  
+    figcaption {
+      left: 35% !important;
+    }
   }
-  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\   
+  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
   @media only screen and (min-device-width: 1024px) {
-    div{
+    div {
       // border:3px solid red;
-      display:flex;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
     h1 {
-     font-size: 40px!important;
+      font-size: 40px !important;
     }
     h2 {
-     font-size: 35px!important;  
+      font-size: 35px !important;
     }
-    h3{
-      font-size: 26px!important;
+    h3 {
+      // font-size: 26px!important;
+      font-size: 19px;
     }
 
-    p{font-size: 26px!important;}
+     p {
+      font-size: 19px !important;
+      
+    }
+    a{/////////////////à transposer dans les autres versions///////////////////
+      text-decoration: none;
+      color: black;
+    }
 
-    h4{
-      font-size: 22px!important;
-   }
-   .button1,.button2,.button3{
-    font-size: 28px!important;
-   }
-    article{ 
-      display:inline-block!important;
+    h4 {
+      font-size: 22px !important;
+    }
+    .button1,
+    .button2,
+    .button3 {
+      font-size: 28px !important;
+    }
+    article {
+      display: inline-block !important;
       // text-align: center;
       width: 30%;
-      h3,h4,p{
+      h3,
+      h4,
+      p {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // margin:0 5% 0 9%!important;   
+        // margin:0 5% 0 9%!important;
       }
-      img{
+      img {
         display: block;
       }
-        .a1{
-          left:20.4% !important;
-          top: 24.5% !important;
-          
-          
-        }
-        .a2{
-          // margin: 0!important;
-          left: 45.2%!important;
-          // background: transparent!important;
-          // border:5px double  #d99827!important;
-          // background-color:rgba(255, 255, 255, 0)!important;
-          top: 24.5% !important;
-        }
-        .a3{
-          left: 80.5%!important;   
-          top: 24.5% !important;   
-        }
-        figcaption{
-          top: 67%!important;
-          left: 6% !important;
-          font-size: 18px!important;
-          // height:0vh!important;
-          // width: 15%!important;
-          // color:red!important; 
-        }
-        .figcaption2{
-          left: 36.5%!important; 
-        }
-        .figcaption3{
-          left: 66.3%!important;     
-        }
-
+      .a1 {
+        left: 20.4% !important;
+        top: 24.5% !important;
+      }
+      .a2 {
+        // margin: 0!important;
+        left: 45.2% !important;
+        // background: transparent!important;
+        // border:5px double  #d99827!important;
+        // background-color:rgba(255, 255, 255, 0)!important;
+        top: 24.5% !important;
+      }
+      .a3 {
+        left: 80.5% !important;
+        top: 24.5% !important;
+      }
+      figcaption {
+        top: 67% !important;
+        left: 6% !important;
+        font-size: 18px !important;
+        // height:0vh!important;
+        // width: 15%!important;
+        // color:red!important;
+      }
+      .figcaption2 {
+        left: 36.5% !important;
+      }
+      .figcaption3 {
+        left: 66.3% !important;
+      }
+    }
   }
-}
-
-
 }

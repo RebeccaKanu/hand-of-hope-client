@@ -90,14 +90,14 @@ export default class index extends Component {
           <div className="footerDesktop">
 
 
-                <div className="copyright">
+                {/* <div className="copyright">
                   <p style= {{fontSize: this.state.fontSize}}>
-                    Fait avec amour par NAWAL, JEROME ET REBECCA <br />
+                    Fait avec amour par Rebecca Kanu <br />
                     Tous droits réservés © 2021
                   </p>
-                </div>
+                </div> */}
 
-                <ul style= {{fontSize: this.state.fontSize}} className="Nav">
+                {/* <ul style= {{fontSize: this.state.fontSize}} className="Nav">
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
@@ -113,7 +113,7 @@ export default class index extends Component {
                   <li>
                     <Link to="/sengager">S'engager</Link>
                   </li>
-                </ul>
+                </ul> */}
 
                 <div className="contactMobile">
                 <Contact style={{fontSize:this.state.fontSize, width:"60%", paddingTop:"5%",border:"4px solid black"}} li={{ fontFamily: "Muli-Bold"}} />
