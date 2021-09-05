@@ -20,10 +20,13 @@ export default class ArticleDetails extends Component {
     window.location.href = "/";
   };
   //
-  handleClick =  () => {
+  handleClick = () => {
     const articleId = this.props.match.params.article_id;
-    
+
+    console.log("URL", this.props.match.url);
+
     this.props.history.push("/article/" + articleId);
+
     //
     // try {
     //   this.props.history.push("/article/" + articleId);
@@ -43,7 +46,6 @@ export default class ArticleDetails extends Component {
       await ArticleService.deleteOneArticle(articleId);
       // localStorage.setItem("token", ArticleService.data.token);////////////////////
       console.log("history", this.props);
-     
     } catch (error) {
       this.setState({
         error: error,
@@ -80,7 +82,7 @@ export default class ArticleDetails extends Component {
 
             <div class="header-greet">
               <span>
-                <i class="fa">&#xf007;</i> Bonjour Mizu
+                 Bonjour Mizu
               </span>
 
               <a href="/logout" onClick={this.logout} class="logout-btn white">
@@ -107,6 +109,13 @@ export default class ArticleDetails extends Component {
                 Témoignages
               </a>
             </li>
+
+            <li>
+              <a href="/logout" onClick={this.logout} class="white">
+                Déconnexion
+              </a>
+            </li>
+          
           </ul>
         </div>
 

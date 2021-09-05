@@ -183,13 +183,15 @@ class index extends Component {
             <a href="/sengager">S'engager</a>
           </li>
           <li
-            className="contacts"
+            className="contacts contactTest"
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontS,
             }}
           >
-            <a href="#" onClick={this.adressCompteur}>
+            <a href="/contact">Contact</a>
+            
+            <a href="/contact" onClick={this.adressCompteur}>
               {this.state.contact}
             </a>
             <div className="contactPart1">

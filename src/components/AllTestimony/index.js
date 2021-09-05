@@ -41,7 +41,7 @@ export class Testimonies extends Component {
 
             <div class="header-greet">
               <span>
-                <i class="fa">&#xf007;</i> Bonjour Mizou
+                Bonjour Mizou
               </span>
 
               <a href="/logout" onClick={this.logout} class="logout-btn white">
@@ -73,6 +73,11 @@ export class Testimonies extends Component {
             <li>
               <a href="/temoignages" class="white">
                 Témoignages
+              </a>
+            </li>
+            <li>
+              <a href="/logout" onClick={this.logout} class="white">
+                Déconnexion
               </a>
             </li>
           </ul>

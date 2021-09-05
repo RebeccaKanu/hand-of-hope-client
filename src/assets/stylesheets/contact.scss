@@ -3,6 +3,12 @@
   src: local("Muli"),
     url(../../assets/fonts/muli/Muli.ttf) format("truetype");
 }
+.sengagerContainer>.ContactP {//AJOUTER
+  font-family: "Quicksand-Light";
+  font-size: 2em;
+  width: 32%;
+  margin-left: 63px;
+}
 
 .contact {
   font-size: 62.5%;
@@ -34,6 +40,7 @@
     display: flex!important;
     align-items: flex-end!important;
     order:1!important;
+    
   }
 }
 

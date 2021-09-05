@@ -22,8 +22,8 @@ export default class index extends Component {
     render() {
         return (
             <div className="video">
-                <h1>Les dernière actualités de l’association </h1>
-                 <h2>VIDEO EXPLICATIVE DU CONTEXTE</h2>
+                <h1>Les dernière actualités</h1>
+                 <h2>L'HYGIÈNE MENSTRUELLE DANS LE MONDE</h2>
                  <br/>
                 <iframe controls  src="https://www.youtube.com/embed/BAMwbICU7G4"
                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import  Nav  from "../../components/Nav/index"
+import Nav from "../../components/Nav/index";
+import StripeContainer from "../../components/Stripe/StripeContainer";
+import Footer from "../../components/Footer";
 import "../../assets/stylesheets/sengager.scss";
-
 
 export default class index extends Component {
   render() {
     return (
       <div class="sengagerContainer">
-         <Nav />
+        <Nav />
         <h1>S'ENGAGER AVEC NOUS</h1>
 
+        <StripeContainer />
+
         <div className="ligne"></div>
+
 
         <p>
           Pour faire connaître <span>hand of hope</span> : faites-nous connaître
@@ -20,6 +24,10 @@ export default class index extends Component {
           questions sur le bénévolat? Une idée? Un projet? Contactez nous !{" "}
           <a href="#"></a>
         </p>
+
+       
+
+        <Footer />
       </div>
     );
   }

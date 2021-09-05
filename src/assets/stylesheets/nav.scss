@@ -11,11 +11,12 @@
 .BurgerLink {
   font-size: 62.5%;
   display: flex;
-  position: fixed;
+  position: static;
   box-sizing: border-box;
   justify-content: space-between;
   // align-items: flex-end;
   z-index: 10;
+  top: 10px; //AJOUTER
 
   .burgerMenu {
     margin: 10px;
@@ -36,14 +37,13 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    
-    
-    a{
+
+    a {
       font-family: "Muli-Light";
       text-decoration: none;
       color: black;
       font-size: 22px;
-      // display:none;  
+      // display:none;
     }
   }
   .contacts a {
@@ -52,11 +52,11 @@
   }
 
   // SURFACE DUO
-  @media (min-width: 540px){
+  @media (min-width: 540px) {
     .Links {
       color: rgb(0, 0, 0) !important;
       // border: 3px solid blue;
-      z-index: 3!important;
+      z-index: 3 !important;
       // right: 100% !important;
       top: 3% !important;
       display: none !important;
@@ -76,89 +76,96 @@
   }
   // IPAD
   @media (min-width: 768px) {
-   
-    left:50%;
-    
+    left: 50%;
+
     .burgerMenu {
       display: none;
     }
-      ul:nth-child(1){
-      display:none;
-    } 
+    ul:nth-child(1) {
+      display: none;
+    }
     .Links {
       color: rgb(0, 0, 0) !important;
       // border: 3px solid blue;
-      z-index: 3!important;
+      z-index: 3 !important;
       // right: 100% !important;
       top: 3% !important;
-     
+
       display: flex !important;
-      flex-direction:row ;
+      flex-direction: row;
       justify-content: flex-end !important;
       align-items: flex-end !important;
       a {
         display: flex !important;
         font-family: "Muli-Light";
-        font-size: 16px !important;
+        font-size: 21px !important; //MODIFIER
         color: black !important;
-        // display:none;
+
+        margin-right: -5px; // RAJOUTER
+        margin-top: 2px; // RAJOUTER
+        padding-left: 18px;
       }
 
-    li {
-      display: flex !important;
-      color: black;
-      display: flex !important;
-      color: black !important;
-      z-index: 8;
+      li {
+        display: flex !important;
+        color: black;
+        display: flex !important;
+        color: black !important;
+        z-index: 8;
+      }
+
+      .desktop {
+        display: flex !important;
+        color: black !important;
+        z-index: 8;
+      }
     }
+    /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
+    @media only screen and (min-device-width: 1024px) {
+      // .a1,.a3{
+      //   left: 60.9%!important;
+      // }
+      .contactTest{
+        padding-left: -1px;
+        padding-bottom: 1px;
+        font-size: 20px;
+      }
+      .Links {
+        visibility: visible !important;
+        margin-left: 586px;
+      }
+      // .BurgerLink {
 
-    .desktop {
-      display: flex !important;
-      color: black !important;
-      z-index: 8;
+      //   font-size: 62.5%;
+      //     display: flex;
+      //     position: fixed;
+      //     box-sizing: border-box;
+      //     justify-content: flex-end;
+      //     align-items: flex-end;
+      //     z-index: 10;
+      //     border: 2px solid blue;;
+
+      // }
+
+      // .Links {
+      //   color: rgb(0, 0, 0) !important;
+      //   border: 3px solid blue;
+      //   z-index: 3!important;
+      //   // right: 100% !important;
+      //   top: 3% !important;
+      //   display: flex !important;
+      //   justify-content: flex-end !important;
+      //   align-items: flex-end !important;
+      //   li {
+      //     display: flex !important;
+      //     a {
+      //       display: flex !important;
+      //       font-family: "Muli-Light";
+      //       font-size: 16px !important;
+      //       color: black !important;
+      //     }
+      //   }
+      // }
     }
-    
-  }
-  /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
-  @media only screen and (min-device-width: 1024px) {
-    // .a1,.a3{
-    //   left: 60.9%!important;
-    // }
-    .Links{
-      visibility: visible!important;
-    }
-    // .BurgerLink {
-
-    //   font-size: 62.5%;
-    //     display: flex;
-    //     position: fixed;
-    //     box-sizing: border-box;
-    //     justify-content: flex-end;
-    //     align-items: flex-end;
-    //     z-index: 10;
-    //     border: 2px solid blue;;
-
-    // }
-
-    // .Links {
-    //   color: rgb(0, 0, 0) !important;
-    //   border: 3px solid blue;
-    //   z-index: 3!important;
-    //   // right: 100% !important;
-    //   top: 3% !important;
-    //   display: flex !important;
-    //   justify-content: flex-end !important;
-    //   align-items: flex-end !important;
-    //   li {
-    //     display: flex !important;
-    //     a {
-    //       display: flex !important;
-    //       font-family: "Muli-Light";
-    //       font-size: 16px !important;
-    //       color: black !important;
-    //     }
-    //   }
-    // }
-  }
   }
 }

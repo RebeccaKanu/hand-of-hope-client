@@ -15,8 +15,7 @@ import Login from "../src/pages/Authenticate/SigninPage";
 import TestimonyForm from "../src/components/TestimonyForm";
 import VisitorArticleDetails from "./components/VisitorArticleDetails";
 import { AllVisitorArticle } from "./pages/AllArticleVisitor";
-//Stripe
-import { StripeContainer } from "./components/Don/StripeContainer";
+import ContactAssociation from "./pages/ContactAssociation";
 
 //Admin
 // import AdminPage from "./pages/AdminPage/indexPause";
@@ -49,8 +48,13 @@ function App() {
           <Route exact path="/aPropos" component={AboutUs} />
           <Route exact path="/adminlogin" component={Login} />
           <Route exact path="/votrePetitMot" component={TestimonyForm} />
-          {/* <Route exact path="/article/:article_id" component={VisitorArticleDetails}/> */}
+          <Route
+            exact
+            path="/visitorArticle/:article_id"
+            component={VisitorArticleDetails}
+          />
           <Route exact path="/allArticles" component={AllVisitorArticle} />
+          <Route exact path="/contact" component={ContactAssociation} />
           {/*Admin*/}
           <PrivateRoute path="/adminPage" component={AdminPage} />
           <PrivateRoute path="/articles" component={Articles} />
@@ -68,7 +72,6 @@ function App() {
             component={ArticleUpdateForm}
           />
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

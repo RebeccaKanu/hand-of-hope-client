@@ -32,9 +32,11 @@ export default class index extends Component {
                 {this.state.data.map((el, index) => {
                  return (
                     <div key={index} className="box ">
-                        <h3>{el.first_name}&#160;{el.last_name}</h3> 
+                        <h3>Fally</h3>
+                        {/* <h3>&#160;{el.last_name}</h3>  */}
+                        <h6>Bénéficiaire du programme</h6>
                         <h5>{el.role}</h5>
-                        <p>{el.opinion}</p>
+                        <p>"{el.opinion}"</p>
                     </div> 
                   );
                 })}

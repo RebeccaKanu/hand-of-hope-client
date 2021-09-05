@@ -6,7 +6,6 @@ const config = {headers: { Authorization: `${token}`}}
 //
 const ArticleService = {
 
-  //ADMIN
   //post
   publishArticle: async ( title, img, tags, resume_article, content_article, author_article, video) => {
     const article = { title, img, tags, resume_article, content_article, author_article, video };
@@ -38,7 +37,7 @@ const ArticleService = {
   },
   VisitorGetOneArticle: async (articleId) => {
     const id = articleId;
-    return await api.get(`/article/${id}`);
+    return await api.get(`/visitorArticle/${id}`);
   },
   getAllVisitorArticle: async () => {
     return await api.get("/allArticles")

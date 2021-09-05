@@ -36,7 +36,8 @@ export default class index extends Component {
       <div className="actuality">
         <section>
           <h1>DERNIERES ACTUS</h1>
-          <h2>Les dernières actualités de l’association </h2>
+          <hr size="0" width="193%" color="black"/>  
+          <h2>Découvrez les dernières actualités de l’association </h2>
         </section>
         <div className="allBox">
           {this.state.data.map((element, index) => {
@@ -44,27 +45,39 @@ export default class index extends Component {
               <div key={index}>
                 <article>
                   <figure className="article">
-                    <img
-                      className="imgcard actualityHover"
-                      // src={mainArticleOne}
-                      src={element.img}
-                      alt="taylor"
-                      style={{
-                        width: this.state.width,
-                        height: this.state.height,
-                      }}
-                    />
-                   
-                    {/* <a className="a1" href="#">
+                    <a href={"/visitorArticle/" + element.article_id}>
+                      <img
+                        className="imgcard actualityHover"
+                        // src={mainArticleOne}
+                        src={element.img}
+                        alt="taylor"
+                        style={{
+                          width: this.state.width,
+                          height: this.state.height,
+                        }}
+                      />
+                    </a>
+
+                     {/* <a className="a1" href={"/visitorArticle/" + element.article_id}>
                       {element.tags}
-                    </a> */}
+                    </a>  */}
                   </figure>
 
                   <h3>{element.title}</h3>
-                  <a href={'/article/' + element.article_id}><p>{element.resume_article}</p></a>
 
+                  <a href={"/visitorArticle/" + element.article_id}>
+                    <p class="firstActualityP"> par {element.author_article}</p>
+                  </a>
+
+                
+                  <a href={"/visitorArticle/" + element.article_id}>
+                    <p>{element.resume_article}</p>
+                  </a>
+                
                   {/* <button className="button1">
-                    <a href={'/article/' + element.article_id}>Lire la suite &nbsp; &rarr;</a>
+                    <a href={"/visitorArticle/" + element.article_id}>
+                      Lire la suite &nbsp; &rarr;
+                    </a>
                   </button> */}
                 </article>
               </div>

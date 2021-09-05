@@ -148,7 +148,6 @@ class index extends Component {
 
         {/* ul menuBurger disponible version desktop*/}
         <ul className="Links">
-
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
@@ -157,7 +156,7 @@ class index extends Component {
           >
             <a href="/allArticles">Actualité</a>
           </li>
-     
+
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
@@ -181,6 +180,7 @@ class index extends Component {
               fontSize: this.state.fontS,
             }}
           >
+            <a href="/contact">Contact</a>
             <a href="#" onClick={this.adressCompteur}>
               {this.state.contact}
             </a>
@@ -191,7 +191,6 @@ class index extends Component {
               <p>{this.state.contactAdressPart2}</p>
             </div>
           </li>
-  
         </ul>
 
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>

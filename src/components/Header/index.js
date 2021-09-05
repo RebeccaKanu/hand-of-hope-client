@@ -48,7 +48,7 @@ export default class index extends Component {
         </article>
         <section className="HomepageImage">
           <img className="imgHeader" src={Header2} alt="taylor" />
-          <p
+           {/* <p
             style={{
               writingMode: "vertical-rl",
               transform: "unset",
@@ -67,8 +67,8 @@ export default class index extends Component {
               }}
               alt="facebook logo"
             />
-            {/* RETROUVEZ NOUS SUR  */}
-          </a>
+            
+          </a>  */}
         </section>
       
       </header>

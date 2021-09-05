@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import fondateur from "../../assets/images/fondateur_hop.jpg";
 import  Nav  from "../../components/Nav/index"
+import Footer from "../../components/Footer";
 import "../../assets/stylesheets/aboutUs.scss";
 // import CheckoutWithStripe from "../../components/Don/CheckoutWithStripe";
 
@@ -22,7 +23,7 @@ export default class index extends Component {
           éthique et une condition intrinsèque.
         </p>
 
-        <div className="actions">
+        {/* <div className="actions">
           <img src={fondateur} alt="fondateur association photo" />
 
           <div className="detailsAction">
@@ -47,10 +48,11 @@ export default class index extends Component {
                 structures sportives.
               </li>
             </ul>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         {/*  DON */}
         {/* <CheckoutWithStripe /> */}
+        <Footer/>
       </div>
     );
   }

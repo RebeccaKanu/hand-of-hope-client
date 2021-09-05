@@ -42,20 +42,28 @@
   justify-content: $justify-content;
 }
 
-////@at-root
+//AJOUTER
 
-
-.actualityHover:hover{
-   width: 290px;
-   height: 390px;
-   border: 7px solid red;
-   transition: width 10s height 3s;
-
+.imgVisitor {
+  width: 290px;
+  height: 390px;
 }
-
+.imgVisitor:hover {
+  width: 290px;
+  height: 390px;
+  border: none;
+}
+.visitorTitle {
+  font-family: "Peace Sans";
+  width: 330px;
+}
+.pStylingVisitor {
+  width: 557px;
+  padding-right: 65px;
+}
+///
 
 .actuality {
- 
   margin: 4%;
   display: flex;
   flex-direction: column;
@@ -72,10 +80,11 @@
 
     h1 {
       // margin-top: 10px;////AVANT REFA REB
-      margin-top: 69px;///////////////A TRANSPOSER
+      margin-top: 69px; ///////////////A TRANSPOSER
       // font-size: 2em;
       letter-spacing: 1px;
       font-family: "Roboto-Bold";
+      // font-family: "Peace Sans";
       font-weight: -400;
       color: #d99827;
     }
@@ -111,6 +120,7 @@
     }
     a {
       font-family: "Roboto-Bold";
+      // font-family: "Peace Sans";
       font-size: 22.1px;
     }
     .a3 {
@@ -210,13 +220,15 @@
     text-align: center;
     align-items: center;
   }
+
   h3 {
     color: black;
     font-weight: 600;
     // font-size: 1em!important;
     font-size: 18px !important;
     color: #356178;
-    font-family: "Muli-ExtraLight";
+    // font-family: "Muli-ExtraLight";
+    font-family: "Quicksand-Regular";
   }
   h4 {
     font-family: "Muli-ExtraLight";
@@ -363,28 +375,39 @@
   }
   /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
   @media only screen and (min-device-width: 1024px) {
+    .allBox{
+      margin-left: 14px;
+    }
+    button {
+      //AJOUT REBECCA BOUTON
+      margin-left: 138px;
+    }
     div {
       // border:3px solid red;
       display: flex;
       align-items: center;
       justify-content: center;
+      // margin-right: 10%;
+      margin-left: -8%;
     }
     h1 {
-      font-size: 40px !important;
+      font-size: 26px !important;
+      margin-bottom: 12px;
     }
     h2 {
-      font-size: 35px !important;
+      font-size: 22px !important;
+      margin-top: 10px;
     }
     h3 {
       // font-size: 26px!important;
       font-size: 19px;
     }
 
-     p {
-      font-size: 19px !important;
-      
+    p {
+      font-size: 16px !important;
     }
-    a{/////////////////à transposer dans les autres versions///////////////////
+    a {
+      /////////////////à transposer dans les autres versions///////////////////
       text-decoration: none;
       color: black;
     }
@@ -409,6 +432,20 @@
         justify-content: center;
         align-items: center;
         // margin:0 5% 0 9%!important;
+      }
+       p {
+        margin-left: 118px;
+        
+      }
+      .firstActualityP{
+        color: #6c6c6c;
+      }
+      h3 {
+        margin-left: 25px;
+        width: 182%;
+      }
+      h4 {
+        margin-left: 183%;
       }
       img {
         display: block;

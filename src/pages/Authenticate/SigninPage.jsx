@@ -115,27 +115,16 @@ class ReactForm extends React.Component {
       );
 
       localStorage.setItem("token", response.data.token);
-      //  this.context.setAuth(true);
+     
 
       this.props.history.push("/adminPage");
 
-      //   this.context.setAuth(true); => commenté par moi
-      //   const { email, user_name, password } = response.data.user;// commenté par moi
-      //   this.context.setUserInfos(email, user_name, password); => commenté par moi
-      // console.log(this.appContext); => commenté par moi
-      //   console.log(this.context); => commenté par moi
+      
     } catch (error) {
       console.error(error);
       this.setState({ error: error });
     }
   };
-
-  // componentDidMount() {
-  //   if (this.context.isAuth === true) {
-  //     this.props.history.push("/");
-  //   }
-  //   console.log(this.context);
-  // }
 
   render() {
     return (
@@ -215,3 +204,4 @@ class ReactForm extends React.Component {
 }
 
 export default ReactForm;
+

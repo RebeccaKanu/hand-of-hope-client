@@ -6,6 +6,5 @@ const userService = {
     return api.post("/adminlogin", user);
   },
 };
-//await?
 
 export default userService;

@@ -3,12 +3,15 @@ import React, { Component } from "react";
 import axios from "axios";
 import Nav from "../../components/Nav/index"
 import { ArticleService } from "../../services";
+import Footer from "../../components/Footer";
 import "../../assets/stylesheets/adminPage.scss";
 
 export class AllVisitorArticle extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      width: "280px",
+      height: "400px",
       data: [],
       error: null,
     };
@@ -44,14 +47,24 @@ export class AllVisitorArticle extends Component {
               <div key={index}>
                 <article>
                   <h2><a href={'/article/' + element.article_id}>{element.title}</a></h2>
+                  <a href={'/article/' + element.article_id}>
+                      <img
+                        className="imgcard actualityHover"
+                        src={element.img}
+                        alt="taylor"
+                        style={{
+                          width: this.state.width,
+                          height: this.state.height,
+                        }}
+                      />
+                    </a>
                   <p><a href={'/article/' + element.article_id}>{element.resume_article}</a></p>
-                  <p><a href={'/article/' + element.article_id}>{element.content_article}</a></p>
-                  <p><a href={'/article/' + element.article_id}>{element.author_article}</a></p>
                 </article>
               </div>
             );
           })}
         </section>
+        <Footer/>
       </div>
     );
   }

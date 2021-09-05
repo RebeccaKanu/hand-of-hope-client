@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import { ArticleForm } from "../../components/ArticleForm/index";
+import  ArticleForm  from "../../components/ArticleForm/index";
 import connectedUser2 from "../../assets/images/connectedUser2.jpg";
 import "../../assets/stylesheets/test.scss";
 
@@ -19,7 +19,7 @@ export default class test extends Component {
 
             <div class="header-greet">
               <span>
-                <i class="fa">&#xf007;</i> Bonjour Mizu
+               Bonjour Mizu
               </span>
 
               <img

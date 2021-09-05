@@ -35,8 +35,9 @@
     color: #004aad;
     }
 iframe{
-  width:80vw;
-  height:40vh;
+  // width:80vw;
+  width: 110vh;//MODIFIER PAR REBECCA
+  height:67vh;//MODIFIER PAR REBECCA
 }
 span{
     
@@ -51,8 +52,9 @@ span{
 }
 // IPAD
 @media(min-width:768px){
-  h1{
-    font-size:21px!important;    
+  h1 {
+    font-size: 21px !important;
+    margin-top: 44px;
   }
   h2{
     font-size:18px!important;    

@@ -31,7 +31,7 @@ export class ArticleUpdateForm extends Component {
     e.preventDefault();
     const articleId = this.props.match.params.article_id;
 
-    console.log("testi id", articleId);
+    console.log("testi id", this.props.match.params);
 
     try {
       const response = await ArticleService.updateOneArticle(
@@ -63,7 +63,7 @@ export class ArticleUpdateForm extends Component {
 
             <div class="header-greet">
               <span>
-                <i class="fa">&#xf007;</i> Bonjour Mizu
+                Bonjour Mizu
               </span>
 
               <a href="/logout" onClick={this.logout} class="logout-btn white">
@@ -89,6 +89,11 @@ export class ArticleUpdateForm extends Component {
             <li>
               <a href="/temoignages" class="white">
                 Témoignages
+              </a>
+            </li>
+            <li>
+              <a href="/logout" onClick={this.logout} class="white">
+                Déconnexion
               </a>
             </li>
           </ul>

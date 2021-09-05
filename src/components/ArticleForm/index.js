@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { BrowserRouter as Link } from "react-router-dom";
 import { ArticleService } from "../../services";
 
@@ -25,7 +26,7 @@ import "../../assets/stylesheets/TestimonyForm.scss";
 //   videoError: "",
 // };
 
-export class ArticleForm extends Component {
+class ArticleForm extends React.Component {
   constructor(props) {
     super(props);
     // this.state = initialState;
@@ -60,7 +61,6 @@ export class ArticleForm extends Component {
     let author_articleError = "";
     let videoError = "";
 
-    //
     if (!this.state.title) {
       titleError = "vous devez remplir le champs titre";
     }
@@ -159,7 +159,7 @@ export class ArticleForm extends Component {
         this.state.video
       );
 
-      console.log("token", data.data.token);
+      this.props.history.push("/articles/");
 
       // localStorage.setItem("token", data.token);
     } catch (error) {
@@ -274,12 +274,13 @@ export class ArticleForm extends Component {
               onChange={this.handleChange}
               // value={this.state.video}
             />
+
+            {this.state.videoError ? (
+              <div style={{ fontSize: 12, color: "red" }}>
+                {this.state.videoError}
+              </div>
+            ) : null}
           </div>
-          {this.state.videoError ? (
-            <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.videoError}
-            </div>
-          ) : null}
 
           <button
             type="submit"
@@ -293,3 +294,4 @@ export class ArticleForm extends Component {
     );
   }
 }
+export default withRouter(ArticleForm);

@@ -8,15 +8,28 @@ import Video from "../../components/Video";
 import "../../assets/stylesheets/homepage.scss";
 
 export default class index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      error: null,
+    };
+  }
+
+  componentWillMount() {
+    console.log(this.props.match.url === "/");
+  }
+
   render() {
     return (
       <div className="homepage">
-      <NavHomePage />
+        {this.props.match.url === "/" ? <NavHomePage /> : null}
         <Header />
         <Actuality />
         <Video />
         <Testimony />
-        <a href="/api/votrePetitMot">Témoignez!</a>
+        {/* <a href="/api/votrePetitMot">Témoignez!</a> */}
+        <Footer />
       </div>
     );
   }
