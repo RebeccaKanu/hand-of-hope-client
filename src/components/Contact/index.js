@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/index";
 import { Link } from "react-router-dom";
 import "../../assets/stylesheets/contact.scss";
 
@@ -13,11 +14,11 @@ const Contact = ({ style, li }) => {
         <li>
           <a href="mailto:handofhope1@outlook.fr">handofhope1@outlook.fr</a>
         </li>
-        <li style={li }>06 23 35 62 69</li>
+        <li style={li}>06 23 35 62 69</li>
       </ul>
     </div>
-    )
-}
+  );
+};
 
 // function Contact() {
 //   return (

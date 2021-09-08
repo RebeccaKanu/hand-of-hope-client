@@ -28,6 +28,11 @@
   src: local("QuicksandLight"),
     url(../../assets/fonts/Quicksand/Quicksand-Light.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Peace Sans";
+  src: local("PeaceSans"),
+    url(../../assets/fonts/peace_sans/PeaceSansWebfont.ttf) format("truetype");
+}
 
 .sengagerContainer {
   font-size: 62.5% !important;
@@ -44,9 +49,10 @@
   }
 
   h1 {
-    font-family: "Roboto-Bold";
+    font-family: "Peace Sans";
+    color: black;
     font-size: 2.6em;
-    margin-right: 115px;
+    margin-right: 87px;
     margin-top: 177px;
   }
 

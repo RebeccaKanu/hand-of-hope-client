@@ -26,31 +26,33 @@ input {
   text-decoration: none;
   color: black;
 }
+
 @media only screen and (max-width: 1441px) and (min-width: 1025px) {
   .actuality {
     display: flex;
     flex-direction: column;
     .article {
-        // border: 8px solid black;
-        width: 296px;
-        img:hover{
-            width: 200px;
-        }
+      // border: 8px solid black;
+      width: 296px;
+      img:hover {
+        width: 200px;
+      }
     }
   }
 }
-
 @media only screen and (max-width: 1024px) {
-    .actuality {
-        display: flex;
-        flex-direction: column;
-      }
+  .actuality {
+    display: flex;
+    flex-direction: column;
+  }
+  .articleDetailsAdmin {
+    margin-left: 119px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-    .actuality {
-        display: flex;
-        flex-direction: column;
-      }
+  .actuality {
+    display: flex;
+    flex-direction: column;
+  }
 }
-

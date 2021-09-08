@@ -8,6 +8,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import NavHomePage from "../src/components/NavHomePage";
 import Nav from "../src/components/Nav";
 import Footer from "../src/components/Footer";
 import Actuality from "../src/components/Actuality";
@@ -25,16 +26,19 @@ import { Testimonies } from "./components/AllTestimony";
 import ArticleDetails from "./pages/ArticleDetails";
 import { TestimonyDetails } from "./pages/TestimonyDetails";
 import { ArticleUpdateForm } from "./pages/ArticleUpdateForm";
+import Don from "./components/Don/index";
+import Logout from "./pages/Logout";
 
 function PrivateRoute(props) {
   const token = localStorage.getItem("token");
+
   if (token) {
     return <Route exact path={props.path} component={props.component} />;
   }
   return <Route render={() => <Redirect to="/" />} />;
 }
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Router>
@@ -42,11 +46,10 @@ function App() {
           {/*Visitor*/}
 
           <Route exact path="/" component={HomePage} />
-          {/* <Nav /> */}
-          <Route exact path="/logout" component={HomePage} />
+          {/* <Route exact path="/logout" component={HomePage} /> */}
           <Route exact path="/sengager" component={Sengager} />
           <Route exact path="/aPropos" component={AboutUs} />
-          <Route exact path="/adminlogin" component={Login} />
+
           <Route exact path="/votrePetitMot" component={TestimonyForm} />
           <Route
             exact
@@ -55,8 +58,12 @@ function App() {
           />
           <Route exact path="/allArticles" component={AllVisitorArticle} />
           <Route exact path="/contact" component={ContactAssociation} />
+          <Route exact path="/don" component={Don} />
+
           {/*Admin*/}
+          <Route exact path="/adminlogin" component={Login} />
           <PrivateRoute path="/adminPage" component={AdminPage} />
+          <Route exact path="/logout" component={Logout} />
           <PrivateRoute path="/articles" component={Articles} />
           <PrivateRoute path="/temoignages" component={Testimonies} />
           <PrivateRoute

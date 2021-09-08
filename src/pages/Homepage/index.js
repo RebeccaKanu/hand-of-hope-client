@@ -13,19 +13,17 @@ export default class index extends Component {
     this.state = {
       data: [],
       error: null,
+      marginTop: "3050px",
     };
-  }
-
-  componentWillMount() {
-    console.log(this.props.match.url === "/");
   }
 
   render() {
     return (
       <div className="homepage">
-        {this.props.match.url === "/" ? <NavHomePage /> : null}
-        <Header />
-        <Actuality />
+        <NavHomePage url={this.props.match.url} margintop={"100px"} />
+        {/* {this.props.match.url === "/" ? <NavHomePage /> : null} */}
+        <Header url={this.props.match.url} />
+        <Actuality margintop={"50px"} />
         <Video />
         <Testimony />
         {/* <a href="/api/votrePetitMot">Témoignez!</a> */}

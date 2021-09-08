@@ -107,26 +107,6 @@ class index extends Component {
     }
   };
 
-  /************************/
-  /////////////// BROUILLONS NAV ////////////////////////////
-  // componentWillMount() {
-  //   if (window.innerWidth >= 768) {
-  //     this.setState({
-  //       display: "flex",
-  //       paddingLeft: "2%",
-  //       // marginLeft: "35%",
-  //       // marginRight: "1%",
-  //       // justifyContent:"",
-  //       flexDirection: "row",
-  //       width: "90vw",
-  //       fontSize: "1rem",
-  //       fontS: "0.6rem",
-  //       // alignItems: "flex-end",
-  //       justifyContent: "flex-end",
-  //       visibility: "visible",
-  //     });
-  //   }
-
   render() {
     const navArray = this.state.navStates;
     const iterateNav = navArray.map((el) => (
@@ -134,72 +114,171 @@ class index extends Component {
         <a href={el}>{el}</a>
       </li>
     ));
-
-    return (
-      <div
-        className="BurgerLink"
-        style={{
-          backgroundColor: this.state.backgroundColor,
-        }}
-      >
-        {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
-        {/* ul menuBurger disponible version mobile composant only JS */}
-        <ul style={{ border: "5px solid pink" }}>{iterateNav}</ul>
-
-        {/* ul menuBurger disponible version desktop*/}
-        <ul className="Links">
-          <li
+    if (this.props.url === "/") {
+      return (
+        <div
+          className="BurgerLink Brg"
+          style={{
+            backgroundColor: this.state.backgroundColor,
+            left: "22%",
+            top: "76px",
+            position: "relative",
+            textDecoration: "none",
+          }}
+        >
+          {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+          {/* ul menuBurger disponible version mobile composant only JS */}
+          <ul
             style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
+              marginTop: this.props.margintop,
             }}
           >
-            <a href="/allArticles">Actualité</a>
-          </li>
+            {iterateNav}
+          </ul>
 
-          <li
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
-            }}
-          >
-            <a href="/aPropos">A propos de nous</a>
-          </li>
-          <li
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontSize,
-            }}
-          >
-            <a href="/sengager">S'engager</a>
-          </li>
-          <li
-            className="contacts"
-            style={{
-              paddingLeft: this.state.paddingLeft,
-              fontSize: this.state.fontS,
-            }}
-          >
-            <a href="/contact">Contact</a>
-            <a href="#" onClick={this.adressCompteur}>
-              {this.state.contact}
-            </a>
-            <div className="contactPart1">
-              <p>{this.state.contactAdressPart1}</p>
-            </div>
-            <div className="contactPart2">
-              <p>{this.state.contactAdressPart2}</p>
-            </div>
-          </li>
-        </ul>
+          {/* ul menuBurger disponible version desktop*/}
+          <ul className="Links" style={{ marginTop: "-54px" }}>
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/allArticles" style={{ color: "white" }}>
+                Actualité
+              </a>
+            </li>
 
-        <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
-          <div style={{ transform: this.state.transformTop }}></div>
-          <div style={{ background: this.state.background }}></div>
-          <div style={{ transform: this.state.transformBottom }}></div>
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/aPropos" style={{ color: "white" }}>
+                A propos de nous
+              </a>
+            </li>
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/sengager" style={{ color: "white" }}>
+                S'engager
+              </a>
+            </li>
+            <li
+              className="contacts"
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontS,
+              }}
+            >
+              <a href="/contact" style={{ color: "white" }}>
+                Contact
+              </a>
+              <a
+                href="#"
+                onClick={this.adressCompteur}
+                style={{ color: "white" }}
+              >
+                {this.state.contact}
+              </a>
+              <div className="contactPart1">
+                <p>{this.state.contactAdressPart1}</p>
+              </div>
+              <div className="contactPart2">
+                <p>{this.state.contactAdressPart2}</p>
+              </div>
+            </li>
+          </ul>
+
+          <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
+            <div style={{ transform: this.state.transformTop }}></div>
+            <div style={{ background: this.state.background }}></div>
+            <div style={{ transform: this.state.transformBottom }}></div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div
+          className="BurgerLink"
+          style={{
+            backgroundColor: this.state.backgroundColor,
+          }}
+        >
+          {/*changement dynamique des valeurs via this.hideMenu(); la valeur des liens de nav alterne entre string vide et string remplis. Exemple au clique on passe de lien invisible c'est à dire "" à des liens qui deviennent visible comme "contact"*/}
+          {/* ul menuBurger disponible version mobile composant only JS */}
+          <ul style={{ border: "5px solid pink" }}>{iterateNav}</ul>
+
+          {/* ul menuBurger disponible version desktop*/}
+          <ul className="Links">
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/">Accueil</a>
+            </li>
+
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/allArticles">Actualité</a>
+            </li>
+
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/aPropos">A propos de nous</a>
+            </li>
+            <li
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontSize,
+              }}
+            >
+              <a href="/sengager">S'engager</a>
+            </li>
+            <li
+              className="contacts contactTest"
+              style={{
+                paddingLeft: this.state.paddingLeft,
+                fontSize: this.state.fontS,
+              }}
+            >
+              <a href="/contact">Contact</a>
+
+              <a href="/contact" onClick={this.adressCompteur}>
+                {this.state.contact}
+              </a>
+              <div className="contactPart1">
+                <p>{this.state.contactAdressPart1}</p>
+              </div>
+              <div className="contactPart2">
+                <p>{this.state.contactAdressPart2}</p>
+              </div>
+            </li>
+          </ul>
+
+          <div className="burgerMenu" onClick={this.burgerMenuCompteur}>
+            <div style={{ transform: this.state.transformTop }}></div>
+            <div style={{ background: this.state.background }}></div>
+            <div style={{ transform: this.state.transformBottom }}></div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 export default index;

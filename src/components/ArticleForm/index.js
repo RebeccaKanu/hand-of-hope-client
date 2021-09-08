@@ -103,7 +103,6 @@ class ArticleForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-  //test Jérôme
   handleChangeImage = (e) => {
     const img = e.target.files[0];
     const reader = new FileReader();
@@ -177,6 +176,7 @@ class ArticleForm extends React.Component {
           className="ui form"
           id="form1"
           onSubmit={this.handleSubmit}
+          style={{ width: "80%", marginLeft: "216px" }}
         >
           <div class=" fiels">
             <label htmlFor="title">Titre</label>

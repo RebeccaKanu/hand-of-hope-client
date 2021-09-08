@@ -86,13 +86,14 @@
       font-family: "Roboto-Bold";
       // font-family: "Peace Sans";
       font-weight: -400;
-      color: #d99827;
+      // color: #d99827;
+      color: #004aad;
     }
     h2 {
       font-weight: 300;
       font-family: "Roboto-Light";
       color: black;
-      padding-bottom: 10%;
+      padding-bottom: 5%;
       // font-size:1.8em;
     }
     .span {
@@ -225,8 +226,9 @@
     color: black;
     font-weight: 600;
     // font-size: 1em!important;
-    font-size: 18px !important;
-    color: #356178;
+    // font-size: 18px !important;
+    font-size: 15px !important;
+    // color: #356178;
     // font-family: "Muli-ExtraLight";
     font-family: "Quicksand-Regular";
   }
@@ -376,7 +378,7 @@
   /////////////// VERSIONS DESKTOP \\\\\\\\\\\\\\\
   @media only screen and (min-device-width: 1024px) {
     .allBox{
-      margin-left: 14px;
+      margin-left: -138px;
     }
     button {
       //AJOUT REBECCA BOUTON
@@ -388,14 +390,14 @@
       align-items: center;
       justify-content: center;
       // margin-right: 10%;
-      margin-left: -8%;
+      margin-left: -4%;
     }
     h1 {
       font-size: 26px !important;
       margin-bottom: 12px;
     }
     h2 {
-      font-size: 22px !important;
+      font-size: 19px !important;
       margin-top: 10px;
     }
     h3 {
@@ -404,7 +406,7 @@
     }
 
     p {
-      font-size: 16px !important;
+      font-size: 15px !important;
     }
     a {
       /////////////////à transposer dans les autres versions///////////////////
@@ -434,15 +436,17 @@
         // margin:0 5% 0 9%!important;
       }
        p {
-        margin-left: 118px;
+        margin-left: 45px;
+        width: 200px;
         
       }
       .firstActualityP{
         color: #6c6c6c;
       }
       h3 {
-        margin-left: 25px;
-        width: 182%;
+        margin-left: 59px;
+        // margin-left: 46px;
+        width: 185%;
       }
       h4 {
         margin-left: 183%;

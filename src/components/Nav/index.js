@@ -107,26 +107,6 @@ class index extends Component {
     }
   };
 
-  /************************/
-  /////////////// BROUILLONS NAV ////////////////////////////
-  // componentWillMount() {
-  //   if (window.innerWidth >= 768) {
-  //     this.setState({
-  //       display: "flex",
-  //       paddingLeft: "2%",
-  //       // marginLeft: "35%",
-  //       // marginRight: "1%",
-  //       // justifyContent:"",
-  //       flexDirection: "row",
-  //       width: "90vw",
-  //       fontSize: "1rem",
-  //       fontS: "0.6rem",
-  //       // alignItems: "flex-end",
-  //       justifyContent: "flex-end",
-  //       visibility: "visible",
-  //     });
-  //   }
-
   render() {
     const navArray = this.state.navStates;
     const iterateNav = navArray.map((el) => (
@@ -148,7 +128,7 @@ class index extends Component {
 
         {/* ul menuBurger disponible version desktop*/}
         <ul className="Links">
-        <li
+          <li
             style={{
               paddingLeft: this.state.paddingLeft,
               fontSize: this.state.fontSize,
@@ -165,7 +145,7 @@ class index extends Component {
           >
             <a href="/allArticles">Actualité</a>
           </li>
-     
+
           <li
             style={{
               paddingLeft: this.state.paddingLeft,
@@ -190,7 +170,7 @@ class index extends Component {
             }}
           >
             <a href="/contact">Contact</a>
-            
+
             <a href="/contact" onClick={this.adressCompteur}>
               {this.state.contact}
             </a>
@@ -201,7 +181,6 @@ class index extends Component {
               <p>{this.state.contactAdressPart2}</p>
             </div>
           </li>
-  
         </ul>
 
         <div className="burgerMenu" onClick={this.burgerMenuCompteur}>

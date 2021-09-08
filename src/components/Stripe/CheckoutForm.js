@@ -50,13 +50,13 @@ export const CheckoutForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ width: 353 }}>
-      <CardElement 
-      options={{
-        hidePostaleCode: true
-      }}
+    <form onSubmit={handleSubmit} style={{ width: 353, marginLeft: "485px" }}>
+      <CardElement
+        options={{
+          hidePostaleCode: true,
+        }}
       />
-      
+
       {/* <button type="submit" disabled={!stripe}> */}
       <button>Payer</button>
     </form>

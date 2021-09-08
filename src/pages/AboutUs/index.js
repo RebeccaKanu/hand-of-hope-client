@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import fondateur from "../../assets/images/fondateur_hop.jpg";
-import  Nav  from "../../components/Nav/index"
+import NavHomePage from "../../components/NavHomePage/index";
 import Footer from "../../components/Footer";
 import "../../assets/stylesheets/aboutUs.scss";
 // import CheckoutWithStripe from "../../components/Don/CheckoutWithStripe";
@@ -8,22 +8,24 @@ import "../../assets/stylesheets/aboutUs.scss";
 export default class index extends Component {
   render() {
     return (
-      <div class="aboutUsContainer">
-        <Nav/>
-        <h1>NOTRE HISTOIRE</h1>
+      <div>
+        <NavHomePage url={this.props.match.url} />
+        <div class="aboutUsContainer">
+          {/* <Nav/> */}
+          <h1>NOTRE HISTOIRE</h1>
 
-        <div className="ligne"></div>
+          <div className="ligne"></div>
 
-        <p>
-          Association fondée en 2020 par Victoir et Mizou Bilongo avec pour but
-          d’aider les personnes en difficultés dans de nombreux domaines tels
-          que : la santé, l’éducation et le sport (…) Sa vocation est de
-          permettre à chacun d’avoir les mêmes chances de survie et de
-          développement. Pour nous, aider les plus démunis est une obligation
-          éthique et une condition intrinsèque.
-        </p>
+          <p>
+            Association fondée en 2020 par Victoir et Mizou Bilongo avec pour
+            but d’aider les personnes en difficultés dans de nombreux domaines
+            tels que : la santé, l’éducation et le sport (…) Sa vocation est de
+            permettre à chacun d’avoir les mêmes chances de survie et de
+            développement. Pour nous, aider les plus démunis est une obligation
+            éthique et une condition intrinsèque.
+          </p>
 
-        {/* <div className="actions">
+          {/* <div className="actions">
           <img src={fondateur} alt="fondateur association photo" />
 
           <div className="detailsAction">
@@ -49,10 +51,19 @@ export default class index extends Component {
               </li>
             </ul>
           </div> */}
-        {/* </div> */}
-        {/*  DON */}
-        {/* <CheckoutWithStripe /> */}
-        <Footer/>
+          {/* </div> */}
+          {/*  DON */}
+          {/* <CheckoutWithStripe /> */}
+          <div
+            style={{
+              width: "1120px",
+              color: "black",
+              border: "1px solid black",
+              marginTop: "93px",
+            }}
+          ></div>
+          <Footer />
+        </div>
       </div>
     );
   }
