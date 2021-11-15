@@ -49,6 +49,7 @@ This a full stack project (client side part) for the french association **Hand o
             npm install -D nodemon
             npm install mysql2
             npm install dotenv
+            npm install axios
             npm install body-parser
             npm install cookie-parser
             npm install cors
