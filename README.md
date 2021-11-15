@@ -1,4 +1,4 @@
-# HAND OF-HOPE
+# 🚀Hand of-hope
 
 <img src="./src/assets/images/Hand-of-hope.png" alt="hanf of hope template"/>
 
