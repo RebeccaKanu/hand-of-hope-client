@@ -52,7 +52,7 @@ This a full stack project (client side part) for the french association **Hand o
             npm install jsonwebtoken
             npm install @stripe/react-stripe-js @stripe/stripe-js
 
-            **react:**
+            React:
             npx create-react-app my-app
             cd my-app
             npm start
