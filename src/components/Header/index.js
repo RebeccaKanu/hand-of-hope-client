@@ -128,7 +128,7 @@ export default class index extends Component {
             <div class="all-border">
               <div class="shows-location">
                 <div class="location-text">
-                  <span class="location">Créer un article</span>
+                  <span class="location">Bienvenue Hand of hope</span>
                 </div>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default class index extends Component {
             <div class="all-border">
               <div class="shows-location">
                 <div class="location-text">
-                  <span class="location">Créer un article</span>
+                  <span class="location">Bonjour!</span>
                 </div>
               </div>
             </div>
