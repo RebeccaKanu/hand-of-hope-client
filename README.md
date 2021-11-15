@@ -18,7 +18,7 @@ You're sections headers will be used to reference location of destination.
 
 ---
 
-## Description
+##  📖 Description
 
 This a full stack project for the french association **Hand of-hope**. 
 
