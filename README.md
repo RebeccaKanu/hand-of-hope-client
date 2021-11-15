@@ -1,8 +1,8 @@
-# Read Me Template
+# HAND OF-HOPE
 
-![Project Image](project-image-url)
+<img src="./src/assets/images/Hand-of-hope.png" alt="hanf of hope template"/>
 
-> This is a ReadMe template to help save you time and effort.
+
 
 ---
 
@@ -20,20 +20,42 @@ You're sections headers will be used to reference location of destination.
 
 ## Description
 
-Creating ReadMe's for your Github repository can be tedious. I hope this template can save you time and effort as well as provide you with some consistency across your projects.
+This a full stack project for the french association **Hand of-hope**. 
 
 #### Technologies
 
 - Technology 1
 - Technology 2
 
-[Back To The Top](#read-me-template)
 
 ---
 
 ## How To Use
 
-#### Installation
+#### ⚙️ Installation
+
+1.  Installation of Nodejs
+
+            sudo apt install nodejs
+
+2.  Initialisation of a package.json
+
+            npm init
+
+3.  Installation of modules
+
+            npm install express
+            npm install -D nodemon
+            npm install mysql2
+            npm install dotenv
+            npm install body-parser
+            npm install cookie-parser
+            npm install cors
+            npm install jsonwebtoken
+            npm install bcrypt
+            npm install express-session
+            npm install express-flash-message
+            npm install express fileupload
 
 #### API Reference
 
@@ -41,47 +63,18 @@ Creating ReadMe's for your Github repository can be tedious. I hope this templat
 <p>dummy code</p>
 ```
 
-[Back To The Top](#read-me-template)
 
 ---
 
 ## References
 
-[Back To The Top](#read-me-template)
-
 ---
-
-## License
-
-MIT License
-
-Copyright (c) [2017] [James Q Quick]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-[Back To The Top](#read-me-template)
 
 ## Contributors
 
-- <spam>Kanu Rebecca</spam> [<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubrebecca]
-- <spam>Jérôme Eliezer</spam> [<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubnawal]
-- <spam>Nawal Maizate</spam> [<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubjérome]
+- <spam>Kanu Rebecca</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubrebecca]
+- <spam>Jérôme Eliezer</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubnawal]
+- <spam>Nawal Maizate</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubjérome]
 
 <br />
 <br />
