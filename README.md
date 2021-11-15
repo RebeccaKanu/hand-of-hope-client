@@ -71,11 +71,11 @@ This a full stack project for the french association **Hand of-hope**.
 ---
 
 ## Contributors
-<div>
-<spam>Kanu Rebecca</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubrebecca]
-<spam>Jérôme Eliezer</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubnawal]
-<spam>Nawal Maizate</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubjérome] 
-</div>
+
+- <spam>Kanu Rebecca</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubrebecca]
+- <spam>Jérôme Eliezer</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubnawal]
+- <spam>Nawal Maizate</spam>[<img alt="github link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][githubjérome]
+
 <br />
 <br />
 
