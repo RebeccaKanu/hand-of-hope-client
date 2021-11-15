@@ -45,19 +45,17 @@ This a full stack project (client side part) for the french association **Hand o
 
 3.  Installation of modules
 
-            npm install express
-            npm install -D nodemon
-            npm install mysql2
+          
             npm install dotenv
             npm install axios
-            npm install body-parser
-            npm install cookie-parser
-            npm install cors
+            npm install sass
             npm install jsonwebtoken
-            npm install bcrypt
-            npm install express-session
-            npm install express-flash-message
-            npm install express fileupload
+            npm install @stripe/react-stripe-js @stripe/stripe-js
+
+            **react:**
+            npx create-react-app my-app
+            cd my-app
+            npm start
 
 #### API Reference
 
