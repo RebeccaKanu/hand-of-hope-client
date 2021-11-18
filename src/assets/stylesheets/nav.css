@@ -8,6 +8,11 @@
   src: local("MuliBold"), url(../../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: local("BebasNeueRegular"), url(../../assets/fonts/bebas_neue/BebasNeue-Regular.ttf) format("truetype");
+}
+
 .BurgerLink {
   font-size: 62.5%;
   display: -webkit-box;

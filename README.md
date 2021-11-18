@@ -45,6 +45,10 @@ This a full stack project (client side part) for the french association **Hand o
 
 3.  Installation of modules
 
+            React:
+            npx create-react-app my-app
+            cd my-app
+            npm start
           
             npm install dotenv
             npm install axios
@@ -52,10 +56,7 @@ This a full stack project (client side part) for the french association **Hand o
             npm install jsonwebtoken
             npm install @stripe/react-stripe-js @stripe/stripe-js
 
-            React:
-            npx create-react-app my-app
-            cd my-app
-            npm start
+         
 
 #### API Reference
 
