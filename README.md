@@ -58,10 +58,6 @@ This a full stack project (client side part) for the french association **Hand o
 
 #### API Reference
 
-```html
-<p>dummy code</p>
-```
-
 ---
 
 ## References

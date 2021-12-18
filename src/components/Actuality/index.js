@@ -11,7 +11,9 @@ import { ArticleService } from "../../services";
 // import { threadId } from "../../../../Backend/src/db";
 
 export default class index extends Component {
+
   constructor(props) {
+
     super(props);
     this.state = {
       width: "280px",
