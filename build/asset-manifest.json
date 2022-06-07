@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bab45493.chunk.css",
+    "main.js": "/static/js/main.e2131cdd.chunk.js",
+    "main.js.map": "/static/js/main.e2131cdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.719f7edc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.719f7edc.js.map",
+    "static/js/2.c678b98f.chunk.js": "/static/js/2.c678b98f.chunk.js",
+    "static/js/2.c678b98f.chunk.js.map": "/static/js/2.c678b98f.chunk.js.map",
+    "static/js/3.99eff068.chunk.js": "/static/js/3.99eff068.chunk.js",
+    "static/js/3.99eff068.chunk.js.map": "/static/js/3.99eff068.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.bab45493.chunk.css.map": "/static/css/main.bab45493.chunk.css.map",
+    "static/js/2.c678b98f.chunk.js.LICENSE.txt": "/static/js/2.c678b98f.chunk.js.LICENSE.txt",
+    "static/media/header.scss": "/static/media/Header-tablette-pro.925a049f.jpg",
+    "static/media/Header1.10d131eb.jpg": "/static/media/Header1.10d131eb.jpg",
+    "static/media/Header2.66277203.jpeg": "/static/media/Header2.66277203.jpeg",
+    "static/media/articleDetails.scss": "/static/media/Quicksand-Regular.cffc2790.ttf",
+    "static/media/aboutUs.scss": "/static/media/Roboto-Light.8be2d148.ttf",
+    "static/media/nav.scss": "/static/media/Muli-Light.aac5722b.ttf",
+    "static/media/bon_prenatale_2.286be99d.jpeg": "/static/media/bon_prenatale_2.286be99d.jpeg",
+    "static/media/connectedUser2.2229491a.jpg": "/static/media/connectedUser2.2229491a.jpg",
+    "static/media/distribution_club_2.95934162.jpeg": "/static/media/distribution_club_2.95934162.jpeg",
+    "static/media/facebook.2f9e32cd.svg": "/static/media/facebook.2f9e32cd.svg",
+    "static/media/fondateur_hop.6b0097da.jpg": "/static/media/fondateur_hop.6b0097da.jpg",
+    "static/media/logo-hoh.569bacc4.png": "/static/media/logo-hoh.569bacc4.png",
+    "static/media/logo_hoh_officiel.8d385150.jpeg": "/static/media/logo_hoh_officiel.8d385150.jpeg",
+    "static/media/orphelinat_3.5cfa6c59.jpeg": "/static/media/orphelinat_3.5cfa6c59.jpeg",
+    "static/media/taylor.3fdd0bea.jpg": "/static/media/taylor.3fdd0bea.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.719f7edc.js",
+    "static/js/2.c678b98f.chunk.js",
+    "static/css/main.bab45493.chunk.css",
+    "static/js/main.e2131cdd.chunk.js"
+  ]
+}
